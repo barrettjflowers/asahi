@@ -1,0 +1,33 @@
+# Ignore everything
+*
+
+# Except...
+!*.vimrc
+!*.vim
+!*.zshrc
+!*.bashrc
+!.gitignore
+!.gitignore_global
+!.bashrc
+!.codeium
+!.fzf
+!/.hammerspoon/
+!/.hammerspoon/*
+!.parsec
+!.putty
+!/Markdown/
+!/Markdown/*
+!/.scripts/
+!/.scripts/*
+
+# Unignore .config directory and its contents
+!/.config
+!/.config/**
+
+# Ignore these config directories
+/.config/herd-lite
+/.config/github-copilot
+
+# Unignore .github directory and its contents
+!/.github
+!/.github/**
