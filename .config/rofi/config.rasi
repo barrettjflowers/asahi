@@ -1,0 +1,158 @@
+configuration {
+    font:                        "JetBrainsMono Nerd Font Mono Medium 13";
+    location:                    1;
+}
+
+* {
+    background:                  transparent;
+    background-color:            transparent;
+    background-color-alt:        transparent;
+    foreground:                  #B5BBC7;
+    foreground-color:            #B5BBC7;
+    foreground-color-alt:        #66707D;
+    accent-color:                #66707D;
+    border-color:                transparent;
+    selected-background:         transparent;
+    on:                          #66707D;
+    off:                         #3e3e3e;
+    urgent:                      #f53c3c;
+    separatorcolor:              transparent;
+    lightbg:                     transparent;
+    normal-background:           transparent;
+    normal-foreground:           #B5BBC7;
+    alternate-normal-background: transparent;
+    alternate-normal-foreground: #B5BBC7;
+    selected-normal-foreground:  #66707D;
+    selected-normal-background:  transparent;
+    urgent-foreground:           #f53c3c;
+    active-foreground:           #B5BBC7;
+}
+
+window {
+    x-offset:                  10;
+    y-offset:                  0;
+    transparency:              "real";
+    background-color:          rgba(58, 63, 68, 0.40);
+    text-color:                @foreground-color;
+    border:                    0px;
+    border-color:              @border-color;
+    border-radius:             0;
+    width:                     600px;
+}
+
+mainbox {
+    spacing:                   0;
+    padding:                   0;
+    background-color:          transparent;
+}
+
+inputbar {
+    padding:                   12px;
+    spacing:                   8px;
+    children:                  [entry, prompt, indicator, case-indicator];
+    background-color:          transparent;
+}
+
+prompt {
+    text-color:                @foreground-color-alt;
+    background-color:          transparent;
+}
+
+entry {
+    text-color:                @foreground-color;
+    placeholder:               "Search...";
+    placeholder-color:         @foreground-color-alt;
+    cursor-color:              @accent-color;
+    blink:                     true;
+    background-color:          transparent;
+}
+
+listview {
+    spacing:                   0;
+    padding:                   0;
+    lines:                     10;
+    columns:                   1;
+    fixed-height:              true;
+    dynamic:                   true;
+    background-color:          transparent;
+}
+
+element {
+    padding:                   8px 12px;
+    text-color:                @foreground-color;
+    background-color:          transparent;
+}
+
+element normal {
+    background-color:          transparent;
+}
+
+element normal active {
+    text-color:                @foreground-color;
+    background-color:          transparent;
+}
+
+element urgent {
+    text-color:                @urgent;
+    background-color:          transparent;
+}
+
+element selected {
+    text-color:                @accent-color;
+    background-color:          transparent;
+}
+
+element selected.urgent {
+    text-color:                @urgent;
+    background-color:          transparent;
+}
+
+element selected.active {
+    text-color:                @accent-color;
+    background-color:          transparent;
+}
+
+element-icon {
+    size:                      24px;
+    background-color:          transparent;
+}
+
+element-text {
+    text-color:                inherit;
+    vertical-align:            0.5;
+    horizontal-align:          0.0;
+    background-color:          transparent;
+}
+
+button {
+    text-color:                @foreground-color;
+    background-color:          transparent;
+}
+
+scrollbar {
+    handle-color:              @accent-color;
+    handle-width:              4px;
+}
+
+sidebar {
+    border:                    0px;
+    border-color:              @border-color;
+    background-color:          transparent;
+}
+
+button.selected {
+    text-color:                @accent-color;
+    background-color:          transparent;
+}
+
+error-message {
+    background-color:          transparent;
+    text-color:                @foreground-color;
+    border:                    0px;
+    border-color:              @border-color;
+}
+
+textbox {
+    text-color:                @foreground-color;
+    background-color:          transparent;
+}
