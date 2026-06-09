@@ -1,0 +1,11 @@
+GRUB_DISABLE_SUBMENU=true
+GRUB_DISABLE_RECOVERY=true
+GRUB_DISABLE_OS_PROBER=true
+GRUB_CMDLINE_LINUX_DEFAULT="rhgb quiet rootflags=subvol=root appledrm.show_notch=1 hid-apple.swap_fn_leftctrl=1 mitigations=off nowatchdog"
+GRUB_DISTRIBUTOR="Fedora Linux Asahi Remix"
+GRUB_ENABLE_BLSCFG=true
+GRUB_GFXMODE=auto
+GRUB_TERMINAL_INPUT="console"
+GRUB_TERMINAL_OUTPUT="console"
+GRUB_TIMEOUT=1
+GRUB_DEFAULT=saved
