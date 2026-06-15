@@ -1,5 +1,5 @@
 configuration {
-    font:                        "JetBrainsMono Nerd Font Mono Medium 13";
+    font:                        "JetBrainsMono Nerd Font Mono Medium 12";
     location:                    1;
 }
 
@@ -11,7 +11,7 @@ configuration {
     foreground-color:            #B5BBC7;
     foreground-color-alt:        #66707D;
     accent-color:                #66707D;
-    border-color:                transparent;
+    border-color:                #66707D;
     selected-background:         transparent;
     on:                          #66707D;
     off:                         #3e3e3e;
@@ -22,17 +22,18 @@ configuration {
     normal-foreground:           #B5BBC7;
     alternate-normal-background: transparent;
     alternate-normal-foreground: #B5BBC7;
-    selected-normal-foreground:  #66707D;
-    selected-normal-background:  transparent;
+    selected-normal-foreground:  @off;
+    selected-normal-background:  @border-color;
     urgent-foreground:           #f53c3c;
     active-foreground:           #B5BBC7;
 }
 
 window {
-    x-offset:                  10;
-    y-offset:                  0;
+    x-offset:                  12;
+    y-offset:                  5;
+    padding:                   0;
     transparency:              "real";
-    background-color:          rgba(58, 63, 68, 0.40);
+    background-color:          rgba(58, 63, 68, 0.30);
     text-color:                @foreground-color;
     border:                    0px;
     border-color:              @border-color;
@@ -44,6 +45,8 @@ mainbox {
     spacing:                   0;
     padding:                   0;
     background-color:          transparent;
+    border:                      1px;
+    border-color:                @border-color;
 }
 
 inputbar {
@@ -98,18 +101,18 @@ element urgent {
 }
 
 element selected {
-    text-color:                @accent-color;
-    background-color:          transparent;
+    text-color:                @off;
+    background-color:          @border-color;
 }
 
 element selected.urgent {
     text-color:                @urgent;
-    background-color:          transparent;
+    background-color:          @border-color;
 }
 
 element selected.active {
     text-color:                @accent-color;
-    background-color:          transparent;
+    background-color:          @border-color;
 }
 
 element-icon {
@@ -141,8 +144,8 @@ sidebar {
 }
 
 button.selected {
-    text-color:                @accent-color;
-    background-color:          transparent;
+    text-color:                @off;
+    background-color:          @border-color;
 }
 
 error-message {
