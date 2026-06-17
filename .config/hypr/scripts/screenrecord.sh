@@ -16,7 +16,7 @@ if [ -f "$PIDFILE" ]; then
 fi
 
 mkdir -p "$OUTDIR"
-OUTFILE="$OUTDIR/recording_$(date +%Y%m%d_%H%M%S).mp4"
+OUTFILE="$OUTDIR/$(date +%a_%d_%b_%H%M).mp4"
 
 # Create null sink to combine desktop audio + mic
 pactl load-module module-null-sink sink_name=$COMBINED_SINK > "$NULL_MODULE_FILE"
