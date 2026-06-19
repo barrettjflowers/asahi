@@ -1,0 +1,58 @@
+(defcfg
+  process-unmapped-keys yes
+  concurrent-tap-hold yes
+  chords-v2-min-idle 200
+  sequence-timeout 300
+  log-layer-changes yes
+)
+
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)
+
+(defalias
+  vim-toggle (layer-switch vim-normal)
+)
+
+(defchordsv2
+  (j k) @vim-toggle 90 first-release (vim-normal)
+)
+
+(deflayer base
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)
+
+(defvirtualkeys
+  del-word (macro S-C-rght del)
+  del-back (macro S-C-left del)
+  del-line (macro home S-end del)
+)
+
+(defseq
+  del-word (w)
+  del-back (b)
+  del-line (d)
+)
+
+(deflayermap (vim-normal)
+  h    left
+  j    down
+  k    up
+  l    rght
+  w    C-rght
+  b    C-left
+  e    C-rght
+  d    sldr
+  x    del
+  i    (layer-switch base)
+  u    C-z
+  esc  (layer-switch base)
+)
