@@ -1,42 +1,38 @@
+@import "../colors/colors.rasi"
+
 configuration {
     font:                        "JetBrainsMono Nerd Font Mono Medium 12";
     location:                    1;
+    drun-display-format:         "{name}";
 }
 
 * {
     background:                  transparent;
     background-color:            transparent;
     background-color-alt:        transparent;
-    foreground:                  #B5BBC7;
-    foreground-color:            #B5BBC7;
-    foreground-color-alt:        #66707D;
-    accent-color:                #66707D;
-    border-color:                #66707D;
+    foreground:                  @foreground-color;
     selected-background:         transparent;
-    on:                          #66707D;
-    off:                         #3e3e3e;
-    urgent:                      #f53c3c;
     separatorcolor:              transparent;
     lightbg:                     transparent;
     normal-background:           transparent;
-    normal-foreground:           #B5BBC7;
+    normal-foreground:           @foreground-color;
     alternate-normal-background: transparent;
-    alternate-normal-foreground: #B5BBC7;
+    alternate-normal-foreground: @foreground-color;
     selected-normal-foreground:  @off;
     selected-normal-background:  @border-color;
-    urgent-foreground:           #f53c3c;
-    active-foreground:           #B5BBC7;
+    urgent-foreground:           @urgent;
+    active-foreground:           @foreground-color;
 }
 
 window {
-    x-offset:                  12;
-    y-offset:                  5;
+    x-offset:                  10;
+    y-offset:                  4;
     padding:                   0;
     transparency:              "real";
-    background-color:          rgba(58, 63, 68, 0.30);
+    background-color:          rgba(32, 32, 42, 0.30);
     text-color:                @foreground-color;
     border:                    0px;
-    border-color:              @border-color;
+    border-color:              @off;
     border-radius:             0;
     width:                     600px;
 }
@@ -46,7 +42,7 @@ mainbox {
     padding:                   0;
     background-color:          transparent;
     border:                      1px;
-    border-color:                @border-color;
+    border-color:                @off;
 }
 
 inputbar {

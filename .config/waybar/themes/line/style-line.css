@@ -147,3 +147,17 @@ tooltip {
     padding: 0px 5px;
     transition: all .3s ease; 
 }
+
+#custom-recording {
+    padding: 0px 5px;
+    transition: all .3s ease;
+    color: transparent;
+}
+#custom-recording.recording {
+    color: #f53c3c;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}

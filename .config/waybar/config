@@ -2,15 +2,15 @@
         "layer": "top",
         "position": "top",
         "reload_style_on_change": true,
-        "margin-top": 12,
+        "margin-top": 10,
         "margin-bottom": 0,
-        "margin-left": 12,
-        "margin-right": 12,
+        "margin-left": 10,
+        "margin-right": 10,
         "modules-left": ["hyprland/workspaces", "hyprland/window"],
         "hyprland/window": {
             "format": "→ {class}",
         },
-        "modules-center": ["cpu","memory","temperature"],
+        "modules-center": ["custom/recording","cpu","memory","custom/weather"],
         "modules-right": ["battery","network","clock"],
 
 
@@ -50,10 +50,10 @@
             "on-click": "kitty nmtui"
         },
         "bluetooth": {
-            "format-on": "󰂯",
+            "format-on": "<span font-size='15000'>󰂯</span>",
             "format-off": "BT-off",
-            "format-disabled": "󰂲",
-            "format-connected-battery": "{device_battery_percentage}% 󰂯",
+            "format-disabled": "<span font-size='15000'>󰂲</span>",
+            "format-connected-battery": "{device_battery_percentage}% <span font-size='15000'>󰂯</span>",
             "format-alt": "{device_alias} 󰂯",
             "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
             "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
@@ -66,23 +66,25 @@
             "states": {
                 "good": 95,
                 "warning": 30,
-                "critical": 20
+                "critical": 15
             },
-            "format": "{icon}\u2009{capacity}%",
-            "format-charging": "󰂄\u2009{capacity}%",
-            "format-plugged": "󰂄  {capacity}%",
-            "format-alt": "{icon}\u2009{time}",
+            "format": "<span font-size='10000'>{icon}</span> {capacity}%",
+            "format-charging": "<span font-size='10000'>󰂄</span> {capacity}%",
+            "format-plugged": "<span font-size='10000'>󰂄 </span> {capacity}%",
+            "format-warning": "<span font-size='10000'>{icon}</span> {capacity}%",
+            "format-critical": "<span font-size='10000'>{icon}</span> {capacity}%",
+            "format-alt": "<span font-size='10000'>{icon}</span> {time}",
             "format-icons": [
                 "󰁻",
-            "󰁼",
-            "󰁾",
-            "󰂀",
-            "󰂂",
-            "󰁹"
+                "󰁼",
+                "󰁾",
+                "󰂀",
+                "󰂂",
+                "󰁹"
             ],
         },
         "custom/pacman": {
-            "format": "󰅢 {}",
+            "format": "<span font-size='15000'>󰅢</span> {}",
             "interval": 30,   
             "exec": "checkupdates | wc -l",
             "exec-if": "exit 0",
@@ -90,21 +92,28 @@
             "signal": 8,
             "tooltip": false,
         },
+        "custom/recording": {
+            "format": "{}",
+            "return-type": "json",
+            "interval": 1,
+            "exec": "~/.config/waybar/scripts/record-indicator.sh",
+            "tooltip": false
+        },
 
         "cpu": {
-            "format": " {usage}%",
+            "format": "<span font-size='15000'></span> {usage}%",
             "interval": 2,
             "tooltip": true
         },
         "memory": {
-            "format": "󰍛 {percentage}%",
+            "format": "<span font-size='15000'></span> {used:0.1f}GB",
             "interval": 5
         },
-        "temperature": {
-            "critical-threshold": 80,
-            "format": "\u2009{temperatureF}°F",
-            "interval": 5,
-            "unit": "fahrenheit"
+        "custom/weather": {
+            "exec": "~/.config/waybar/scripts/weather.sh",
+            "interval": 600,
+            "format": "<span font-size='15000'></span> {}",
+            "tooltip": true
         },
         "tray": {
             "icon-size": 14,

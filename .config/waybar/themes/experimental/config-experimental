@@ -4,7 +4,7 @@
         "reload_style_on_change": true,
         "modules-left": ["custom/notification","clock","custom/pacman","tray"],
         "modules-center": ["hyprland/workspaces"],
-        "modules-right": ["group/expand","bluetooth","network","battery"],
+        "modules-right": ["group/expand","bluetooth","network","battery","custom/recording"],
 
 
         "hyprland/workspaces": {
@@ -87,6 +87,13 @@
             "on-click": "kitty sh -c 'yay -Syu; echo Done - Press enter to exit; read'; pkill -SIGRTMIN+8 waybar",
             "signal": 8,
             "tooltip": false,
+        },
+        "custom/recording": {
+            "format": "{}",
+            "return-type": "json",
+            "interval": 1,
+            "exec": "~/.config/waybar/scripts/record-indicator.sh",
+            "tooltip": false
         },
         "custom/expand": {
             "format": "",
