@@ -1,0 +1,9 @@
+* {
+    foreground-color:            #B5BBC7;
+    foreground-color-alt:        #696980;
+    accent-color:                #696980;
+    border-color:                #696980;
+    on:                          #696980;
+    off:                         #404042;
+    urgent:                      #f53c3c;
+}
