@@ -1,10 +1,10 @@
 #!/bin/bash
 # One source of truth — edit the 5 hex values below, then run ./colors.sh
 
-BACKGROUND="20202A"
-TEXT="B5BBC7"
-ACCENT="696980"
-INACTIVE="404042"
+BACKGROUND="161718"
+TEXT="B7BCB9"
+ACCENT="5e7375"
+INACTIVE="303032"
 URGENT="f53c3c"
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
@@ -14,7 +14,7 @@ BG_G=$((16#${BACKGROUND:2:2}))
 BG_B=$((16#${BACKGROUND:4:2}))
 
 cat > "$DIR/colors.css" << EOF
-@define-color background rgba($BG_R, $BG_G, $BG_B, 0.30);
+@define-color background rgba($BG_R, $BG_G, $BG_B, 1.0);
 @define-color text #$TEXT;
 @define-color accent #$ACCENT;
 @define-color inactive #$INACTIVE;
@@ -23,6 +23,7 @@ EOF
 
 cat > "$DIR/colors.rasi" << EOF
 * {
+    bg:                          #$BACKGROUND;
     foreground-color:            #$TEXT;
     foreground-color-alt:        #$ACCENT;
     accent-color:                #$ACCENT;
