@@ -1,7 +1,7 @@
 @import "../colors/colors.rasi"
 
 configuration {
-    font:                        "JetBrainsMono Nerd Font Mono Medium 12";
+    font:                        "JetBrainsMono Nerd Font Mono Medium 11";
     location:                    1;
     drun-display-format:         "{name}";
 }
@@ -25,11 +25,11 @@ configuration {
 }
 
 window {
-    x-offset:                  10;
-    y-offset:                  4;
+    x-offset:                  13;
+    y-offset:                  6;
     padding:                   0;
     transparency:              "real";
-    background-color:          rgba(32, 32, 42, 0.30);
+    background-color:          @bg;
     text-color:                @foreground-color;
     border:                    0px;
     border-color:              @off;
@@ -41,8 +41,9 @@ mainbox {
     spacing:                   0;
     padding:                   0;
     background-color:          transparent;
-    border:                      1px;
-    border-color:                @off;
+    border:                    2px;
+		border-radius:             10px;
+    border-color:                @border-color;
 }
 
 inputbar {

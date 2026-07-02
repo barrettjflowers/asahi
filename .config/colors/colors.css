@@ -1,5 +1,5 @@
-@define-color background rgba(32, 32, 42, 0.30);
-@define-color text #B5BBC7;
-@define-color accent #696980;
-@define-color inactive #404042;
+@define-color background rgba(22, 23, 24, 1.0);
+@define-color text #B7BCB9;
+@define-color accent #5e7375;
+@define-color inactive #303032;
 @define-color urgent #f53c3c;

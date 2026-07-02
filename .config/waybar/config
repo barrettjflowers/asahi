@@ -2,11 +2,12 @@
         "layer": "top",
         "position": "top",
         "reload_style_on_change": true,
-        "margin-top": 10,
-        "margin-bottom": 0,
-        "margin-left": 10,
-        "margin-right": 10,
-        "modules-left": ["hyprland/workspaces", "hyprland/window"],
+        "spacing": 7,
+        "margin-top": 12,
+        "margin-bottom": 2,
+        "margin-left": 12,
+        "margin-right": 12,
+        "modules-left": ["custom/kanata-layer", "hyprland/workspaces", "hyprland/window"],
         "hyprland/window": {
             "format": "→ {class}",
         },
@@ -19,6 +20,12 @@
             "persistent-workspaces": {
                 "*": [ 1,2,3,4,5 ]
             }
+        },
+        "custom/kanata-layer": {
+            "format": "{} |",
+            "return-type": "json",
+            "exec": "~/.config/waybar/scripts/kanata-layer.sh",
+            "tooltip": false
         },
         "custom/notification": {
             "tooltip": false,
@@ -41,7 +48,7 @@
             }
         },
         "network": {
-            "format-wifi": "",
+            "format-wifi": "󰖩 {essid}",
             "format-ethernet":"",
             "format-disconnected": "",
             "tooltip-format-disconnected": "Error",
@@ -50,10 +57,10 @@
             "on-click": "kitty nmtui"
         },
         "bluetooth": {
-            "format-on": "<span font-size='15000'>󰂯</span>",
+            "format-on": "󰂯",
             "format-off": "BT-off",
-            "format-disabled": "<span font-size='15000'>󰂲</span>",
-            "format-connected-battery": "{device_battery_percentage}% <span font-size='15000'>󰂯</span>",
+            "format-disabled": "󰂲",
+            "format-connected-battery": "{device_battery_percentage}% 󰂯",
             "format-alt": "{device_alias} 󰂯",
             "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
             "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
@@ -68,23 +75,23 @@
                 "warning": 30,
                 "critical": 15
             },
-            "format": "<span font-size='10000'>{icon}</span> {capacity}%",
-            "format-charging": "<span font-size='10000'>󰂄</span> {capacity}%",
-            "format-plugged": "<span font-size='10000'>󰂄 </span> {capacity}%",
-            "format-warning": "<span font-size='10000'>{icon}</span> {capacity}%",
-            "format-critical": "<span font-size='10000'>{icon}</span> {capacity}%",
-            "format-alt": "<span font-size='10000'>{icon}</span> {time}",
+            "format": "{icon} {capacity}%",
+            "format-charging": " {capacity}%",
+            "format-plugged": "  {capacity}%",
+            "format-warning": "{icon} {capacity}%",
+            "format-critical": "{icon} {capacity}%",
+            "format-alt": "{icon} {time}",
             "format-icons": [
-                "󰁻",
-                "󰁼",
-                "󰁾",
-                "󰂀",
-                "󰂂",
-                "󰁹"
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
             ],
         },
         "custom/pacman": {
-            "format": "<span font-size='15000'>󰅢</span> {}",
+            "format": "󰅢 {}",
             "interval": 30,   
             "exec": "checkupdates | wc -l",
             "exec-if": "exit 0",
@@ -101,19 +108,22 @@
         },
 
         "cpu": {
-            "format": "<span font-size='15000'></span> {usage}%",
+            "format": " {usage}%",
             "interval": 2,
-            "tooltip": true
+            "tooltip": true,
+            "on-click": ""
         },
         "memory": {
-            "format": "<span font-size='15000'></span> {used:0.1f}GB",
-            "interval": 5
+            "format": " {used:0.1f}GB",
+            "interval": 5,
+            "on-click": ""
         },
         "custom/weather": {
             "exec": "~/.config/waybar/scripts/weather.sh",
             "interval": 600,
-            "format": "<span font-size='15000'></span> {}",
-            "tooltip": true
+            "format": " {}",
+            "tooltip": true,
+            "on-click": ""
         },
         "tray": {
             "icon-size": 14,

@@ -1,21 +1,20 @@
 @import "../colors/colors.css";
 
 * {
-    font-size:15px;
+    font-size:14px;
     font-family: "JetBrainsMono Nerd Font Mono";
-    font-weight: 600;
+    font-weight: 700;
 }
 window#waybar{
     background: @background;
-    border: 1px solid @inactive;
-    border-radius: 0px;
-    min-height: 24px;
+    border: 1.8px solid @inactive;
+    border-radius: 10px;
 }
 .modules-left {
     padding: 0px 20px;
 }
 .modules-center {
-    padding: 0px 0px;
+    padding: 6px 0px;
     margin-left: 450px; /* notch */
 }
 .modules-right {
@@ -34,10 +33,9 @@ tooltip {
     color: @accent;
 }
 #custom-notification {
-    padding: 0px 5px;
+    padding: 0px 7px;
     transition: all .3s ease;
     color: @text;
-    font-size: 22px;
 }
 #window {
     padding: 0px 0px;
@@ -45,47 +43,47 @@ tooltip {
     color: @text;
 }
 #clock{
-    padding: 0px 5px;
+    padding: 0px 7px;
     color:@text;
     transition: all .3s ease;
 }
 #custom-pacman{
-    padding: 0px 5px;
+    padding: 0px 7px;
     transition: all .3s ease;
     color:@text;
 
 }
 #workspaces {
-    padding: 0px 5px;
+    padding: 0px 7px;
     min-width: 100px;
     border: 2px transparent;
 }
 #workspaces button {
-    all:unset;
-    padding: 0px 5px;
-		color: @text;
+    background: transparent;
     border: 2px transparent;
+    padding: 0px 7px;
+	color: @text;
 }
 #workspaces button.active {
-    color: @inactive;
+    color: @text;
     background: @accent;
+		border-radius: 4px;
 		min-width: 15px;
 		margin: 5px 0;
 }
 #bluetooth{
-    padding: 0px 5px;
+    padding: 0px 7px;
     transition: all .3s ease;
     color:@text;
 
 }
 #network{
-    padding: 0px 5px;
+    padding: 0px 7px;
     transition: all .3s ease;
     color:@text;
-		font-size: 22px;
 }
 #battery{
-    padding: 0px 5px;
+    padding: 0px 7px;
     transition: all .3s ease;
     color:@text;
     background: transparent;
@@ -105,11 +103,11 @@ tooltip {
 }
 
 #group-expand{
-    padding: 0px 5px;
+    padding: 0px 7px;
     transition: all .3s ease; 
 }
 #custom-expand{
-    padding: 0px 5px;
+    padding: 0px 7px;
     color:alpha(@foreground,.2);
     text-shadow: 0px 0px 2px rgba(0, 0, 0, .7);
     transition: all .3s ease; 
@@ -119,7 +117,7 @@ tooltip {
     text-shadow: 0px 0px 2px rgba(255, 255, 255, .5);
 }
 #cpu,#memory,#custom-weather{
-    padding: 0px 5px;
+    padding: 0px 7px;
     transition: all .3s ease; 
     color:@text;
 
@@ -135,17 +133,17 @@ tooltip {
 
 }
 #tray{
-    padding: 0px 5px;
+    padding: 0px 7px;
     transition: all .3s ease; 
 
 }
 #tray menu * {
-    padding: 0px 5px;
+    padding: 0px 7px;
     transition: all .3s ease; 
 }
 
 #tray menu separator {
-    padding: 0px 5px;
+    padding: 0px 7px;
     transition: all .3s ease; 
 }
 
@@ -162,6 +160,14 @@ tooltip {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+}
+#custom-kanata-layer {
+    padding: 0px 10px;
+    color: @text;
+}
+#custom-kanata-layer.layer-vim-normal {
+    color: @text;
+    font-weight: bold;
 }
 @keyframes blink {
     to {
