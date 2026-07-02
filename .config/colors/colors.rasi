@@ -1,9 +1,10 @@
 * {
-    foreground-color:            #B5BBC7;
-    foreground-color-alt:        #696980;
-    accent-color:                #696980;
-    border-color:                #696980;
-    on:                          #696980;
-    off:                         #404042;
+    bg:                          #161718;
+    foreground-color:            #B7BCB9;
+    foreground-color-alt:        #5e7375;
+    accent-color:                #5e7375;
+    border-color:                #5e7375;
+    on:                          #5e7375;
+    off:                         #303032;
     urgent:                      #f53c3c;
 }
