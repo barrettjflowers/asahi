@@ -1,8 +1,16 @@
 {
   "plugins": {
+    "cmp-buffer": {
+      "rev": "b74fab3656eea9de20a9b8116afa3cfc4ec09657",
+      "src": "https://github.com/hrsh7th/cmp-buffer"
+    },
     "cmp-nvim-lsp": {
       "rev": "cbc7b02bb99fae35cb42f514762b89b5126651ef",
       "src": "https://github.com/hrsh7th/cmp-nvim-lsp"
+    },
+    "cmp-path": {
+      "rev": "c642487086dbd9a93160e1679a1327be111cbc25",
+      "src": "https://github.com/hrsh7th/cmp-path"
     },
     "mason.nvim": {
       "rev": "16ba83bfc8a25f52bb545134f5bee082b195c460",
@@ -31,6 +39,10 @@
     "plenary.nvim": {
       "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
       "src": "https://github.com/nvim-lua/plenary.nvim"
+    },
+    "supermaven-nvim": {
+      "rev": "07d20fce48a5629686aefb0a7cd4b25e33947d50",
+      "src": "https://github.com/supermaven-inc/supermaven-nvim"
     },
     "typst-preview.nvim": {
       "rev": "87db18b8d19c8b0eed399f52e4c527ce5afe4817",

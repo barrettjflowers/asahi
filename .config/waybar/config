@@ -9,7 +9,7 @@
         "margin-right": 12,
         "modules-left": ["custom/kanata-layer", "hyprland/workspaces", "hyprland/window"],
         "hyprland/window": {
-            "format": "→ {class}",
+            "format": "→  {class}",
         },
         "modules-center": ["custom/recording","cpu","memory","custom/weather"],
         "modules-right": ["battery","network","clock"],
@@ -39,13 +39,10 @@
             "tooltip-format": "<tt>{calendar}</tt>",
             "calendar": {
                 "format": {
-                    "today": "<span color='#fAfBfC'><b>{}</b></span>"
+                    "today": ""
                 }
             },
-            "actions": {
-                "on-click-right": "shift_down",
-                "on-click": "shift_up"
-            }
+            "on-click": "kitty vim /home/barrettjflowers/Documents/Vault/barrettjflowers/calendar/calendar.md"
         },
         "network": {
             "format-wifi": "󰖩 {essid}",

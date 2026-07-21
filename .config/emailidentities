@@ -1,0 +1,14 @@
+[General]
+Default Identity=712641348
+
+[Identity #0]
+Default Domain=mac-fedora
+Disable Fcc=false
+Disable Spam=false
+Identity=Barrett Flowers
+Image Location=
+Inline Signature=
+Name=Barrett Flowers
+Override Encryption Defaults=false
+Signature Enabled=false
+uoid=712641348

@@ -1,0 +1,26 @@
+[General]
+ShowCloseButtonOnTabs=false
+ShowFullPath=true
+ShowStatusBar=FullWidth
+Version=202
+ViewPropsTimestamp=2026,6,1,20,35,39.258
+
+[IconsMode]
+IconSize=22
+TextWidthIndex=0
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=32
+
+[MainWindow]
+MenuBar=Disabled
+
+[PlacesPanel]
+IconSize=32
+
+[PreviewSettings]
+Plugins=audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,gsf-office,mobithumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs
+
+[UiSettings]
+ColorScheme=BreezeDark
