@@ -1,0 +1,6 @@
+[Unit]
+Description=Sync Obsidian vault with iCloud (bidirectional)
+
+[Service]
+Type=oneshot
+ExecStart=rclone bisync /home/barrettjflowers/Documents/Obsidian/barrettjflowers icloud:Obsidian/barrettjflowers --exclude .obsidian/** --create-empty-dirs -v

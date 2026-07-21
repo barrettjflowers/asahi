@@ -1,15 +1,36 @@
+/*
 #tabs-tabbar-container,
 #header {
 display: none !important;
 }
+*/
+#browser > div.auto-hide-wrapper.right.show {
+    display: none !important;
+}
+
+::-webkit-scrollbar {
+ width: 0 !important;
+  height: 0 !important;
+  display: none !important;
+}
 
 #urlFieldInput {
-    font-family: JetBrains Mono, monospace !important;
-    font-size: 15px !important;
+    font-family: Iosevka Nerd Font Mono, monospace !important;
+		font-weight: 600 !important;
+    font-size: 16px !important;
 }
 
 #addressfield {
     box-shadow: none !important;
+}
+
+.OmniDropdown,
+.OmniDropdown *,
+.OmniLinkItem,
+.omni-clickable {
+  font-family: Iosevka Nerd Font Mono, monospace !important;
+  font-weight: 600 !important;
+	font-size: 16px !important;
 }
 
 /* Remove 6px gap around window when auto-hide is active */

@@ -1,9 +1,10 @@
 @import "../colors/colors.rasi"
 
 configuration {
-    font:                        "JetBrainsMono Nerd Font Mono Medium 11";
+    font:                        "Iosevka Nerd Font Mono SemiBold 12";
     location:                    1;
     drun-display-format:         "{name}";
+    scroll-method:               1;
 }
 
 * {
@@ -25,25 +26,20 @@ configuration {
 }
 
 window {
-    x-offset:                  13;
+    x-offset:                  12;
     y-offset:                  6;
     padding:                   0;
-    transparency:              "real";
-    background-color:          @bg;
+    background-color:          transparent;
     text-color:                @foreground-color;
-    border:                    0px;
-    border-color:              @off;
-    border-radius:             0;
-    width:                     600px;
+    width:                     550px;
+		border-color:              transparent;
 }
 
 mainbox {
-    spacing:                   0;
-    padding:                   0;
-    background-color:          transparent;
-    border:                    2px;
-		border-radius:             10px;
-    border-color:                @border-color;
+    spacing:                   0px;
+    background-color:          @bg;
+		border:						         2px;
+		border-radius:				     10px;
 }
 
 inputbar {
@@ -130,8 +126,9 @@ button {
 }
 
 scrollbar {
-    handle-color:              @accent-color;
-    handle-width:              4px;
+    handle-color:              transparent;
+    handle-width:              0px;
+    background-color:          transparent;
 }
 
 sidebar {
