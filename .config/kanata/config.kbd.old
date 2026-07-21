@@ -4,6 +4,7 @@
   chords-v2-min-idle 200
   sequence-timeout 300
   log-layer-changes yes
+  danger-enable-cmd yes
 )
 
 (defsrc
@@ -11,15 +12,17 @@
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps a    s    d    f    g    h    j    k    l    ;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lmet lalt           spc            ralt rmet rctl
+  lctl lmet lalt           spc            ralt rmet   rctl
 )
 
 (defalias
   vim-toggle (layer-switch vim-normal)
+  sym-toggle (layer-switch symbol)
 )
 
 (defchordsv2
   (j k) @vim-toggle 90 first-release (vim-normal)
+  (z m) @sym-toggle 90 first-release (symbol)
 )
 
 (deflayer base
@@ -27,7 +30,7 @@
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps a    s    d    f    g    h    j    k    l    ;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lmet lalt           spc            ralt rmet rctl
+  lctl lmet lalt           spc            ralt rmet   rctl
 )
 
 (defvirtualkeys
@@ -37,9 +40,9 @@
 )
 
 (defseq
-  del-word (w)
-  del-back (b)
-  del-line (d)
+  del-word (d w)
+  del-back (d b)
+  del-line (d d)
 )
 
 (deflayermap (vim-normal)
@@ -55,4 +58,16 @@
   i    (layer-switch base)
   u    C-z
   esc  (layer-switch base)
+  caps (layer-switch base)
+)
+
+(deflayermap (symbol)
+  grv   (layer-switch base)
+  esc   (layer-switch base)
+  caps  (layer-switch base)
+  ,     (macro (cmd wl-copy "←") 50 C-v)
+  .     (macro (cmd wl-copy "→") 50 C-v)
+  0     (macro (cmd wl-copy "°") 50 C-v)
+  =     (macro (cmd wl-copy "≠") 50 C-v)
+  -     (macro (cmd wl-copy "—") 50 C-v)
 )

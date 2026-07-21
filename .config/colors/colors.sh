@@ -1,9 +1,9 @@
 #!/bin/bash
 # One source of truth — edit the 5 hex values below, then run ./colors.sh
 
-BACKGROUND="161718"
-TEXT="B7BCB9"
-ACCENT="5e7375"
+BACKGROUND="1E1F1E"
+TEXT="828782"
+ACCENT="3F4843"
 INACTIVE="303032"
 URGENT="f53c3c"
 

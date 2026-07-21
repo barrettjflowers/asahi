@@ -1,3 +1,10 @@
-*/15 * * * * /home/barrettjflowers/Documents/Vaults/barrettjflowers/sync.sh
-* * * * * crontab -l > /home/barrettjflowers/.config/asahi/crontab
-* * * * * cat /etc/default/grub > /home/barrettjflowers/.config/asahi/grub
+# backups crontab to dotfiles
+*/15 * * * * crontab -l > /home/barrettjflowers/.config/asahi/crontab
+#backup grub crontab to dotfiles
+*/15 * * * * cat /etc/default/grub > /home/barrettjflowers/.config/asahi/grub
+
+# ===== obsidian vault ======
+# copy blog to vault
+*/15 * * * * cp /home/barrettjflowers/Dev/site/docs/blog  /home/barrettjflowers/Documents/Vault/barrettjflowers/blog
+#  fetch calendar
+*/1 * * * * /bin/zsh -c '/home/barrettjflowers/Documents/Vault/barrettjflowers/calendar_gen.py'
