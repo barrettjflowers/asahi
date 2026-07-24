@@ -1,2 +1,102 @@
 [Global plugin config]
 manageProfile=false
+
+[SSH Config][igw-demo]
+hostname=igw-demo
+identifier=igw-demo
+importedFromSshConfig=true
+port=22
+profileName=Built-in
+sshkey=
+useSshConfig=true
+username=root
+
+[SSH Config][igw-dev]
+hostname=igw-dev
+identifier=igw-dev
+importedFromSshConfig=true
+port=22
+profileName=Built-in
+sshkey=
+useSshConfig=true
+username=root
+
+[SSH Config][igw-mirror]
+hostname=igw-mirror
+identifier=igw-mirror
+importedFromSshConfig=true
+port=22
+profileName=Built-in
+sshkey=
+useSshConfig=true
+username=ubuntu
+
+[SSH Config][igw-prod]
+hostname=igw-prod
+identifier=igw-prod
+importedFromSshConfig=true
+port=22
+profileName=Built-in
+sshkey=
+useSshConfig=true
+username=root
+
+[SSH Config][igw-qa]
+hostname=igw-qa
+identifier=igw-qa
+importedFromSshConfig=true
+port=22
+profileName=Built-in
+sshkey=
+useSshConfig=true
+username=root
+
+[SSH Config][igw-rabers]
+hostname=igw-rabers
+identifier=igw-rabers
+importedFromSshConfig=true
+port=22
+profileName=
+sshkey=
+useSshConfig=true
+username=root
+
+[SSH Config][igw-rabers-new]
+hostname=igw-rabers-new
+identifier=igw-rabers-new
+importedFromSshConfig=true
+port=
+profileName=Built-in
+sshkey=
+useSshConfig=true
+username=root
+
+[SSH Config][igw-status]
+hostname=igw-status
+identifier=igw-status
+importedFromSshConfig=true
+port=22
+profileName=Built-in
+sshkey=
+useSshConfig=true
+username=root
+
+[SSH Config][indyhost]
+hostname=indyhost
+identifier=indyhost
+importedFromSshConfig=true
+port=
+profileName=Built-in
+sshkey=
+useSshConfig=true
+username=
+
+[SSH Config][oracle]
+hostname=oracle
+identifier=oracle
+importedFromSshConfig=true
+port=22
+profileName=Built-in
+sshkey=
+useSshConfig=true
+username=ubuntu

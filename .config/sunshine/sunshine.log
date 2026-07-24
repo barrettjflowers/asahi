@@ -1,0 +1,381 @@
+[2026-07-23 20:00:46.906]: Info: Sunshine version: 0.0.0-dirty commit: 
+[2026-07-23 20:00:46.906]: Info: Package Publisher: Third Party Publisher
+[2026-07-23 20:00:46.906]: Info: Publisher Website: 
+[2026-07-23 20:00:46.906]: Info: Get support: https://app.lizardbyte.dev/support
+[2026-07-23 20:00:46.906]: Info: config: 'encoder' = software
+[2026-07-23 20:00:46.906]: Info: config: 'min_threads' = 8
+[2026-07-23 20:00:46.906]: Info: config: 'sw_tune' = zerolatency
+[2026-07-23 20:00:46.906]: Info: config: 'sw_preset' = ultrafast
+[2026-07-23 20:00:46.906]: Info: config: 'qp' = 51
+[2026-07-23 20:00:46.906]: Info: config: 'minimum_fps_target' = 60
+[2026-07-23 20:00:46.907]: Info: [wayland] Found display [wayland-1]
+[2026-07-23 20:00:46.907]: Info: [wayland] Found interface: zxdg_output_manager_v1(9) version 3
+[2026-07-23 20:00:46.907]: Info: [wayland] Found interface: zwlr_screencopy_manager_v1(58) version 3
+[2026-07-23 20:00:46.907]: Info: [wayland] Found interface: zwp_linux_dmabuf_v1(67) version 5
+[2026-07-23 20:00:46.907]: Info: [wayland] Found interface: wl_output(68) version 4
+[2026-07-23 20:00:46.907]: Info: [wayland] Resolution: 2560x1664
+[2026-07-23 20:00:46.907]: Info: [wayland] Name: eDP-1
+[2026-07-23 20:00:46.908]: Info: [wayland] Found monitor:    (eDP-1)
+[2026-07-23 20:00:46.908]: Info: [wayland] Offset: 0x0
+[2026-07-23 20:00:46.908]: Info: [wayland] Logical size: 1600x1040
+[2026-07-23 20:00:46.908]: Info: [wlgrab] -------- Start of Wayland monitor list --------
+[2026-07-23 20:00:46.908]: Info: [wlgrab] Monitor 0 is eDP-1:    (eDP-1)
+[2026-07-23 20:00:46.908]: Info: [wlgrab] --------- End of Wayland monitor list ---------
+[2026-07-23 20:00:46.908]: Info: [portalgrab] Loaded portal restore token from disk
+[2026-07-23 20:00:46.910]: Error: [portalgrab] Could not create RemoteDesktop session: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.RemoteDesktop” on object at path /org/freedesktop/portal/desktop
+[2026-07-23 20:00:46.916]: Info: [wayland] Found display [wayland-1]
+[2026-07-23 20:00:46.916]: Info: [wayland] Found interface: zxdg_output_manager_v1(9) version 3
+[2026-07-23 20:00:46.916]: Info: [wayland] Found interface: zwlr_screencopy_manager_v1(58) version 3
+[2026-07-23 20:00:46.916]: Info: [wayland] Found interface: zwp_linux_dmabuf_v1(67) version 5
+[2026-07-23 20:00:46.916]: Info: [wayland] Found interface: wl_output(68) version 4
+[2026-07-23 20:00:46.916]: Info: [wayland] Resolution: 2560x1664
+[2026-07-23 20:00:46.916]: Info: [wayland] Name: eDP-1
+[2026-07-23 20:00:46.916]: Info: [wayland] Found monitor:    (eDP-1)
+[2026-07-23 20:00:46.916]: Info: [wayland] Offset: 0x0
+[2026-07-23 20:00:46.916]: Info: [wayland] Logical size: 1600x1040
+[2026-07-23 20:00:46.917]: Info: [portalgrab] Found stream for display id/name: '' position: 0x0 resolution: 2560x1664
+[2026-07-23 20:00:46.932]: Info: Trying encoder [software]
+[2026-07-23 20:00:46.933]: Info: Screencasting with Wayland's protocol
+[2026-07-23 20:00:46.933]: Info: [wlgrab] Requested frame rate [60fps]
+[2026-07-23 20:00:46.933]: Info: [wayland] Found display [wayland-1]
+[2026-07-23 20:00:46.933]: Info: [wayland] Found interface: zxdg_output_manager_v1(9) version 3
+[2026-07-23 20:00:46.933]: Info: [wayland] Found interface: zwlr_screencopy_manager_v1(58) version 3
+[2026-07-23 20:00:46.933]: Info: [wayland] Found interface: zwp_linux_dmabuf_v1(67) version 5
+[2026-07-23 20:00:46.933]: Info: [wayland] Found interface: wl_output(68) version 4
+[2026-07-23 20:00:46.933]: Info: [wayland] Resolution: 2560x1664
+[2026-07-23 20:00:46.933]: Info: [wayland] Name: eDP-1
+[2026-07-23 20:00:46.933]: Info: [wayland] Found monitor:    (eDP-1)
+[2026-07-23 20:00:46.933]: Info: [wayland] Offset: 0x0
+[2026-07-23 20:00:46.933]: Info: [wayland] Logical size: 1600x1040
+[2026-07-23 20:00:46.933]: Info: [wlgrab] Selected monitor [   (eDP-1)] for streaming
+[2026-07-23 20:00:46.940]: Warning: EGL: context priority set to HIGH but CAP_SYS_NICE capability is missing
+[2026-07-23 20:00:46.941]: Info: Creating encoder [libx264]
+[2026-07-23 20:00:46.941]: Info: Color coding: SDR (Rec. 601)
+[2026-07-23 20:00:46.941]: Info: Color depth: 8-bit
+[2026-07-23 20:00:46.941]: Info: Color range: JPEG
+[2026-07-23 20:00:46.942]: Info: Streaming bitrate is 1000000
+[2026-07-23 20:00:46.943]: Info: [libx264 @ 0xe0d8140] using cpu capabilities: ARMv8 NEON DotProd I8MM
+[2026-07-23 20:00:46.944]: Info: [libx264 @ 0xe0d8140] profile Constrained Baseline, level 4.2, 4:2:0, 8-bit
+[2026-07-23 20:00:46.964]: Warning: [libx264 @ 0xe0d8140] VBV underflow (frame 0, -35028 bits)
+[2026-07-23 20:00:46.965]: Info: [libx264 @ 0xe0d8140] frame I:1     Avg QP:40.00  size:  7191
+[2026-07-23 20:00:46.965]: Info: [libx264 @ 0xe0d8140] mb I  I16..4: 100.0%  0.0%  0.0%
+[2026-07-23 20:00:46.965]: Info: [libx264 @ 0xe0d8140] coded y,uvDC,uvAC intra: 0.0% 0.0% 0.0%
+[2026-07-23 20:00:46.965]: Info: [libx264 @ 0xe0d8140] i16 v,h,dc,p: 88%  0% 12%  0%
+[2026-07-23 20:00:46.965]: Info: [libx264 @ 0xe0d8140] i8c dc,h,v,p: 100%  0%  0%  0%
+[2026-07-23 20:00:46.965]: Info: [libx264 @ 0xe0d8140] kb/s:3451.68
+[2026-07-23 20:00:46.965]: Info: Screencasting with Wayland's protocol
+[2026-07-23 20:00:46.965]: Info: [wlgrab] Requested frame rate [60fps]
+[2026-07-23 20:00:46.965]: Info: [wayland] Found display [wayland-1]
+[2026-07-23 20:00:46.965]: Info: [wayland] Found interface: zxdg_output_manager_v1(9) version 3
+[2026-07-23 20:00:46.965]: Info: [wayland] Found interface: zwlr_screencopy_manager_v1(58) version 3
+[2026-07-23 20:00:46.965]: Info: [wayland] Found interface: zwp_linux_dmabuf_v1(67) version 5
+[2026-07-23 20:00:46.965]: Info: [wayland] Found interface: wl_output(68) version 4
+[2026-07-23 20:00:46.965]: Info: [wayland] Resolution: 2560x1664
+[2026-07-23 20:00:46.965]: Info: [wayland] Name: eDP-1
+[2026-07-23 20:00:46.965]: Info: [wayland] Found monitor:    (eDP-1)
+[2026-07-23 20:00:46.965]: Info: [wayland] Offset: 0x0
+[2026-07-23 20:00:46.965]: Info: [wayland] Logical size: 1600x1040
+[2026-07-23 20:00:46.965]: Info: [wlgrab] Selected monitor [   (eDP-1)] for streaming
+[2026-07-23 20:00:46.971]: Warning: EGL: context priority set to HIGH but CAP_SYS_NICE capability is missing
+[2026-07-23 20:00:46.972]: Info: Creating encoder [libx264]
+[2026-07-23 20:00:46.972]: Info: Color coding: SDR (Rec. 601)
+[2026-07-23 20:00:46.972]: Info: Color depth: 8-bit
+[2026-07-23 20:00:46.972]: Info: Color range: JPEG
+[2026-07-23 20:00:46.972]: Info: Streaming bitrate is 1000000
+[2026-07-23 20:00:46.974]: Info: [libx264 @ 0xe0d8140] using cpu capabilities: ARMv8 NEON DotProd I8MM
+[2026-07-23 20:00:46.974]: Info: [libx264 @ 0xe0d8140] profile High 4:4:4 Predictive, level 4.2, 4:4:4, 8-bit
+[2026-07-23 20:00:46.997]: Warning: [libx264 @ 0xe0d8140] VBV underflow (frame 0, -43172 bits)
+[2026-07-23 20:00:46.997]: Info: [libx264 @ 0xe0d8140] frame I:1     Avg QP:40.00  size:  8209
+[2026-07-23 20:00:46.997]: Info: [libx264 @ 0xe0d8140] mb I  I16..4: 100.0%  0.0%  0.0%
+[2026-07-23 20:00:46.997]: Info: [libx264 @ 0xe0d8140] coded y,u,v intra: 0.0% 0.0% 0.0%
+[2026-07-23 20:00:46.997]: Info: [libx264 @ 0xe0d8140] i16 v,h,dc,p: 88%  0% 12%  0%
+[2026-07-23 20:00:46.997]: Info: [libx264 @ 0xe0d8140] kb/s:3940.32
+[2026-07-23 20:00:46.998]: Info: Screencasting with Wayland's protocol
+[2026-07-23 20:00:46.998]: Info: [wlgrab] Requested frame rate [60fps]
+[2026-07-23 20:00:46.998]: Info: [wayland] Found display [wayland-1]
+[2026-07-23 20:00:46.998]: Info: [wayland] Found interface: zxdg_output_manager_v1(9) version 3
+[2026-07-23 20:00:46.998]: Info: [wayland] Found interface: zwlr_screencopy_manager_v1(58) version 3
+[2026-07-23 20:00:46.998]: Info: [wayland] Found interface: zwp_linux_dmabuf_v1(67) version 5
+[2026-07-23 20:00:46.998]: Info: [wayland] Found interface: wl_output(68) version 4
+[2026-07-23 20:00:46.998]: Info: [wayland] Resolution: 2560x1664
+[2026-07-23 20:00:46.998]: Info: [wayland] Name: eDP-1
+[2026-07-23 20:00:46.998]: Info: [wayland] Found monitor:    (eDP-1)
+[2026-07-23 20:00:46.998]: Info: [wayland] Offset: 0x0
+[2026-07-23 20:00:46.998]: Info: [wayland] Logical size: 1600x1040
+[2026-07-23 20:00:46.998]: Info: [wlgrab] Selected monitor [   (eDP-1)] for streaming
+[2026-07-23 20:00:47.003]: Warning: EGL: context priority set to HIGH but CAP_SYS_NICE capability is missing
+[2026-07-23 20:00:47.004]: Info: Screencasting with Wayland's protocol
+[2026-07-23 20:00:47.004]: Info: [wlgrab] Requested frame rate [60fps]
+[2026-07-23 20:00:47.004]: Info: [wayland] Found display [wayland-1]
+[2026-07-23 20:00:47.004]: Info: [wayland] Found interface: zxdg_output_manager_v1(9) version 3
+[2026-07-23 20:00:47.004]: Info: [wayland] Found interface: zwlr_screencopy_manager_v1(58) version 3
+[2026-07-23 20:00:47.004]: Info: [wayland] Found interface: zwp_linux_dmabuf_v1(67) version 5
+[2026-07-23 20:00:47.004]: Info: [wayland] Found interface: wl_output(68) version 4
+[2026-07-23 20:00:47.004]: Info: [wayland] Resolution: 2560x1664
+[2026-07-23 20:00:47.004]: Info: [wayland] Name: eDP-1
+[2026-07-23 20:00:47.004]: Info: [wayland] Found monitor:    (eDP-1)
+[2026-07-23 20:00:47.004]: Info: [wayland] Offset: 0x0
+[2026-07-23 20:00:47.004]: Info: [wayland] Logical size: 1600x1040
+[2026-07-23 20:00:47.004]: Info: [wlgrab] Selected monitor [   (eDP-1)] for streaming
+[2026-07-23 20:00:47.009]: Warning: EGL: context priority set to HIGH but CAP_SYS_NICE capability is missing
+[2026-07-23 20:00:47.010]: Info: Screencasting with Wayland's protocol
+[2026-07-23 20:00:47.010]: Info: [wlgrab] Requested frame rate [60fps]
+[2026-07-23 20:00:47.010]: Info: [wayland] Found display [wayland-1]
+[2026-07-23 20:00:47.010]: Info: [wayland] Found interface: zxdg_output_manager_v1(9) version 3
+[2026-07-23 20:00:47.010]: Info: [wayland] Found interface: zwlr_screencopy_manager_v1(58) version 3
+[2026-07-23 20:00:47.010]: Info: [wayland] Found interface: zwp_linux_dmabuf_v1(67) version 5
+[2026-07-23 20:00:47.010]: Info: [wayland] Found interface: wl_output(68) version 4
+[2026-07-23 20:00:47.011]: Info: [wayland] Resolution: 2560x1664
+[2026-07-23 20:00:47.011]: Info: [wayland] Name: eDP-1
+[2026-07-23 20:00:47.011]: Info: [wayland] Found monitor:    (eDP-1)
+[2026-07-23 20:00:47.011]: Info: [wayland] Offset: 0x0
+[2026-07-23 20:00:47.011]: Info: [wayland] Logical size: 1600x1040
+[2026-07-23 20:00:47.011]: Info: [wlgrab] Selected monitor [   (eDP-1)] for streaming
+[2026-07-23 20:00:47.015]: Warning: EGL: context priority set to HIGH but CAP_SYS_NICE capability is missing
+[2026-07-23 20:00:47.016]: Info: Screencasting with Wayland's protocol
+[2026-07-23 20:00:47.016]: Info: [wlgrab] Requested frame rate [60fps]
+[2026-07-23 20:00:47.017]: Info: [wayland] Found display [wayland-1]
+[2026-07-23 20:00:47.017]: Info: [wayland] Found interface: zxdg_output_manager_v1(9) version 3
+[2026-07-23 20:00:47.017]: Info: [wayland] Found interface: zwlr_screencopy_manager_v1(58) version 3
+[2026-07-23 20:00:47.017]: Info: [wayland] Found interface: zwp_linux_dmabuf_v1(67) version 5
+[2026-07-23 20:00:47.017]: Info: [wayland] Found interface: wl_output(68) version 4
+[2026-07-23 20:00:47.017]: Info: [wayland] Resolution: 2560x1664
+[2026-07-23 20:00:47.017]: Info: [wayland] Name: eDP-1
+[2026-07-23 20:00:47.017]: Info: [wayland] Found monitor:    (eDP-1)
+[2026-07-23 20:00:47.017]: Info: [wayland] Offset: 0x0
+[2026-07-23 20:00:47.017]: Info: [wayland] Logical size: 1600x1040
+[2026-07-23 20:00:47.017]: Info: [wlgrab] Selected monitor [   (eDP-1)] for streaming
+[2026-07-23 20:00:47.022]: Warning: EGL: context priority set to HIGH but CAP_SYS_NICE capability is missing
+[2026-07-23 20:00:47.023]: Info: Screencasting with Wayland's protocol
+[2026-07-23 20:00:47.023]: Info: [wlgrab] Requested frame rate [60fps]
+[2026-07-23 20:00:47.023]: Info: [wayland] Found display [wayland-1]
+[2026-07-23 20:00:47.023]: Info: [wayland] Found interface: zxdg_output_manager_v1(9) version 3
+[2026-07-23 20:00:47.023]: Info: [wayland] Found interface: zwlr_screencopy_manager_v1(58) version 3
+[2026-07-23 20:00:47.023]: Info: [wayland] Found interface: zwp_linux_dmabuf_v1(67) version 5
+[2026-07-23 20:00:47.023]: Info: [wayland] Found interface: wl_output(68) version 4
+[2026-07-23 20:00:47.023]: Info: [wayland] Resolution: 2560x1664
+[2026-07-23 20:00:47.023]: Info: [wayland] Name: eDP-1
+[2026-07-23 20:00:47.023]: Info: [wayland] Found monitor:    (eDP-1)
+[2026-07-23 20:00:47.023]: Info: [wayland] Offset: 0x0
+[2026-07-23 20:00:47.023]: Info: [wayland] Logical size: 1600x1040
+[2026-07-23 20:00:47.023]: Info: [wlgrab] Selected monitor [   (eDP-1)] for streaming
+[2026-07-23 20:00:47.028]: Warning: EGL: context priority set to HIGH but CAP_SYS_NICE capability is missing
+[2026-07-23 20:00:47.029]: Info: Screencasting with Wayland's protocol
+[2026-07-23 20:00:47.029]: Info: [wlgrab] Requested frame rate [60fps]
+[2026-07-23 20:00:47.029]: Info: [wayland] Found display [wayland-1]
+[2026-07-23 20:00:47.029]: Info: [wayland] Found interface: zxdg_output_manager_v1(9) version 3
+[2026-07-23 20:00:47.029]: Info: [wayland] Found interface: zwlr_screencopy_manager_v1(58) version 3
+[2026-07-23 20:00:47.029]: Info: [wayland] Found interface: zwp_linux_dmabuf_v1(67) version 5
+[2026-07-23 20:00:47.029]: Info: [wayland] Found interface: wl_output(68) version 4
+[2026-07-23 20:00:47.029]: Info: [wayland] Resolution: 2560x1664
+[2026-07-23 20:00:47.029]: Info: [wayland] Name: eDP-1
+[2026-07-23 20:00:47.029]: Info: [wayland] Found monitor:    (eDP-1)
+[2026-07-23 20:00:47.029]: Info: [wayland] Offset: 0x0
+[2026-07-23 20:00:47.029]: Info: [wayland] Logical size: 1600x1040
+[2026-07-23 20:00:47.029]: Info: [wlgrab] Selected monitor [   (eDP-1)] for streaming
+[2026-07-23 20:00:47.034]: Warning: EGL: context priority set to HIGH but CAP_SYS_NICE capability is missing
+[2026-07-23 20:00:47.036]: Info: // Testing for available encoders, this may generate errors. You can safely ignore those errors. //
+[2026-07-23 20:00:47.036]: Info: 
+[2026-07-23 20:00:47.036]: Info: // Ignore any errors mentioned above, they are not relevant. //
+[2026-07-23 20:00:47.036]: Info: 
+[2026-07-23 20:00:47.036]: Info: Found H.264 encoder: libx264 [software]
+[2026-07-23 20:00:47.036]: Info: No main thread features enabled, skipping event loop
+[2026-07-23 20:00:47.037]: Info: Configuration UI available at [https://localhost:47990]
+[2026-07-23 20:00:47.037]: Info: Adding avahi service mac-fedora
+[2026-07-23 20:00:47.805]: Info: Avahi service mac-fedora successfully established.
+[2026-07-23 20:00:53.061]: Info: Display device configuration is disabled. Reverting any active display device configuration.
+[2026-07-23 20:00:53.061]: Info: Trying encoder [software]
+[2026-07-23 20:00:53.061]: Info: Screencasting with Wayland's protocol
+[2026-07-23 20:00:53.061]: Info: [wlgrab] Requested frame rate [60fps]
+[2026-07-23 20:00:53.062]: Info: [wayland] Found display [wayland-1]
+[2026-07-23 20:00:53.062]: Info: [wayland] Found interface: zxdg_output_manager_v1(9) version 3
+[2026-07-23 20:00:53.062]: Info: [wayland] Found interface: zwlr_screencopy_manager_v1(58) version 3
+[2026-07-23 20:00:53.062]: Info: [wayland] Found interface: zwp_linux_dmabuf_v1(67) version 5
+[2026-07-23 20:00:53.062]: Info: [wayland] Found interface: wl_output(68) version 4
+[2026-07-23 20:00:53.063]: Info: [wayland] Resolution: 2560x1664
+[2026-07-23 20:00:53.063]: Info: [wayland] Name: eDP-1
+[2026-07-23 20:00:53.063]: Info: [wayland] Found monitor:    (eDP-1)
+[2026-07-23 20:00:53.063]: Info: [wayland] Offset: 0x0
+[2026-07-23 20:00:53.063]: Info: [wayland] Logical size: 1600x1040
+[2026-07-23 20:00:53.063]: Info: [wlgrab] Selected monitor [   (eDP-1)] for streaming
+[2026-07-23 20:00:53.109]: Warning: EGL: context priority set to HIGH but CAP_SYS_NICE capability is missing
+[2026-07-23 20:00:53.109]: Info: Creating encoder [libx264]
+[2026-07-23 20:00:53.109]: Info: Color coding: SDR (Rec. 601)
+[2026-07-23 20:00:53.109]: Info: Color depth: 8-bit
+[2026-07-23 20:00:53.109]: Info: Color range: JPEG
+[2026-07-23 20:00:53.109]: Info: Streaming bitrate is 1000000
+[2026-07-23 20:00:53.113]: Info: [libx264 @ 0xfffee832ad70] using cpu capabilities: ARMv8 NEON DotProd I8MM
+[2026-07-23 20:00:53.115]: Info: [libx264 @ 0xfffee832ad70] profile Constrained Baseline, level 4.2, 4:2:0, 8-bit
+[2026-07-23 20:00:53.166]: Warning: [libx264 @ 0xfffee832ad70] VBV underflow (frame 0, -35028 bits)
+[2026-07-23 20:00:53.166]: Info: [libx264 @ 0xfffee832ad70] frame I:1     Avg QP:40.00  size:  7191
+[2026-07-23 20:00:53.166]: Info: [libx264 @ 0xfffee832ad70] mb I  I16..4: 100.0%  0.0%  0.0%
+[2026-07-23 20:00:53.167]: Info: [libx264 @ 0xfffee832ad70] coded y,uvDC,uvAC intra: 0.0% 0.0% 0.0%
+[2026-07-23 20:00:53.167]: Info: [libx264 @ 0xfffee832ad70] i16 v,h,dc,p: 88%  0% 12%  0%
+[2026-07-23 20:00:53.167]: Info: [libx264 @ 0xfffee832ad70] i8c dc,h,v,p: 100%  0%  0%  0%
+[2026-07-23 20:00:53.167]: Info: [libx264 @ 0xfffee832ad70] kb/s:3451.68
+[2026-07-23 20:00:53.168]: Info: Screencasting with Wayland's protocol
+[2026-07-23 20:00:53.168]: Info: [wlgrab] Requested frame rate [60fps]
+[2026-07-23 20:00:53.168]: Info: [wayland] Found display [wayland-1]
+[2026-07-23 20:00:53.168]: Info: [wayland] Found interface: zxdg_output_manager_v1(9) version 3
+[2026-07-23 20:00:53.168]: Info: [wayland] Found interface: zwlr_screencopy_manager_v1(58) version 3
+[2026-07-23 20:00:53.168]: Info: [wayland] Found interface: zwp_linux_dmabuf_v1(67) version 5
+[2026-07-23 20:00:53.168]: Info: [wayland] Found interface: wl_output(68) version 4
+[2026-07-23 20:00:53.168]: Info: [wayland] Resolution: 2560x1664
+[2026-07-23 20:00:53.168]: Info: [wayland] Name: eDP-1
+[2026-07-23 20:00:53.168]: Info: [wayland] Found monitor:    (eDP-1)
+[2026-07-23 20:00:53.168]: Info: [wayland] Offset: 0x0
+[2026-07-23 20:00:53.168]: Info: [wayland] Logical size: 1600x1040
+[2026-07-23 20:00:53.169]: Info: [wlgrab] Selected monitor [   (eDP-1)] for streaming
+[2026-07-23 20:00:53.184]: Warning: EGL: context priority set to HIGH but CAP_SYS_NICE capability is missing
+[2026-07-23 20:00:53.186]: Info: Creating encoder [libx264]
+[2026-07-23 20:00:53.186]: Info: Color coding: SDR (Rec. 601)
+[2026-07-23 20:00:53.186]: Info: Color depth: 8-bit
+[2026-07-23 20:00:53.186]: Info: Color range: JPEG
+[2026-07-23 20:00:53.186]: Info: Streaming bitrate is 1000000
+[2026-07-23 20:00:53.191]: Info: [libx264 @ 0xfffee832ad70] using cpu capabilities: ARMv8 NEON DotProd I8MM
+[2026-07-23 20:00:53.192]: Info: [libx264 @ 0xfffee832ad70] profile High 4:4:4 Predictive, level 4.2, 4:4:4, 8-bit
+[2026-07-23 20:00:53.247]: Warning: [libx264 @ 0xfffee832ad70] VBV underflow (frame 0, -43204 bits)
+[2026-07-23 20:00:53.247]: Info: [libx264 @ 0xfffee832ad70] frame I:1     Avg QP:40.00  size:  8213
+[2026-07-23 20:00:53.247]: Info: [libx264 @ 0xfffee832ad70] mb I  I16..4: 100.0%  0.0%  0.0%
+[2026-07-23 20:00:53.247]: Info: [libx264 @ 0xfffee832ad70] coded y,u,v intra: 0.0% 0.0% 0.0%
+[2026-07-23 20:00:53.247]: Info: [libx264 @ 0xfffee832ad70] i16 v,h,dc,p: 88%  0% 12%  0%
+[2026-07-23 20:00:53.247]: Info: [libx264 @ 0xfffee832ad70] kb/s:3942.24
+[2026-07-23 20:00:53.249]: Info: Screencasting with Wayland's protocol
+[2026-07-23 20:00:53.249]: Info: [wlgrab] Requested frame rate [60fps]
+[2026-07-23 20:00:53.249]: Info: [wayland] Found display [wayland-1]
+[2026-07-23 20:00:53.250]: Info: [wayland] Found interface: zxdg_output_manager_v1(9) version 3
+[2026-07-23 20:00:53.250]: Info: [wayland] Found interface: zwlr_screencopy_manager_v1(58) version 3
+[2026-07-23 20:00:53.250]: Info: [wayland] Found interface: zwp_linux_dmabuf_v1(67) version 5
+[2026-07-23 20:00:53.250]: Info: [wayland] Found interface: wl_output(68) version 4
+[2026-07-23 20:00:53.250]: Info: [wayland] Resolution: 2560x1664
+[2026-07-23 20:00:53.250]: Info: [wayland] Name: eDP-1
+[2026-07-23 20:00:53.250]: Info: [wayland] Found monitor:    (eDP-1)
+[2026-07-23 20:00:53.250]: Info: [wayland] Offset: 0x0
+[2026-07-23 20:00:53.250]: Info: [wayland] Logical size: 1600x1040
+[2026-07-23 20:00:53.250]: Info: [wlgrab] Selected monitor [   (eDP-1)] for streaming
+[2026-07-23 20:00:53.260]: Warning: EGL: context priority set to HIGH but CAP_SYS_NICE capability is missing
+[2026-07-23 20:00:53.263]: Info: Screencasting with Wayland's protocol
+[2026-07-23 20:00:53.263]: Info: [wlgrab] Requested frame rate [60fps]
+[2026-07-23 20:00:53.263]: Info: [wayland] Found display [wayland-1]
+[2026-07-23 20:00:53.263]: Info: [wayland] Found interface: zxdg_output_manager_v1(9) version 3
+[2026-07-23 20:00:53.263]: Info: [wayland] Found interface: zwlr_screencopy_manager_v1(58) version 3
+[2026-07-23 20:00:53.263]: Info: [wayland] Found interface: zwp_linux_dmabuf_v1(67) version 5
+[2026-07-23 20:00:53.263]: Info: [wayland] Found interface: wl_output(68) version 4
+[2026-07-23 20:00:53.263]: Info: [wayland] Resolution: 2560x1664
+[2026-07-23 20:00:53.263]: Info: [wayland] Name: eDP-1
+[2026-07-23 20:00:53.263]: Info: [wayland] Found monitor:    (eDP-1)
+[2026-07-23 20:00:53.263]: Info: [wayland] Offset: 0x0
+[2026-07-23 20:00:53.263]: Info: [wayland] Logical size: 1600x1040
+[2026-07-23 20:00:53.263]: Info: [wlgrab] Selected monitor [   (eDP-1)] for streaming
+[2026-07-23 20:00:53.273]: Warning: EGL: context priority set to HIGH but CAP_SYS_NICE capability is missing
+[2026-07-23 20:00:53.275]: Info: Screencasting with Wayland's protocol
+[2026-07-23 20:00:53.275]: Info: [wlgrab] Requested frame rate [60fps]
+[2026-07-23 20:00:53.275]: Info: [wayland] Found display [wayland-1]
+[2026-07-23 20:00:53.275]: Info: [wayland] Found interface: zxdg_output_manager_v1(9) version 3
+[2026-07-23 20:00:53.275]: Info: [wayland] Found interface: zwlr_screencopy_manager_v1(58) version 3
+[2026-07-23 20:00:53.275]: Info: [wayland] Found interface: zwp_linux_dmabuf_v1(67) version 5
+[2026-07-23 20:00:53.275]: Info: [wayland] Found interface: wl_output(68) version 4
+[2026-07-23 20:00:53.276]: Info: [wayland] Resolution: 2560x1664
+[2026-07-23 20:00:53.276]: Info: [wayland] Name: eDP-1
+[2026-07-23 20:00:53.276]: Info: [wayland] Found monitor:    (eDP-1)
+[2026-07-23 20:00:53.276]: Info: [wayland] Offset: 0x0
+[2026-07-23 20:00:53.276]: Info: [wayland] Logical size: 1600x1040
+[2026-07-23 20:00:53.276]: Info: [wlgrab] Selected monitor [   (eDP-1)] for streaming
+[2026-07-23 20:00:53.285]: Warning: EGL: context priority set to HIGH but CAP_SYS_NICE capability is missing
+[2026-07-23 20:00:53.286]: Info: Screencasting with Wayland's protocol
+[2026-07-23 20:00:53.286]: Info: [wlgrab] Requested frame rate [60fps]
+[2026-07-23 20:00:53.286]: Info: [wayland] Found display [wayland-1]
+[2026-07-23 20:00:53.286]: Info: [wayland] Found interface: zxdg_output_manager_v1(9) version 3
+[2026-07-23 20:00:53.286]: Info: [wayland] Found interface: zwlr_screencopy_manager_v1(58) version 3
+[2026-07-23 20:00:53.287]: Info: [wayland] Found interface: zwp_linux_dmabuf_v1(67) version 5
+[2026-07-23 20:00:53.287]: Info: [wayland] Found interface: wl_output(68) version 4
+[2026-07-23 20:00:53.287]: Info: [wayland] Resolution: 2560x1664
+[2026-07-23 20:00:53.287]: Info: [wayland] Name: eDP-1
+[2026-07-23 20:00:53.287]: Info: [wayland] Found monitor:    (eDP-1)
+[2026-07-23 20:00:53.287]: Info: [wayland] Offset: 0x0
+[2026-07-23 20:00:53.287]: Info: [wayland] Logical size: 1600x1040
+[2026-07-23 20:00:53.287]: Info: [wlgrab] Selected monitor [   (eDP-1)] for streaming
+[2026-07-23 20:00:53.294]: Warning: EGL: context priority set to HIGH but CAP_SYS_NICE capability is missing
+[2026-07-23 20:00:53.296]: Info: Screencasting with Wayland's protocol
+[2026-07-23 20:00:53.296]: Info: [wlgrab] Requested frame rate [60fps]
+[2026-07-23 20:00:53.296]: Info: [wayland] Found display [wayland-1]
+[2026-07-23 20:00:53.296]: Info: [wayland] Found interface: zxdg_output_manager_v1(9) version 3
+[2026-07-23 20:00:53.296]: Info: [wayland] Found interface: zwlr_screencopy_manager_v1(58) version 3
+[2026-07-23 20:00:53.296]: Info: [wayland] Found interface: zwp_linux_dmabuf_v1(67) version 5
+[2026-07-23 20:00:53.296]: Info: [wayland] Found interface: wl_output(68) version 4
+[2026-07-23 20:00:53.296]: Info: [wayland] Resolution: 2560x1664
+[2026-07-23 20:00:53.296]: Info: [wayland] Name: eDP-1
+[2026-07-23 20:00:53.296]: Info: [wayland] Found monitor:    (eDP-1)
+[2026-07-23 20:00:53.296]: Info: [wayland] Offset: 0x0
+[2026-07-23 20:00:53.296]: Info: [wayland] Logical size: 1600x1040
+[2026-07-23 20:00:53.296]: Info: [wlgrab] Selected monitor [   (eDP-1)] for streaming
+[2026-07-23 20:00:53.303]: Warning: EGL: context priority set to HIGH but CAP_SYS_NICE capability is missing
+[2026-07-23 20:00:53.304]: Info: Screencasting with Wayland's protocol
+[2026-07-23 20:00:53.305]: Info: [wlgrab] Requested frame rate [60fps]
+[2026-07-23 20:00:53.305]: Info: [wayland] Found display [wayland-1]
+[2026-07-23 20:00:53.305]: Info: [wayland] Found interface: zxdg_output_manager_v1(9) version 3
+[2026-07-23 20:00:53.305]: Info: [wayland] Found interface: zwlr_screencopy_manager_v1(58) version 3
+[2026-07-23 20:00:53.305]: Info: [wayland] Found interface: zwp_linux_dmabuf_v1(67) version 5
+[2026-07-23 20:00:53.305]: Info: [wayland] Found interface: wl_output(68) version 4
+[2026-07-23 20:00:53.305]: Info: [wayland] Resolution: 2560x1664
+[2026-07-23 20:00:53.305]: Info: [wayland] Name: eDP-1
+[2026-07-23 20:00:53.305]: Info: [wayland] Found monitor:    (eDP-1)
+[2026-07-23 20:00:53.305]: Info: [wayland] Offset: 0x0
+[2026-07-23 20:00:53.305]: Info: [wayland] Logical size: 1600x1040
+[2026-07-23 20:00:53.305]: Info: [wlgrab] Selected monitor [   (eDP-1)] for streaming
+[2026-07-23 20:00:53.311]: Warning: EGL: context priority set to HIGH but CAP_SYS_NICE capability is missing
+[2026-07-23 20:00:53.313]: Info: // Testing for available encoders, this may generate errors. You can safely ignore those errors. //
+[2026-07-23 20:00:53.313]: Info: 
+[2026-07-23 20:00:53.313]: Info: // Ignore any errors mentioned above, they are not relevant. //
+[2026-07-23 20:00:53.313]: Info: 
+[2026-07-23 20:00:53.313]: Info: Found H.264 encoder: libx264 [software]
+[2026-07-23 20:00:53.313]: Info: Executing [Desktop]
+[2026-07-23 20:00:53.416]: Info: New streaming session started [active sessions: 1]
+[2026-07-23 20:00:53.459]: Info: CLIENT CONNECTED
+[2026-07-23 20:00:53.460]: Info: [wayland] Found display [wayland-1]
+[2026-07-23 20:00:53.460]: Info: [wayland] Found interface: zxdg_output_manager_v1(9) version 3
+[2026-07-23 20:00:53.460]: Info: [wayland] Found interface: zwlr_screencopy_manager_v1(58) version 3
+[2026-07-23 20:00:53.460]: Info: [wayland] Found interface: zwp_linux_dmabuf_v1(67) version 5
+[2026-07-23 20:00:53.460]: Info: [wayland] Found interface: wl_output(68) version 4
+[2026-07-23 20:00:53.461]: Info: [wayland] Resolution: 2560x1664
+[2026-07-23 20:00:53.461]: Info: [wayland] Name: eDP-1
+[2026-07-23 20:00:53.461]: Info: [wayland] Found monitor:    (eDP-1)
+[2026-07-23 20:00:53.461]: Info: [wayland] Offset: 0x0
+[2026-07-23 20:00:53.461]: Info: [wayland] Logical size: 1600x1040
+[2026-07-23 20:00:53.461]: Info: [wlgrab] -------- Start of Wayland monitor list --------
+[2026-07-23 20:00:53.461]: Info: [wlgrab] Monitor 0 is eDP-1:    (eDP-1)
+[2026-07-23 20:00:53.461]: Info: [wlgrab] --------- End of Wayland monitor list ---------
+[2026-07-23 20:00:53.461]: Info: Screencasting with Wayland's protocol
+[2026-07-23 20:00:53.461]: Info: [wlgrab] Requested frame rate [60fps]
+[2026-07-23 20:00:53.461]: Info: [wayland] Found display [wayland-1]
+[2026-07-23 20:00:53.461]: Info: [wayland] Found interface: zxdg_output_manager_v1(9) version 3
+[2026-07-23 20:00:53.461]: Info: [wayland] Found interface: zwlr_screencopy_manager_v1(58) version 3
+[2026-07-23 20:00:53.461]: Info: [wayland] Found interface: zwp_linux_dmabuf_v1(67) version 5
+[2026-07-23 20:00:53.461]: Info: [wayland] Found interface: wl_output(68) version 4
+[2026-07-23 20:00:53.461]: Info: [wayland] Resolution: 2560x1664
+[2026-07-23 20:00:53.461]: Info: [wayland] Name: eDP-1
+[2026-07-23 20:00:53.461]: Info: [wayland] Found monitor:    (eDP-1)
+[2026-07-23 20:00:53.461]: Info: [wayland] Offset: 0x0
+[2026-07-23 20:00:53.461]: Info: [wayland] Logical size: 1600x1040
+[2026-07-23 20:00:53.461]: Info: [wlgrab] Selected monitor [   (eDP-1)] for streaming
+[2026-07-23 20:00:53.480]: Warning: EGL: context priority set to HIGH but CAP_SYS_NICE capability is missing
+[2026-07-23 20:00:53.481]: Info: Creating encoder [libx264]
+[2026-07-23 20:00:53.481]: Info: Color coding: SDR (Rec. 601)
+[2026-07-23 20:00:53.481]: Info: Color depth: 8-bit
+[2026-07-23 20:00:53.481]: Info: Color range: MPEG
+[2026-07-23 20:00:53.481]: Info: Streaming bitrate is 70988000
+[2026-07-23 20:00:53.485]: Info: [libx264 @ 0xfffeb8003330] using cpu capabilities: ARMv8 NEON DotProd I8MM
+[2026-07-23 20:00:53.486]: Info: [libx264 @ 0xfffeb8003330] profile High 4:4:4 Predictive, level 5.2, 4:4:4, 8-bit
+[2026-07-23 20:00:53.490]: Info: Minimum FPS target set to ~60fps (16.6667ms)
+[2026-07-23 20:00:53.920]: Info: Setting default sink to: [sink-sunshine-stereo]
+[2026-07-23 20:00:53.920]: Info: Found default monitor by name: sink-sunshine-stereo.monitor
+[2026-07-23 20:00:53.990]: Info: Opus initialized: 48 kHz, 2 channels, 512 kbps (total), LOWDELAY
+[2026-07-23 20:21:48.479]: Info: CLIENT DISCONNECTED
+[2026-07-23 20:21:48.479]: Info: Setting default sink to: [audio_effect.j413-convolver]
+[2026-07-23 20:21:48.489]: Info: [libx264 @ 0xfffeb8003330] frame I:4     Avg QP:27.67  size:140065
+[2026-07-23 20:21:48.489]: Info: [libx264 @ 0xfffeb8003330] frame P:67077 Avg QP: 1.33  size: 35460
+[2026-07-23 20:21:48.489]: Info: [libx264 @ 0xfffeb8003330] mb I  I16..4: 100.0%  0.0%  0.0%
+[2026-07-23 20:21:48.489]: Info: [libx264 @ 0xfffeb8003330] mb P  I16..4:  0.5%  0.0%  0.0%  P16..4: 15.2%  0.0%  0.0%  0.0%  0.0%    skip:84.3%
+[2026-07-23 20:21:48.489]: Info: [libx264 @ 0xfffeb8003330] coded y,u,v intra: 25.5% 9.7% 10.3% inter: 4.5% 2.2% 2.2%
+[2026-07-23 20:21:48.489]: Info: [libx264 @ 0xfffeb8003330] i16 v,h,dc,p: 64% 25%  6%  6%
+[2026-07-23 20:21:48.489]: Info: [libx264 @ 0xfffeb8003330] kb/s:17023.57

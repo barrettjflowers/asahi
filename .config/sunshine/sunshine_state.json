@@ -1,0 +1,16 @@
+{
+    "username": "sunshine",
+    "salt": "OlFOfaLoP=U-16bc",
+    "password": "FD275B6DE45ABD90C7A7A86BF8E1BE7BA65019465E33DA19A159655162C5B577",
+    "root": {
+        "uniqueid": "0DBEDC8C-1395-9325-7011-DD070992E4ED",
+        "named_devices": [
+            {
+                "name": "mac-fedora",
+                "cert": "-----BEGIN CERTIFICATE-----\nMIICvzCCAaegAwIBAgIBADANBgkqhkiG9w0BAQsFADAjMSEwHwYDVQQDDBhOVklE\nSUEgR2FtZVN0cmVhbSBDbGllbnQwHhcNMjYwNzIwMjEwMjE1WhcNNDYwNzE1MjEw\nMjE1WjAjMSEwHwYDVQQDDBhOVklESUEgR2FtZVN0cmVhbSBDbGllbnQwggEiMA0G\nCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCYqYsWKJ3g9KCalcr4boX9OARhfnnW\nsQMDozmx0slNTV8wHV4FedOfYoNYmMTAiHYryLk86S5u\/5gMwIIXdm2ZeFVjHo2z\nDJUNhMilDlxWuY\/edmSSOvuXdQDJ2mFoRl1wwBn8Ts+K7P71nTNkzE\/gu6Ai+Ug2\nnJOWwyoP5zeaQ2lueV2UPV9qsu6SJbE8BdDsgtVojjE64BmKqHUoXTjep1\/awkSk\nBND3cwi+mnju8MLOmE+KgkIsNquVSa41tATfz9VV6\/iVvbl4bdcQj0w7n1hFkRgc\n+C0KWCrUeMiSaGAxayKGedhQDb93\/XibwbJ+nn+yBE1VfJvQ6MSsa0vLAgMBAAEw\nDQYJKoZIhvcNAQELBQADggEBAFcRGauR+ecNplTMP8wglxJ7nBaUi\/Oa+ugBFSzo\nezRUvs6B4P3i\/3dvDDGhboQHN5TDdfVL3pbo3raQEHZsTEaCU1k43PnzMFrKPDJQ\nQAt2jhwNHc7lYFMx6XmgYOfgjrDoOSEyWF3zYrgB1XjdFgkLmQ8bm3gKlNnA\/hqG\nkApUsMrnLrdfzJjp5MqxOY0INr5LQfX2hQOyIhgbIH1Ucsd9L6EVI+o4e0RMSK2U\nB28jdRd1siu4WPXdLYgKlZzQZJE\/\/NrRQJyJfIrnYso9MuwnsnqhTd97Af3T3+5e\nZJx0zt7LEObAPHCwfAUc9rY9IGX1d58aN4NCkkSusoJBATw=\n-----END CERTIFICATE-----\n",
+                "uuid": "68BA32A8-A40F-0D27-5497-7396B0E6BCC0",
+                "enabled": "true"
+            }
+        ]
+    }
+}
