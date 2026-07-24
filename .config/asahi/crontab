@@ -1,3 +1,13 @@
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name command to be executed
+
+# ====== dotfile backups ======
 # backups crontab to dotfiles
 */15 * * * * crontab -l > /home/barrettjflowers/.config/asahi/crontab
 #backup grub crontab to dotfiles
@@ -7,4 +17,4 @@
 # copy blog to vault
 */15 * * * * cp /home/barrettjflowers/Dev/site/docs/blog  /home/barrettjflowers/Documents/Vault/barrettjflowers/blog
 #  fetch calendar
-*/1 * * * * /bin/zsh -c '/home/barrettjflowers/Documents/Vault/barrettjflowers/calendar_gen.py'
+*/10 * * * * /bin/zsh -c '/home/barrettjflowers/Documents/Vault/barrettjflowers/calendar_gen.py'

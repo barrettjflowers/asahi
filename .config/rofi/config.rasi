@@ -38,7 +38,7 @@ window {
 mainbox {
     spacing:                   0px;
     background-color:          @bg;
-		border:						         2px;
+		border:						         3px;
 		border-radius:				     10px;
 }
 
