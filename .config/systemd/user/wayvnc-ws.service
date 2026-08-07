@@ -1,0 +1,15 @@
+[Unit]
+Description=wayvnc WebSocket VNC server (browser client)
+After=graphical-session.target
+
+[Service]
+Type=simple
+Environment=XDG_RUNTIME_DIR=%t
+Environment=WAYLAND_DISPLAY=wayland-1
+Environment=DISPLAY=:0
+Environment=LD_LIBRARY_PATH=%h/.local/lib64
+ExecStart=%h/.local/bin/wayvnc -w -S %t/wayvncctl-ws -o eDP-1 0.0.0.0 5901
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

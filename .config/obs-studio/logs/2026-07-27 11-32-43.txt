@@ -1,0 +1,214 @@
+11:32:43.449: Platform: Wayland
+11:32:43.449: Physical Cores: 8, Logical Cores: 8
+11:32:43.449: Physical Memory: 23546MB Total, 7575MB Free
+11:32:43.449: Kernel Version: Linux 6.19.14-400.asahi.fc44.aarch64+16k
+11:32:43.449: Distribution: "Fedora Linux Asahi Remix" 44
+11:32:43.449: Desktop Environment: Hyprland (Hyprland)
+11:32:43.449: Session Type: wayland
+11:32:43.450: Current Date/Time: 2026-07-27, 11:32:43 AM
+11:32:43.450: Browser Hardware Acceleration: true
+11:32:43.450: Qt Version: 6.11.1 (runtime), 6.11.1 (compiled)
+11:32:43.450: Portable mode: false
+11:32:43.472: OBS 32.1.1 (linux)
+11:32:43.472: ---------------------------------
+11:32:43.472: ---------------------------------
+11:32:43.473: audio settings reset:
+11:32:43.473: 	samples per sec: 48000
+11:32:43.473: 	speakers:        1
+11:32:43.473: 	max buffering:   960 milliseconds
+11:32:43.473: 	buffering type:  dynamically increasing
+11:32:43.475: ---------------------------------
+11:32:43.475: Initializing OpenGL...
+11:32:43.475: Using EGL/Wayland
+11:32:43.505: Initialized EGL 1.5
+11:32:43.516: Loading up OpenGL on adapter Mesa Apple M2 (G14G B0)
+11:32:43.516: OpenGL loaded successfully, version 4.6 (Core Profile) Mesa 26.1.4, shading language 4.60
+11:32:43.535: ---------------------------------
+11:32:43.535: video settings reset:
+11:32:43.535: 	base resolution:   1108x720
+11:32:43.535: 	output resolution: 1108x720
+11:32:43.535: 	downscale filter:  Bicubic
+11:32:43.535: 	fps:               24000/1001
+11:32:43.535: 	format:            NV12
+11:32:43.535: 	YUV mode:          Rec. 709/Partial
+11:32:43.535: NV12 texture support enabled
+11:32:43.535: P010 texture support not available
+11:32:43.536: Audio monitoring device:
+11:32:43.536: 	name: Default
+11:32:43.536: 	id: default
+11:32:43.537: ---------------------------------
+11:32:43.539: Failed to load 'en-US' text for module: 'decklink-captions.so'
+11:32:43.542: Failed to load 'en-US' text for module: 'decklink-output-ui.so'
+11:32:43.544: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+11:32:43.544: Failed to initialize module 'decklink.so'
+11:32:43.547: [distroav] obs_module_load: you can haz DistroAV (Version 6.2.1)
+11:32:43.549: [distroav] obs_module_load: NDI library detected
+11:32:43.549: [distroav] obs_module_load: NDI library initialized ('NDI SDK LINUX 13:10:53 Apr 13 2026 6.3.2.0')
+11:32:43.549: [distroav] NDI Library Version detected: 6.3.2.0
+11:32:43.549: [distroav] obs_module_load: NDI library version detected (NDI SDK LINUX 13:10:53 Apr 13 2026 6.3.2.0) is compatible
+11:32:43.549: [distroav] register_plugin_features: NDI plugin features registered
+11:32:43.551: [distroav] plugin loaded (full NDI features) (version 6.2.1)
+11:32:43.633: [pipewire] Available capture sources:
+11:32:43.633: [pipewire]     - Monitor source
+11:32:43.633: [pipewire]     - Window source
+11:32:43.642: v4l2loopback not installed, virtual camera not registered
+11:32:43.656: [obs-browser]: Alloy Runtime preferences not found. No migration necessary.
+11:32:43.656: [obs-browser]: Version 2.26.8
+11:32:43.656: [obs-browser]: CEF Version 146.0.7680.177 (runtime), 146.0.11+g3a0fcf1+chromium-146.0.7680.177 (compiled)
+11:32:43.693: VAAPI: Failed to initialize display in vaapi_device_h264_supported
+11:32:43.693: FFmpeg VAAPI H264 encoding not supported
+11:32:43.693: VAAPI: Failed to initialize display in vaapi_device_av1_supported
+11:32:43.693: FFmpeg VAAPI AV1 encoding not supported
+11:32:43.693: VAAPI: Failed to initialize display in vaapi_device_hevc_supported
+11:32:43.693: FFmpeg VAAPI HEVC encoding not supported
+11:32:43.703: [obs-pwvideo] plugin loaded successfully (version 0.2.4)
+11:32:43.724: [obs-websocket] [obs_module_load] you can haz websockets (Version: 5.7.3 | RPC Version: 1)
+11:32:43.724: [obs-websocket] [obs_module_load] Qt version (compile-time): 6.11.1 | Qt version (run-time): 6.11.1
+11:32:43.724: [obs-websocket] [obs_module_load] Linked ASIO Version: 103002
+11:32:43.726: [obs-websocket] [obs_module_load] Module loaded.
+11:32:43.738: [vlc-video]: VLC 3.0.23 Vetinari found, VLC video source enabled
+11:32:43.738: ---------------------------------
+11:32:43.738:   Loaded Modules:
+11:32:43.738:     vlc-video.so
+11:32:43.738:     text-freetype2.so
+11:32:43.738:     rtmp-services.so
+11:32:43.738:     obs-x264.so
+11:32:43.738:     obs-websocket.so
+11:32:43.738:     obs-webrtc.so
+11:32:43.738:     obs-webkitgtk.so
+11:32:43.738:     obs-vst.so
+11:32:43.738:     obs-transitions.so
+11:32:43.738:     obs-pwvideo.so
+11:32:43.738:     obs-outputs.so
+11:32:43.738:     obs-libfdk.so
+11:32:43.738:     obs-filters.so
+11:32:43.738:     obs-ffmpeg.so
+11:32:43.738:     obs-browser.so
+11:32:43.738:     linux-v4l2.so
+11:32:43.738:     linux-pulseaudio.so
+11:32:43.738:     linux-pipewire.so
+11:32:43.738:     linux-jack.so
+11:32:43.738:     linux-capture.so
+11:32:43.738:     linux-alsa.so
+11:32:43.738:     image-source.so
+11:32:43.738:     frontend-tools.so
+11:32:43.738:     distroav.so
+11:32:43.738:     decklink-output-ui.so
+11:32:43.738:     decklink-captions.so
+11:32:43.738: ---------------------------------
+11:32:43.738: ---------------------------------
+11:32:43.738: Available Encoders:
+11:32:43.738:   Video Encoders:
+11:32:43.738: 	- ffmpeg_openh264 (OpenH264)
+11:32:43.738: 	- ffmpeg_svt_av1 (SVT-AV1)
+11:32:43.738: 	- ffmpeg_aom_av1 (AOM AV1)
+11:32:43.738: 	- obs_x264 (x264)
+11:32:43.738:   Audio Encoders:
+11:32:43.738: 	- ffmpeg_aac (FFmpeg AAC)
+11:32:43.738: 	- ffmpeg_opus (FFmpeg Opus)
+11:32:43.738: 	- ffmpeg_pcm_s16le (FFmpeg PCM (16-bit))
+11:32:43.738: 	- ffmpeg_pcm_s24le (FFmpeg PCM (24-bit))
+11:32:43.738: 	- ffmpeg_pcm_f32le (FFmpeg PCM (32-bit float))
+11:32:43.738: 	- ffmpeg_alac (FFmpeg ALAC (24-bit))
+11:32:43.738: 	- ffmpeg_flac (FFmpeg FLAC (16-bit))
+11:32:43.738: 	- libfdk_aac (libfdk AAC)
+11:32:43.738: ==== Startup complete ===============================================
+11:32:43.793: Failed to register with host portal QDBusError("org.freedesktop.portal.Error.Failed", "Could not register app ID: Connection already associated with an application ID")
+11:32:43.793: All scene data cleared
+11:32:43.793: ------------------------------------------------
+11:32:43.803: Device for 'Audio Output Capture' source Desktop Audio is also used for audio monitoring.
+11:32:43.803: Deduplication logic is being applied to all monitored sources.
+11:32:43.803: pulse-input: Server name: 'PulseAudio (on PipeWire 1.6.8) 15.0.0'
+11:32:43.803: pulse-input: Audio format: float32le, 48000 Hz, 2 channels
+11:32:43.803: pulse-input: Started recording from 'audio_effect.j413-convolver.monitor' (default)
+11:32:43.803: [Loaded global audio device]: 'Desktop Audio'
+11:32:43.804: pulse-input: Server name: 'PulseAudio (on PipeWire 1.6.8) 15.0.0'
+11:32:43.804: pulse-input: Audio format: float32le, 48000 Hz, 1 channels
+11:32:43.804: pulse-input: Started recording from 'effect_output.j413-mic' (default)
+11:32:43.804: [Loaded global audio device]: 'Mic/Aux'
+11:32:43.804: PipeWire initialized
+11:32:43.804: v4l2-input: Start capture from /dev/video0
+11:32:43.805: v4l2-input: Input: 0
+11:32:43.805: v4l2-input: Resolution: 1280x720
+11:32:43.805: v4l2-input: Pixelformat: BGR3
+11:32:43.805: v4l2-input: Linesize: 3840 Bytes
+11:32:43.805: v4l2-input: Framerate: 30.00 fps
+11:32:43.805: v4l2-input: /dev/video0: select timeout set to 166666 (5x frame periods)
+11:32:43.806: Switched to scene 'webcam'
+11:32:43.806: ------------------------------------------------
+11:32:43.806: Loaded scenes:
+11:32:43.806: - scene 'full':
+11:32:43.806:     - source: 'Screen Capture (PipeWire)' (pipewire-screen-capture-source)
+11:32:43.806: - scene 'webcam':
+11:32:43.806:     - source: 'Video Capture Device (V4L2)' (v4l2_input)
+11:32:43.806:         - filter: 'Color Correction' (color_filter_v2)
+11:32:43.806: ------------------------------------------------
+11:32:43.842: Device for 'Audio Output Capture' source Desktop Audio is also used for audio monitoring.
+11:32:43.842: Deduplication logic is being applied to all monitored sources.
+11:32:43.849: [pipewire] Screencast session created
+11:32:44.390: adding 21 milliseconds of audio buffering, total audio buffering is now 21 milliseconds (source: Desktop Audio)
+11:32:44.390: 
+11:32:45.249: [pipewire] Asking for monitor and window
+11:32:45.257: [pipewire] source selected, setting up screencast
+11:32:45.275: [pipewire] Server version: 1.6.8
+11:32:45.275: [pipewire] Library version: 1.6.8
+11:32:45.275: [pipewire] Header version: 1.6.4
+11:32:45.276: [pipewire] Created stream 0xaaabcd2e2450
+11:32:45.276: [pipewire] Stream 0xaaabcd2e2450 state: "connecting" (error: none)
+11:32:45.276: [pipewire] Playing stream 0xaaabcd2e2450
+11:32:45.288: [pipewire] Stream 0xaaabcd2e2450 state: "paused" (error: none)
+11:32:45.309: [pipewire] Negotiated format:
+11:32:45.310: [pipewire]     Format: 12 (Spa:Enum:VideoFormat:BGRA)
+11:32:45.310: [pipewire]     Modifier: 0x0
+11:32:45.310: [pipewire]     Size: 2560x1664
+11:32:45.310: [pipewire]     Framerate: 0/1
+11:32:45.313: [pipewire] Negotiated format:
+11:32:45.313: [pipewire]     Format: 12 (Spa:Enum:VideoFormat:BGRA)
+11:32:45.313: [pipewire]     Modifier: 0xc00000000000002
+11:32:45.313: [pipewire]     Size: 2560x1664
+11:32:45.313: [pipewire]     Framerate: 0/1
+11:32:45.321: [pipewire] Stream 0xaaabcd2e2450 state: "streaming" (error: none)
+11:32:49.639: ---------------------------------
+11:32:49.639: [H.264 encoder: 'advanced_video_stream'] settings:
+11:32:49.639: 	encoder:      OpenH264
+11:32:49.639: 	rc_mode:      quality
+11:32:49.639: 	bitrate:      2000
+11:32:49.639: 	keyint_sec:   2
+11:32:49.639: 	profile:      constrained_baseline
+11:32:49.639: 	width:        1108
+11:32:49.639: 	height:       720
+11:32:49.639: 	ffmpeg opts:  
+11:32:49.639: 
+11:32:49.641: libfdk_aac encoder created
+11:32:49.641: libfdk_aac bitrate: 160, channels: 1
+11:32:49.641: [rtmp stream: 'adv_stream'] Dynamic bitrate disabled. The encoder does not support on-the-fly bitrate reconfiguration.
+11:32:49.641: [rtmp stream: 'adv_stream'] Connecting to RTMP URL rtmp://use20.contribute.live-video.net/app...
+11:32:50.258: [rtmp stream: 'adv_stream'] Connection to rtmp://use20.contribute.live-video.net/app (35.55.35.1) successful
+11:32:50.260: ==== Streaming Start ===============================================
+13:55:46.682: User switched to scene 'full'
+13:55:47.220: User switched to scene 'webcam'
+13:55:47.362: [pipewire] Stream 0xaaabcd2e2450 state: "paused" (error: none)
+13:56:05.283: PipeWire initialized
+13:56:05.293: User added source 'Screen Capture (PipeWire) 2' (pipewire-screen-capture-source) to scene 'webcam'
+13:56:05.332: [pipewire] Screencast session created
+13:56:15.939: [pipewire] Asking for monitor and window
+13:56:15.964: [pipewire] source selected, setting up screencast
+13:56:15.971: [pipewire] Server version: 1.6.8
+13:56:15.971: [pipewire] Library version: 1.6.8
+13:56:15.971: [pipewire] Header version: 1.6.4
+13:56:15.971: [pipewire] Created stream 0xaaabcd9d6050
+13:56:15.971: [pipewire] Stream 0xaaabcd9d6050 state: "connecting" (error: none)
+13:56:15.971: [pipewire] Playing stream 0xaaabcd9d6050
+13:56:15.972: [pipewire] Stream 0xaaabcd9d6050 state: "paused" (error: none)
+13:56:15.978: [pipewire] Negotiated format:
+13:56:15.978: [pipewire]     Format: 12 (Spa:Enum:VideoFormat:BGRA)
+13:56:15.978: [pipewire]     Modifier: 0x0
+13:56:15.978: [pipewire]     Size: 2506x1536
+13:56:15.978: [pipewire]     Framerate: 0/1
+13:56:15.981: [pipewire] Negotiated format:
+13:56:15.981: [pipewire]     Format: 12 (Spa:Enum:VideoFormat:BGRA)
+13:56:15.981: [pipewire]     Modifier: 0xc00000000000002
+13:56:15.981: [pipewire]     Size: 2506x1536
+13:56:15.981: [pipewire]     Framerate: 0/1
+13:56:15.990: [pipewire] Stream 0xaaabcd9d6050 state: "streaming" (error: none)
+13:57:44.684: The Wayland connection broke. Did the Wayland compositor die?

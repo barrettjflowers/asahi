@@ -1,48 +1,51 @@
 window#osd {
-  border-radius: 10px;
-  border: 2px solid #3F4843;
-  background: #1E1F1Edd;
+  border-radius: 8px;
+  border: 3px solid #3F4843;
+  background: rgba(30, 31, 30, 0.87);
+}
 
-  #container {
-    margin: 16px;
-  }
+window#osd #container {
+  margin: 16px;
+}
 
-  image,
-  label {
-    color: #828782;
-  }
+window#osd image,
+window#osd label {
+  color: rgba(130, 135, 130, 1);
+}
 
-  progressbar:disabled,
-  image:disabled {
-    opacity: 0.5;
-  }
+window#osd progressbar:disabled,
+window#osd image:disabled {
+  opacity: 0.5;
+}
 
-  progressbar,
-  segmentedprogress {
-    min-height: 6px;
-    border-radius: 999px;
-    background: transparent;
-    border: none;
-  }
-  trough,
-  segment {
-    min-height: inherit;
-    border-radius: inherit;
-    border: none;
-    background: #8287827f;
-  }
-  progress,
-  segment.active {
-    min-height: inherit;
-    border-radius: inherit;
-    border: none;
-    background: #828782;
-  }
+window#osd progressbar,
+window#osd segmentedprogress {
+  min-height: 6px;
+  border-radius: 999px;
+  background: transparent;
+  border: none;
+}
 
-  segment {
-    margin-left: 8px;
-    &:first-child {
-      margin-left: 0;
-    }
-  }
+window#osd trough,
+window#osd segment {
+  min-height: 6px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(130, 135, 130, 0.5);
+}
+
+window#osd progress,
+window#osd segment.active {
+  min-height: 6px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(130, 135, 130, 1);
+}
+
+window#osd segment {
+  margin-left: 8px;
+}
+
+window#osd segment:first-child {
+  margin-left: 0;
 }

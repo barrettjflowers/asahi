@@ -1,0 +1,191 @@
+10:45:07.254: Crash or unclean shutdown detected
+10:45:08.955: [Safe Mode] Normal launch selected, loading third-party plugins is enabled
+10:45:08.957: Platform: Wayland
+10:45:08.957: Physical Cores: 8, Logical Cores: 8
+10:45:08.957: Physical Memory: 23546MB Total, 7650MB Free
+10:45:08.957: Kernel Version: Linux 6.19.14-400.asahi.fc44.aarch64+16k
+10:45:08.957: Distribution: "Fedora Linux Asahi Remix" 44
+10:45:08.957: Desktop Environment: Hyprland (Hyprland)
+10:45:08.957: Session Type: wayland
+10:45:08.963: Current Date/Time: 2026-07-27, 10:45:08 AM
+10:45:08.963: Browser Hardware Acceleration: true
+10:45:08.963: Qt Version: 6.11.1 (runtime), 6.11.1 (compiled)
+10:45:08.963: Portable mode: false
+10:45:08.991: OBS 32.1.1 (linux)
+10:45:08.991: ---------------------------------
+10:45:08.992: ---------------------------------
+10:45:08.992: audio settings reset:
+10:45:08.992: 	samples per sec: 48000
+10:45:08.992: 	speakers:        1
+10:45:08.992: 	max buffering:   960 milliseconds
+10:45:08.992: 	buffering type:  dynamically increasing
+10:45:08.994: ---------------------------------
+10:45:08.994: Initializing OpenGL...
+10:45:08.994: Using EGL/Wayland
+10:45:09.021: Initialized EGL 1.5
+10:45:09.043: Loading up OpenGL on adapter Mesa Apple M2 (G14G B0)
+10:45:09.043: OpenGL loaded successfully, version 4.6 (Core Profile) Mesa 26.1.4, shading language 4.60
+10:45:09.071: ---------------------------------
+10:45:09.071: video settings reset:
+10:45:09.071: 	base resolution:   1108x720
+10:45:09.071: 	output resolution: 1108x720
+10:45:09.071: 	downscale filter:  Bicubic
+10:45:09.071: 	fps:               24000/1001
+10:45:09.071: 	format:            NV12
+10:45:09.071: 	YUV mode:          Rec. 709/Partial
+10:45:09.071: NV12 texture support enabled
+10:45:09.071: P010 texture support not available
+10:45:09.072: Audio monitoring device:
+10:45:09.072: 	name: Default
+10:45:09.072: 	id: default
+10:45:09.072: ---------------------------------
+10:45:09.075: Failed to load 'en-US' text for module: 'decklink-captions.so'
+10:45:09.078: Failed to load 'en-US' text for module: 'decklink-output-ui.so'
+10:45:09.080: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+10:45:09.080: Failed to initialize module 'decklink.so'
+10:45:09.083: [distroav] obs_module_load: you can haz DistroAV (Version 6.2.1)
+10:45:09.085: [distroav] obs_module_load: NDI library detected
+10:45:09.085: [distroav] obs_module_load: NDI library initialized ('NDI SDK LINUX 13:10:53 Apr 13 2026 6.3.2.0')
+10:45:09.085: [distroav] NDI Library Version detected: 6.3.2.0
+10:45:09.085: [distroav] obs_module_load: NDI library version detected (NDI SDK LINUX 13:10:53 Apr 13 2026 6.3.2.0) is compatible
+10:45:09.085: [distroav] register_plugin_features: NDI plugin features registered
+10:45:09.086: [distroav] plugin loaded (full NDI features) (version 6.2.1)
+10:45:09.168: [pipewire] Available capture sources:
+10:45:09.168: [pipewire]     - Monitor source
+10:45:09.168: [pipewire]     - Window source
+10:45:09.177: v4l2loopback not installed, virtual camera not registered
+10:45:09.191: [obs-browser]: Alloy Runtime preferences not found. No migration necessary.
+10:45:09.191: [obs-browser]: Version 2.26.8
+10:45:09.191: [obs-browser]: CEF Version 146.0.7680.177 (runtime), 146.0.11+g3a0fcf1+chromium-146.0.7680.177 (compiled)
+10:45:09.229: VAAPI: Failed to initialize display in vaapi_device_h264_supported
+10:45:09.229: FFmpeg VAAPI H264 encoding not supported
+10:45:09.229: VAAPI: Failed to initialize display in vaapi_device_av1_supported
+10:45:09.229: FFmpeg VAAPI AV1 encoding not supported
+10:45:09.229: VAAPI: Failed to initialize display in vaapi_device_hevc_supported
+10:45:09.229: FFmpeg VAAPI HEVC encoding not supported
+10:45:09.239: [obs-pwvideo] plugin loaded successfully (version 0.2.4)
+10:45:09.261: [obs-websocket] [obs_module_load] you can haz websockets (Version: 5.7.3 | RPC Version: 1)
+10:45:09.261: [obs-websocket] [obs_module_load] Qt version (compile-time): 6.11.1 | Qt version (run-time): 6.11.1
+10:45:09.261: [obs-websocket] [obs_module_load] Linked ASIO Version: 103002
+10:45:09.264: [obs-websocket] [obs_module_load] Module loaded.
+10:45:09.276: [vlc-video]: VLC 3.0.23 Vetinari found, VLC video source enabled
+10:45:09.276: ---------------------------------
+10:45:09.276:   Loaded Modules:
+10:45:09.276:     vlc-video.so
+10:45:09.276:     text-freetype2.so
+10:45:09.276:     rtmp-services.so
+10:45:09.276:     obs-x264.so
+10:45:09.276:     obs-websocket.so
+10:45:09.276:     obs-webrtc.so
+10:45:09.276:     obs-webkitgtk.so
+10:45:09.276:     obs-vst.so
+10:45:09.276:     obs-transitions.so
+10:45:09.276:     obs-pwvideo.so
+10:45:09.276:     obs-outputs.so
+10:45:09.276:     obs-libfdk.so
+10:45:09.276:     obs-filters.so
+10:45:09.276:     obs-ffmpeg.so
+10:45:09.276:     obs-browser.so
+10:45:09.276:     linux-v4l2.so
+10:45:09.276:     linux-pulseaudio.so
+10:45:09.276:     linux-pipewire.so
+10:45:09.276:     linux-jack.so
+10:45:09.276:     linux-capture.so
+10:45:09.276:     linux-alsa.so
+10:45:09.276:     image-source.so
+10:45:09.276:     frontend-tools.so
+10:45:09.276:     distroav.so
+10:45:09.276:     decklink-output-ui.so
+10:45:09.276:     decklink-captions.so
+10:45:09.276: ---------------------------------
+10:45:09.276: ---------------------------------
+10:45:09.276: Available Encoders:
+10:45:09.276:   Video Encoders:
+10:45:09.276: 	- ffmpeg_openh264 (OpenH264)
+10:45:09.276: 	- ffmpeg_svt_av1 (SVT-AV1)
+10:45:09.276: 	- ffmpeg_aom_av1 (AOM AV1)
+10:45:09.276: 	- obs_x264 (x264)
+10:45:09.276:   Audio Encoders:
+10:45:09.276: 	- ffmpeg_aac (FFmpeg AAC)
+10:45:09.276: 	- ffmpeg_opus (FFmpeg Opus)
+10:45:09.276: 	- ffmpeg_pcm_s16le (FFmpeg PCM (16-bit))
+10:45:09.276: 	- ffmpeg_pcm_s24le (FFmpeg PCM (24-bit))
+10:45:09.276: 	- ffmpeg_pcm_f32le (FFmpeg PCM (32-bit float))
+10:45:09.276: 	- ffmpeg_alac (FFmpeg ALAC (24-bit))
+10:45:09.276: 	- ffmpeg_flac (FFmpeg FLAC (16-bit))
+10:45:09.276: 	- libfdk_aac (libfdk AAC)
+10:45:09.276: ==== Startup complete ===============================================
+10:45:09.334: All scene data cleared
+10:45:09.334: ------------------------------------------------
+10:45:09.385: Device for 'Audio Output Capture' source Desktop Audio is also used for audio monitoring.
+10:45:09.385: Deduplication logic is being applied to all monitored sources.
+10:45:09.385: pulse-input: Server name: 'PulseAudio (on PipeWire 1.6.8) 15.0.0'
+10:45:09.385: pulse-input: Audio format: float32le, 48000 Hz, 2 channels
+10:45:09.385: pulse-input: Started recording from 'audio_effect.j413-convolver.monitor' (default)
+10:45:09.385: [Loaded global audio device]: 'Desktop Audio'
+10:45:09.386: pulse-input: Server name: 'PulseAudio (on PipeWire 1.6.8) 15.0.0'
+10:45:09.386: pulse-input: Audio format: float32le, 48000 Hz, 1 channels
+10:45:09.386: pulse-input: Started recording from 'effect_output.j413-mic' (default)
+10:45:09.386: [Loaded global audio device]: 'Mic/Aux'
+10:45:09.386: PipeWire initialized
+10:45:09.386: obs-data.c: [obs_data_create_from_json] Failed reading json string (1): '[' or '{' expected near end of file
+10:45:09.389: Switched to scene 'webcam'
+10:45:09.389: ------------------------------------------------
+10:45:09.389: Loaded scenes:
+10:45:09.389: - scene 'full':
+10:45:09.389:     - source: 'Screen Capture (PipeWire)' (pipewire-screen-capture-source)
+10:45:09.389: - scene 'webcam':
+10:45:09.389:     - source: 'Video Capture Device (PipeWire) (BETA)' (pipewire-camera-source)
+10:45:09.389: ------------------------------------------------
+10:45:09.420: Device for 'Audio Output Capture' source Desktop Audio is also used for audio monitoring.
+10:45:09.420: Deduplication logic is being applied to all monitored sources.
+10:45:09.427: [camera-portal] Successfully accessed cameras
+10:45:09.427: [pipewire] Screencast session created
+10:45:09.470: [pipewire] Server version: 1.6.8
+10:45:09.470: [pipewire] Library version: 1.6.8
+10:45:09.470: [pipewire] Header version: 1.6.4
+10:45:09.470: [pipewire] Created registry 0xaaab0f6eaef0
+10:45:09.470: [camera-portal] Found device v4l2_input.platform-22a000000.isp
+10:45:09.952: adding 21 milliseconds of audio buffering, total audio buffering is now 21 milliseconds (source: Desktop Audio)
+10:45:09.952: 
+10:45:14.974: [pipewire] Asking for monitor and window
+10:45:14.989: [pipewire] source selected, setting up screencast
+10:45:15.008: [pipewire] Server version: 1.6.8
+10:45:15.008: [pipewire] Library version: 1.6.8
+10:45:15.008: [pipewire] Header version: 1.6.4
+10:45:15.008: [pipewire] Created stream 0xaaab0f94b4b0
+10:45:15.008: [pipewire] Stream 0xaaab0f94b4b0 state: "connecting" (error: none)
+10:45:15.009: [pipewire] Playing stream 0xaaab0f94b4b0
+10:45:15.010: [pipewire] Stream 0xaaab0f94b4b0 state: "paused" (error: none)
+10:45:15.021: [pipewire] Negotiated format:
+10:45:15.021: [pipewire]     Format: 12 (Spa:Enum:VideoFormat:BGRA)
+10:45:15.021: [pipewire]     Modifier: 0x0
+10:45:15.021: [pipewire]     Size: 2560x1664
+10:45:15.021: [pipewire]     Framerate: 0/1
+10:45:15.025: [pipewire] Negotiated format:
+10:45:15.025: [pipewire]     Format: 12 (Spa:Enum:VideoFormat:BGRA)
+10:45:15.025: [pipewire]     Modifier: 0xc00000000000002
+10:45:15.025: [pipewire]     Size: 2560x1664
+10:45:15.025: [pipewire]     Framerate: 0/1
+10:45:15.036: [pipewire] Stream 0xaaab0f94b4b0 state: "streaming" (error: none)
+10:45:24.051: [camera-portal] Selected format for ''
+10:45:24.052: [camera-portal] selected camera ''
+10:45:25.797: [camera-portal] selected camera 'v4l2_input.platform-22a000000.isp'
+10:45:25.797: [camera-portal] Updating pixel formats
+10:45:25.797: [camera-portal] Selected format for 'v4l2_input.platform-22a000000.isp'
+10:45:25.797: obs-data.c: [obs_data_create_from_json] Failed reading json string (1): '[' or '{' expected near end of file
+10:45:25.800: [camera-portal] Updating device v4l2_input.platform-22a000000.isp
+10:45:25.811: [camera-portal] Selected format for 'v4l2_input.platform-22a000000.isp'
+10:45:25.811: [camera-portal] streaming camera 'v4l2_input.platform-22a000000.isp'
+10:45:25.811: [pipewire] Created stream 0xaaab0fac6f40
+10:45:25.811: [pipewire] Stream 0xaaab0fac6f40 state: "connecting" (error: none)
+10:45:25.812: [pipewire] Playing stream 0xaaab0fac6f40
+10:45:25.812: obs-data.c: [obs_data_create_from_json] Failed reading json string (1): '[' or '{' expected near end of file
+10:45:25.814: [pipewire] Stream 0xaaab0fac6f40 state: "paused" (error: none)
+10:45:25.822: [pipewire] Renegotiating stream
+10:45:25.830: [pipewire] Negotiated format:
+10:45:25.830: [pipewire]     Format: 23 (Spa:Enum:VideoFormat:NV12)
+10:45:25.830: [pipewire]     Size: 1920x1080
+10:45:25.830: [pipewire]     Framerate: 30/1
+10:45:25.835: [pipewire] Stream 0xaaab0fac6f40 state: "streaming" (error: none)
+10:45:25.839: [camera-portal] Updating device v4l2_input.platform-22a000000.isp

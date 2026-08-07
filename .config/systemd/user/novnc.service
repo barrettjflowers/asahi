@@ -1,0 +1,12 @@
+[Unit]
+Description=noVNC web client and WebSocket proxy (websockify)
+After=network.target
+
+[Service]
+Type=simple
+Environment=HOME=%h
+ExecStart=%h/.local/bin/websockify --web %h/noVNC 6080 127.0.0.1:5900
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
