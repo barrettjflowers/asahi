@@ -1,0 +1,14 @@
+* {
+    font-family: "Iosevka Nerd Font Mono", monospace !important;
+}
+*:not([class*="fa"]) {
+    font-weight: 600 !important;
+}
+
+::-webkit-scrollbar {
+    display: none !important;
+}
+* {
+    scrollbar-width: none !important;
+    scrollbar-color: transparent transparent !important;
+}

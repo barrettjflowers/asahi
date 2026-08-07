@@ -1,0 +1,16 @@
+* {
+  font-family: "Iosevka Nerd Font Mono", monospace !important;
+  font-weight: 600;
+}
+
+html, body {
+    margin-top: -25px !important;
+    height: calc(100vh + 50px) !important;
+}
+
+[data-tid="me-control-avatar-trigger"] {
+    position: fixed !important;
+    bottom: 10px;
+    left: 8px; /* adjust as needed */
+    z-index: 999999 !important;
+}

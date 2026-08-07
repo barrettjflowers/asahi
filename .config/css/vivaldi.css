@@ -1,8 +1,5 @@
 /*
-#tabs-tabbar-container,
-#header {
-display: none !important;
-}
+ * Vivaldi DOM Tweaks
 */
 * {
   font-family: Iosevka Nerd Font Mono, monospace !important;
