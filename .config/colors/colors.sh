@@ -13,9 +13,9 @@ BG_R=$((16#${BACKGROUND:0:2}))
 BG_G=$((16#${BACKGROUND:2:2}))
 BG_B=$((16#${BACKGROUND:4:2}))
 
-# 87% alpha for swayosd background, 50% for trough
-BG_ALPHA_DD=$(printf '%02x' $(( 221 )))
-TEXT_ALPHA_7F=$(printf '%02x' $(( 127 )))
+TEXT_R=$((16#${TEXT:0:2}))
+TEXT_G=$((16#${TEXT:2:2}))
+TEXT_B=$((16#${TEXT:4:2}))
 
 cat > "$DIR/colors.css" << EOF
 @define-color background rgba($BG_R, $BG_G, $BG_B, 1.0);
@@ -52,50 +52,53 @@ cat > ~/.config/swayosd/style.css << CSSEOF
 window#osd {
   border-radius: 10px;
   border: 2px solid #$ACCENT;
-  background: #${BACKGROUND}${BG_ALPHA_DD};
+  background: rgba($BG_R, $BG_G, $BG_B, 0.87);
+}
 
-  #container {
-    margin: 16px;
-  }
+window#osd #container {
+  margin: 16px;
+}
 
-  image,
-  label {
-    color: #$TEXT;
-  }
+window#osd image,
+window#osd label {
+  color: rgba($TEXT_R, $TEXT_G, $TEXT_B, 1);
+}
 
-  progressbar:disabled,
-  image:disabled {
-    opacity: 0.5;
-  }
+window#osd progressbar:disabled,
+window#osd image:disabled {
+  opacity: 0.5;
+}
 
-  progressbar,
-  segmentedprogress {
-    min-height: 6px;
-    border-radius: 999px;
-    background: transparent;
-    border: none;
-  }
-  trough,
-  segment {
-    min-height: inherit;
-    border-radius: inherit;
-    border: none;
-    background: #${TEXT}${TEXT_ALPHA_7F};
-  }
-  progress,
-  segment.active {
-    min-height: inherit;
-    border-radius: inherit;
-    border: none;
-    background: #$TEXT;
-  }
+window#osd progressbar,
+window#osd segmentedprogress {
+  min-height: 6px;
+  border-radius: 999px;
+  background: transparent;
+  border: none;
+}
 
-  segment {
-    margin-left: 8px;
-    &:first-child {
-      margin-left: 0;
-    }
-  }
+window#osd trough,
+window#osd segment {
+  min-height: 6px;
+  border-radius: 999px;
+  border: none;
+  background: rgba($TEXT_R, $TEXT_G, $TEXT_B, 0.5);
+}
+
+window#osd progress,
+window#osd segment.active {
+  min-height: 6px;
+  border-radius: 999px;
+  border: none;
+  background: rgba($TEXT_R, $TEXT_G, $TEXT_B, 1);
+}
+
+window#osd segment {
+  margin-left: 8px;
+}
+
+window#osd segment:first-child {
+  margin-left: 0;
 }
 CSSEOF
 
