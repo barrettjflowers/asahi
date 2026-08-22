@@ -11,7 +11,7 @@ window#waybar{
 window#waybar > box {
     margin: 2px;
 		margin-bottom: 8px;
-		margin-top: 10px;
+		margin-top: 8px;
     background: transparent;
     border-radius: 8px;
     /*box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.8); */
@@ -72,14 +72,14 @@ tooltip label {
 }
 #workspaces button {
     background: transparent;
-    border: 2px transparent;
-    padding: 0px 7px;
+    border: 2px solid transparent;
+    padding: 0px 5px;
 	color: @text;
 }
 #workspaces button.active {
     color: @accent;
-		border-bottom: 3px solid @accent;
-		border-radius: 0px;
+	  border: 2px solid @accent;
+		border-radius: 6px;
 		margin: 6px 0;
 }
 #bluetooth{

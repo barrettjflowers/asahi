@@ -1,7 +1,7 @@
 window#osd {
-  border-radius: 8px;
-  border: 3px solid #3F4843;
-  background: rgba(30, 31, 30, 0.87);
+  border-radius: 10px;
+  border: 3px solid #737458;
+  background: rgba(28, 26, 20, 1.00);
 }
 
 window#osd #container {
@@ -10,7 +10,7 @@ window#osd #container {
 
 window#osd image,
 window#osd label {
-  color: rgba(130, 135, 130, 1);
+  color: rgba(104, 105, 79, 1);
 }
 
 window#osd progressbar:disabled,
@@ -31,7 +31,7 @@ window#osd segment {
   min-height: 6px;
   border-radius: 999px;
   border: none;
-  background: rgba(130, 135, 130, 0.5);
+  background: rgba(104, 105, 79, 0.5);
 }
 
 window#osd progress,
@@ -39,7 +39,7 @@ window#osd segment.active {
   min-height: 6px;
   border-radius: 999px;
   border: none;
-  background: rgba(130, 135, 130, 1);
+  background: rgba(104, 105, 79, 1);
 }
 
 window#osd segment {

@@ -4,6 +4,7 @@ configuration {
     font:                        "Iosevka Nerd Font Mono SemiBold 12";
     location:                    2;
     drun-display-format:         "{name}";
+    display-drun:                "Binaries";
     scroll-method:               1;
 }
 
@@ -31,7 +32,7 @@ window {
     padding:                   0;
     background-color:          transparent;
     text-color:                @foreground-color;
-    width:                     550px;
+    width:                     450px;
 		border-color:              transparent;
 }
 
@@ -56,7 +57,7 @@ prompt {
 
 entry {
     text-color:                @foreground-color;
-    placeholder:               "Search...";
+    placeholder:               "";
     placeholder-color:         @foreground-color-alt;
     cursor-color:              @accent-color;
     blink:                     true;
@@ -66,7 +67,7 @@ entry {
 listview {
     spacing:                   0;
     padding:                   0;
-    lines:                     10;
+    lines:                     5;
     columns:                   1;
     fixed-height:              true;
     dynamic:                   true;

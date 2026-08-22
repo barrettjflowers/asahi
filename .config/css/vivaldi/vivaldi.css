@@ -1,0 +1,90 @@
+/*
+Vivaldi DOM Tweaks
+*/
+
+
+* {
+  font-family: Iosevka Nerd Font Mono, monospace !important;
+	font-weight: 600 !important;
+	font-size: 16px !important;
+}
+
+#browser > div.auto-hide-wrapper.right.show {
+    display: none !important;
+}
+
+::-webkit-scrollbar {
+ width: 0 !important;
+  height: 0 !important;
+  display: none !important;
+}
+
+#urlFieldInput {
+    font-family: Iosevka Nerd Font Mono, monospace !important;
+		font-weight: 600 !important;
+    font-size: 16px !important;
+}
+
+#addressfield {
+    box-shadow: none !important;
+}
+
+.OmniDropdown,
+.OmniDropdown *,
+.OmniLinkItem,
+.omni-clickable {
+  font-family: Iosevka Nerd Font Mono, monospace !important;
+  font-weight: 600 !important;
+	font-size: 16px !important;
+}
+
+/* Remove 6px gap around window when auto-hide is active */
+.auto-hide {
+  grid-template-columns: 0 [content] 1fr 0 !important;
+  grid-template-rows: 0 [content] 1fr 0 !important;
+}
+
+#browser {
+  --radiusWindow: 0px !important;
+  border-radius: 0 !important;
+  clip-path: none !important;
+  -webkit-clip-path: none !important;
+  mask-image: none !important;
+  -webkit-mask-image: none !important;
+}
+
+.mainwindow,
+.window-bg,
+body,
+html {
+  border-radius: 0 !important;
+  clip-path: none !important;
+  -webkit-clip-path: none !important;
+  mask-image: none !important;
+  -webkit-mask-image: none !important;
+}
+
+.mainwindow {
+  border-radius: 0 !important;
+}
+.window-bg {
+  border-radius: 0 !important;
+}
+
+/* remove bookmark, rss, reader view buttons */
+.toolbar.toolbar-small.toolbar-insideinput button[title*="Bookmark"],
+.toolbar.toolbar-small.toolbar-insideinput button[aria-label*="Bookmark"],
+.toolbar.toolbar-small.toolbar-insideinput .bookmark,
+.toolbar.toolbar-small.toolbar-insideinput .bookmark-button {
+    display: none !important;
+}
+
+button[title="Page offers feeds"] {
+  display: none !important;
+}
+
+button[title="Reader View"] {
+  display: none !important;
+}
+
+
