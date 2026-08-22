@@ -1,6 +1,6 @@
 # ~/.zshrc
 # prompt
-prompt=$'%F{250}%B%F{250}%~ › %F{250}$(git_branch_name) \n%F{250}=>%b%f '
+prompt=$'%F{250}%B%F{250}%~ › %F{250}$(git_branch_name) \n%F{250}->%b%f '
 
 ##### a bunch of random functions i frequent #####
 
@@ -53,7 +53,7 @@ alias vimconf='nvim $NVIM_CONFIG'
 alias hypr='nvim ~/.config/hypr/hyprland.conf'
 alias wlc='wl-copy'
 alias open='xdg-open'
-alias ascii='/opt/homebrew/bin/ascii-view'
+alias ascii='/home/barrettjflowers/Dev/ascii-view/ascii-view'
 
 # notes
 alias ob='cd /home/barrettjflowers/Documents/Vault/barrettjflowers'
@@ -103,6 +103,7 @@ _complete_ssh_hosts ()
 complete -F _complete_ssh_hosts ssh
 export PATH="/Users/barrettjflowers/.config/herd-lite/bin:$PATH"
 export PHP_INI_SCAN_DIR="/Users/barrettjflowers/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
+export CARGO="/home/barrettjflowers/.cargo/bin"
 
 export PATH="$PATH:/Users/barrettjflowers/.local/bin"
 export NVM_DIR="$HOME/.nvm"

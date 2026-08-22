@@ -26,3 +26,4 @@ unset rc
 
 # opencode
 export PATH=/home/barrettjflowers/.opencode/bin:$PATH
+export PATH=~/.npm-global/bin:$PATH
