@@ -31,3 +31,7 @@
 # Unignore .github directory and its contents
 !/.github
 !/.github/**
+
+# some files in root
+!.tmux.conf
+!.gtkrc-2.0
