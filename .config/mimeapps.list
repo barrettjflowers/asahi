@@ -5,3 +5,4 @@ x-scheme-handler/http=vivaldi-snapshot.desktop
 x-scheme-handler/https=vivaldi-snapshot.desktop
 x-scheme-handler/about=vivaldi-snapshot.desktop
 x-scheme-handler/unknown=vivaldi-snapshot.desktop
+x-scheme-handler/claude-cli=claude-code-url-handler.desktop

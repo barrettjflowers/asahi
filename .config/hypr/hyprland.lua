@@ -91,10 +91,12 @@ hl.bind(control .. " + L",      hl.dsp.exit())
 hl.bind(control .. " + M",      hl.dsp.exec_cmd("pkill waybar || (waybar &)"))
 
 -- window management
-hl.bind("ALT + h",              hl.dsp.layout("focus l"))
-hl.bind("ALT + l",              hl.dsp.layout("focus r"))
+hl.bind("ALT + h",              hl.dsp.focus({ direction = "left" }))
+hl.bind("ALT + l",              hl.dsp.focus({ direction = "right" }))
+hl.bind("ALT + j",              hl.dsp.focus({ direction = "down" }))
+hl.bind("ALT + k",              hl.dsp.focus({ direction = "up" }))
 hl.bind("ALT + o",              hl.dsp.window.float({ action = "toggle" }))
-hl.bind("ALT + k",              hl.dsp.window.fullscreen({ mode = "maximized" }))
+hl.bind("ALT + i",              hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
 
 hl.bind("ALT + SHIFT + H",      hl.dsp.window.resize({ x = -60, y = 0, relative = true }))
 hl.bind("ALT + SHIFT + L",      hl.dsp.window.resize({ x = 60,  y = 0, relative = true }))
@@ -110,16 +112,16 @@ for i = 1, 5 do
 end
 
 -- scratchpad
-hl.bind(control .. " + Q",      hl.dsp.workspace.toggle_special("scratchpad"))
-hl.bind("ALT + Q",              hl.dsp.window.move({ workspace = "special:scratchpad" }))
+hl.bind("SUPER + grave",          hl.dsp.workspace.toggle_special("scratchpad"))
+hl.bind("ALT + grave",            hl.dsp.window.move({ workspace = "special:scratchpad" }))
 
 -- media keys
-hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("swayosd-client --output-volume -5"))
-hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("swayosd-client --output-volume +5"))
---hl.bind("XF86AudioMute",       hl.dsp.exec_cmd("swayosd-client --output-volume mute-toggle"))
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("~/.config/hypr/scripts/volume.sh down"))
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("~/.config/hypr/scripts/volume.sh up"))
+--hl.bind("XF86AudioMute",       hl.dsp.exec_cmd("~/.config/hypr/scripts/volume.sh toggle"))
 hl.bind("XF86AudioMicMute",     hl.dsp.exec_cmd("~/.config/hypr/scripts/transcribe.sh")) -- whisper
-hl.bind("XF86MonBrightnessDown",hl.dsp.exec_cmd("swayosd-client --min-brightness 0 --brightness -3"))
-hl.bind("XF86MonBrightnessUp",  hl.dsp.exec_cmd("swayosd-client --min-brightness 0 --brightness +3"))
+hl.bind("XF86MonBrightnessDown",hl.dsp.exec_cmd("~/.config/hypr/scripts/brightness.sh down"))
+hl.bind("XF86MonBrightnessUp",  hl.dsp.exec_cmd("~/.config/hypr/scripts/brightness.sh up"))
 hl.bind("XF86AudioPlay",        hl.dsp.exec_cmd("playerctl play-pause"))
 hl.bind("XF86AudioPrev",        hl.dsp.exec_cmd("playerctl previous"))
 hl.bind("XF86AudioNext",        hl.dsp.exec_cmd("playerctl next"))
@@ -156,7 +158,7 @@ hl.layer_rule({ name = "swayosd-rules",match = { namespace = "swayosd" }, blur =
 
 hl.config({
     general = {
-        layout           = "scrolling",
+        layout           = "dwindle",
         resize_on_border = true,
         gaps_in          = 2,
         gaps_out         = { top = 10, right = 10, bottom = 10, left = 10 },
@@ -165,16 +167,15 @@ hl.config({
             active_border   = accent,
             inactive_border = inactive,
         },
-    },
+		},
 
-    scrolling = {
-        column_width = 0.7, -- width of newly opened columns
-    },
+--    scrolling = {
+--        direction     = "up", -- scroll vertically instead of horizontally
+--        column_width  = 0.9,
+--    },
 
-    master = {
-        mfact         = 0.55,
-        new_on_active = "after",
-        orientation   = "right",
+    dwindle = {
+        preserve_split = true,
     },
 
     cursor = {
@@ -212,14 +213,16 @@ hl.config({
 
     animations = {
         enabled = false,
-    },
+    }
 })
 
-hl.animation({ leaf = "windows",          enabled = true, speed = 1, bezier = "default" })
-hl.animation({ leaf = "border",           enabled = true, speed = 6, bezier = "default" })
-hl.animation({ leaf = "fade",             enabled = true, speed = 3, bezier = "default" })
-hl.animation({ leaf = "workspaces",       enabled = true, speed = 3, bezier = "default" })
-hl.animation({ leaf = "specialWorkspace", enabled = true, speed = 3, bezier = "default", style = "slidevert" })
+hl.animation({ leaf = "windows",          enabled = false })
+hl.animation({ leaf = "border",           enabled = false })
+hl.animation({ leaf = "fade",             enabled = false })
+hl.animation({ leaf = "workspaces",       enabled = false })
+hl.animation({ leaf = "specialWorkspace",    enabled = true, speed = 3, bezier = "default" })
+hl.animation({ leaf = "specialWorkspaceIn",  enabled = true, speed = 3, bezier = "default", style = "slidevert" })
+hl.animation({ leaf = "specialWorkspaceOut", enabled = true, speed = 3, bezier = "default", style = "slidevert" })
 
 ---------------
 ---- INPUT ----
@@ -246,7 +249,8 @@ hl.config({
 -------------
 
 hl.gesture({ fingers = 3, direction = "horizontal", action = "workspace" })
-hl.gesture({ fingers = 3, direction = "up",         action = "special", workspace_name = "scratchpad" })
+hl.gesture({ fingers = 3, direction = "up",   action = "special", workspace_name = "scratchpad" })
+hl.gesture({ fingers = 3, direction = "down", action = "special", workspace_name = "scratchpad" })
 
 -- Ignore maximize requests from apps:
 -- local suppressMaximize = hl.window_rule({ name = "suppress-maximize", match = { class = ".*" }, suppress_event = "maximize" })
