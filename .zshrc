@@ -54,6 +54,7 @@ alias hypr='nvim ~/.config/hypr/hyprland.conf'
 alias wlc='wl-copy'
 alias open='xdg-open'
 alias ascii='/home/barrettjflowers/Dev/ascii-view/ascii-view'
+alias claude='cd ~/Dev/AgentRoot/Indyhost/ && claude'
 
 # notes
 alias ob='cd /home/barrettjflowers/Documents/Vault/barrettjflowers'
@@ -112,3 +113,4 @@ export NVM_DIR="$HOME/.nvm"
 alias swifter=/Users/barrettjflowers/Dev/swifter/.build/debug/Swifter
 export PATH="$HOME/.opencode/bin:$PATH"
 export QT_QPA_PLATFORMTHEME=qt6ct
+export PATH="$HOME/.local/bin:$PATH"
