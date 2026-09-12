@@ -5,6 +5,11 @@
   font-weight: 700;
 }
 
+notificationwindow,
+blankwindow {
+  background: transparent;
+}
+
 .notification-row {
   outline: none;
   margin: 8px 10px;
@@ -12,14 +17,14 @@
 
 .notification-row:focus,
 .notification-row:hover {
-  background: #1C1A14;
+  background: rgba(28, 26, 20, 0.15);
   border-radius: 10px;
 }
 
 .notification {
   border-radius: 10px;
   border: 2px solid #737458;
-  background: #1C1A14;
+  background: rgba(28, 26, 20, 0.87);
   padding: 0;
   margin: 0;
 }
@@ -33,7 +38,7 @@
 .notification-action {
   padding: 8px 12px;
   border-radius: 8px;
-  background: rgba(44, 42, 36, 0.6);
+  background: rgb(44, 42, 36);
   color: #68694F;
   border: 1px solid transparent;
 }
@@ -71,11 +76,11 @@
 
 .body {
   font-size: 14px;
-  color: rgba(104, 105, 79, 0.9);
+  color: rgb(104, 105, 79);
 }
 
 .time {
-  color: rgba(104, 105, 79, 0.6);
+  color: rgb(104, 105, 79);
 }
 
 .notification.critical {
@@ -89,31 +94,12 @@
 .control-center {
   border-radius: 10px;
   border: 2px solid #737458;
-  background: #1C1A14;
+  background: rgba(28, 26, 20, 0.92);
   padding: 8px;
 }
 
-.control-center-list {
-  background: transparent;
-}
-
-.control-center-list-placeholder {
-  color: #68694F;
-  opacity: 0.6;
-}
-
-.control-center-clear-all {
-  color: #68694F;
-  background: rgba(44, 42, 36, 0.6);
-}
-
-.control-center-clear-all:hover {
-  background: #2C2A24;
-  color: #737458;
-}
-
 .floating-bar {
-  background: #1C1A14;
+  background: rgba(28, 26, 20, 0.9);
   color: #68694F;
   border-radius: 10px;
   border: 1px solid #2C2A24;

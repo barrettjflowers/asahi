@@ -1,6 +1,6 @@
 # ~/.zshrc
 # prompt
-prompt=$'%F{250}%B%F{250}%~ › %F{250}$(git_branch_name) \n%F{250}->%b%f '
+prompt=$'%F{250}%B%F{250}%~ › %F{250}$(git_branch_name) \n%F{250}➞%b%f '
 
 ##### a bunch of random functions i frequent #####
 
@@ -49,12 +49,13 @@ source ~/.fzf-tab/fzf-tab.plugin.zsh
 alias vim='nvim'
 alias gl='git log --all --oneline --graph'
 alias gurl=git_remote_url
+alias gf='git pull --ff-only'
 alias vimconf='nvim $NVIM_CONFIG'
-alias hypr='nvim ~/.config/hypr/hyprland.conf'
+alias hypr='nvim ~/.config/hypr/hyprland.lua'
 alias wlc='wl-copy'
 alias open='xdg-open'
 alias ascii='/home/barrettjflowers/Dev/ascii-view/ascii-view'
-alias claude='cd ~/Dev/AgentRoot/Indyhost/ && claude'
+alias claude='cd ~/Dev/AgentRoot/Indyhost/ && git pull --ff-only && claude'
 
 # notes
 alias ob='cd /home/barrettjflowers/Documents/Vault/barrettjflowers'

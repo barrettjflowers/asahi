@@ -9,7 +9,7 @@
         "margin-right": 3,
         "modules-left": ["custom/kanata-layer", "hyprland/workspaces", "hyprland/window"],
         "hyprland/window": {
-            "format": "->  {class}",
+            "format": "➞  {class}",
         },
         "modules-center": ["custom/recording","cpu","memory","custom/weather"],
         "modules-right": ["battery","network","clock"],
@@ -34,7 +34,7 @@
             "escape": true
         },
         "clock": {
-            "format": "{:%a %d %b %I:%M}",
+            "format": "󱑃 {:%a %d %b %I:%M}",
             "interval": 1,   
             "tooltip-format": "<tt>{calendar}</tt>",
             "calendar": {
