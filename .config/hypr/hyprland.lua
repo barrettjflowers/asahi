@@ -39,9 +39,6 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd("flatpak run md.obsidian.Obsidian", { workspace = "4 silent" })
     hl.exec_cmd("kitty",                          { workspace = "3" })
 
-    -- telegram opencode listener (long-running agent)
-    hl.exec_cmd("~/.scripts/telegram-opencode.sh")
-
     -- audio device setup (Asahi jack)
     hl.exec_cmd("pactl set-card-profile 46 HiFi && pactl set-default-source effect_output.j413-mic && pactl set-source-mute effect_output.j413-mic 0 && pactl set-source-volume effect_output.j413-mic 150% && amixer -c 1 cset name='Jack ADC PGA' 24 && amixer -c 1 cset name='Jack ADC Preamp' 2")
 
