@@ -7,9 +7,12 @@ Show Full Path=false
 Show Inline Previews=true
 Show Speedbar=true
 Show hidden files=false
-Sort by=Name
+Sort by=Size
 Sort directories first=true
 Sort hidden files last=false
 Sort reversed=false
 Speedbar Width=89
 View Style=DetailTree
+
+[KShortcutsDialog Settings]
+Dialog Size=600,480
