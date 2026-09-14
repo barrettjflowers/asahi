@@ -64,6 +64,8 @@ alias daily='/home/barrettjflowers/Documents/Vault/barrettjflowers/daily-note.sh
 # dotfile scripts
 alias ntfy="~/.scripts/ntfy.sh"
 alias dict='~/.scripts/rofi-dict.sh'
+alias couch='~/.scripts/couch-tunnel.sh'
+alias igw-web='~/.scripts/igw-web.sh
 
 # fzf
 alias fman='bash -c '\''compgen -c | fzf --height 20 --no-preview | xargs man'\'
