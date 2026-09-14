@@ -9,7 +9,7 @@
         "margin-right": 3,
         "modules-left": ["custom/kanata-layer", "hyprland/workspaces", "hyprland/window"],
         "hyprland/window": {
-            "format": "➞  {class}",
+            "format": "›  {class}",
         },
         "modules-center": ["disk","custom/recording","cpu","memory","custom/weather"],
         "modules-right": ["battery","network","clock"],
@@ -127,7 +127,8 @@
             "spacing": 10
         },
         "disk": {
-            "format": "󰋜 {used}/{total}",
+            "format": "󰣳 {specific_used:0.1f}/{specific_total:0.1f} GB",
+            "unit": "GB",
             "interval": 60
         },
 } 

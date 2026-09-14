@@ -18,7 +18,7 @@ window#waybar > box {
 }
 .modules-center {
     padding: 6px 0px;
-    margin-left: 50px; /* notch */
+    margin-left: 90px; /* notch */
 }
 .modules-right {
     padding: 0px 25px;
@@ -65,6 +65,7 @@ tooltip label {
 
 #window {
     padding: 0px 0px;
+		padding-left: 4px;
     color: @text;
 }
 #workspaces button {
