@@ -10,20 +10,15 @@ window#waybar{
     min-height: 0px;
 }
 window#waybar > box {
-    margin: 0px;
-		margin-bottom: 2px;
-		margin-top: 2px;
     background: transparent;
     border-radius: 8px;
-    min-height: 0px;
-    /*box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.8); */
 }
 .modules-left {
     padding: 0px 25px;
 }
 .modules-center {
     padding: 6px 0px;
-    margin-left: 450px; /* notch */
+    margin-left: 50px; /* notch */
 }
 .modules-right {
     padding: 0px 25px;
@@ -75,13 +70,13 @@ tooltip label {
 #workspaces button {
     all: unset;
     background: transparent;
-		border-top: 4px solid transparent;
+		border-top: 2px solid transparent;
     padding: 0px 5px;
 		color: @text;
 }
 #workspaces button.active {
     color: @accent;
-    border-top: 4px solid @accent;
+    border-top: 2px solid @accent;
 		border-radius: 0px;
     background: transparent;
 }
@@ -137,8 +132,16 @@ tooltip label {
 
 }
 
+#disk {
+    padding: 0px 7px;
+    color: @text;
+}
+#disk:hover {
+    color: @accent;
+}
+
 #cpu {
-    padding-left: 0px;
+		padding-left: 240px; /* notch */
 	}
 
 #custom-endpoint{
@@ -162,6 +165,7 @@ tooltip label {
 }
 
 #custom-recording {
+    margin-right: -40px;
     padding-right: 15px;
 		padding-left: 15px;
     transition: all .3s ease;
