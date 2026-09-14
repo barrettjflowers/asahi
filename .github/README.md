@@ -4,7 +4,7 @@ Dotfiles for my **M2 MacBook Air** running **Fedora Linux Asahi Remix**
 
 Wayland compositing with [Hyprland](https://hyprland.org/), everything centered around a single color source (`~/.config/colors`).
 
-<img width="2560" height="1664" alt="image" src="https://github.com/user-attachments/assets/3073c14e-1562-4b35-941b-fbeb6c81b100" />
+<img width="2560" height="1664" alt="image" src="https://github.com/user-attachments/assets/4a87718d-79be-45f1-ba14-7baac7bbb546" />
 
 ## config
 
