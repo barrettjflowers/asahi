@@ -9,18 +9,13 @@
 !.gitignore
 !.gitignore_global
 !.bashrc
-!.codeium
 !.fzf
-!/.hammerspoon/
-!/.hammerspoon/*
-!.parsec
-!.putty
-!/Markdown/
-!/Markdown/*
 !/.scripts/
 !/.scripts/*
+!.tmux.conf
+!.gtkrc-2.0
 
-# Curated .config allow-list. Everything else remains ignored by `*` above.
+# Curated .config allow-list. Everything else remains ignored by `*` above
 !/.config/
 
 # System snapshots and desktop configuration
@@ -44,8 +39,6 @@
 !/.config/kanata/**
 !/.config/kitty/
 !/.config/kitty/**
-!/.config/menus/
-!/.config/menus/**
 !/.config/nvim/
 !/.config/nvim/**
 !/.config/qt5ct/
@@ -77,17 +70,11 @@
 !/.config/gtk-4.0/settings.ini
 !/.config/gtk-4.0/window_decorations.css
 
-# Keep only non-secret remote service configuration
 !/.config/sunshine/
 !/.config/sunshine/apps.json
 !/.config/sunshine/sunshine.conf
 !/.config/wayvnc/
 !/.config/wayvnc/config
-
-# OpenCode configuration without local dependencies
-!/.config/opencode/
-!/.config/opencode/AGENTS.md
-!/.config/opencode/opencode.jsonc
 
 # Standalone application and desktop settings
 !/.config/.gtkrc-2.0
@@ -95,18 +82,9 @@
 !/.config/gtkrc
 !/.config/gtkrc-2.0
 !/.config/kdeglobals
-!/.config/kdenlive.kmessagebox
 !/.config/kdenliverc
-!/.config/mimeapps.list
 !/.config/powermanagementprofilesrc
-!/.config/sealert.conf
-!/.config/user-dirs.dirs
-!/.config/user-dirs.locale
 
 # Unignore .github directory and its contents
 !/.github
 !/.github/**
-
-# some files in root
-!.tmux.conf
-!.gtkrc-2.0
