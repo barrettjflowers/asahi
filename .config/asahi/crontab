@@ -10,7 +10,7 @@
 # ====== dotfile backups ======
 # backups crontab to dotfiles
 */15 * * * * crontab -l > /home/barrettjflowers/.config/asahi/crontab
-#backup grub crontab to dotfiles
+# backup grub crontab to dotfiles
 */15 * * * * cat /etc/default/grub > /home/barrettjflowers/.config/asahi/grub
 # backup enabled systemd units to dotfiles
 */15 * * * * systemctl list-unit-files --state=enabled --no-pager > /home/barrettjflowers/.config/asahi/systemd
@@ -20,7 +20,3 @@
 */15 * * * * rpm -qa | LC_ALL=C sort > /home/barrettjflowers/.config/asahi/packages
 
 # ===== obsidian vault ======
-# copy blog to vault
-*/15 * * * * cp /home/barrettjflowers/Dev/site/docs/blog  /home/barrettjflowers/Documents/Vault/barrettjflowers/blog
-#  fetch calendar
-*/10 * * * * /bin/zsh -c '/home/barrettjflowers/Documents/Vault/barrettjflowers/calendar_gen.py'
