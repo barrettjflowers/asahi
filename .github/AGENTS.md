@@ -4,14 +4,14 @@
 
 - This is the home-directory dotfiles repository for an M2 MacBook Air running Fedora Linux Asahi Remix with Hyprland and KDE/Wayland applications.
 - The repository root is the user's home directory. Configuration is tracked in place under `~/.config`; there is no Stow, chezmoi, or deployment layer.
-- `.gitignore` ignores everything by default and explicitly includes selected root dotfiles, `.scripts`, `.config`, and `.github`.
+- `.gitignore` ignores everything by default and uses an explicit allow-list for selected root dotfiles, `.scripts`, `.config` paths, and `.github`.
 - Read `.github/README.md` before changing desktop configuration. It describes the intended theme, applications, and major config areas.
 
 ## Editing conventions
 
 - Preserve the existing visual language and the Apple Silicon/Asahi-specific settings.
 - Prefer focused edits to hand-authored configuration. Do not normalize or clean unrelated application-generated files.
-- Do not stage the entire repository blindly. Inspect `git status` and stage only intended paths because `.config` contains credentials and volatile application state.
+- Do not stage the entire repository blindly. Inspect `git status` and stage only intended paths. Most credential and volatile application-state paths under `.config` are intentionally ignored; add new config paths to the curated root `.gitignore` allow-list only after checking their contents.
 - Many files contain absolute paths under `/home/barrettjflowers`, monitor name `eDP-1`, mount UUIDs, audio device IDs, or remote-host details. Treat these as machine-specific.
 
 ## Generated configuration
