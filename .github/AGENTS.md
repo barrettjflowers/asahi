@@ -1,0 +1,47 @@
+# Repository Guide
+
+## Purpose and environment
+
+- This is the home-directory dotfiles repository for an M2 MacBook Air running Fedora Linux Asahi Remix with Hyprland and KDE/Wayland applications.
+- The repository root is the user's home directory. Configuration is tracked in place under `~/.config`; there is no Stow, chezmoi, or deployment layer.
+- `.gitignore` ignores everything by default and explicitly includes selected root dotfiles, `.scripts`, `.config`, and `.github`.
+- Read `.github/README.md` before changing desktop configuration. It describes the intended theme, applications, and major config areas.
+
+## Editing conventions
+
+- Preserve the existing visual language and the Apple Silicon/Asahi-specific settings.
+- Prefer focused edits to hand-authored configuration. Do not normalize or clean unrelated application-generated files.
+- Do not stage the entire repository blindly. Inspect `git status` and stage only intended paths because `.config` contains credentials and volatile application state.
+- Many files contain absolute paths under `/home/barrettjflowers`, monitor name `eDP-1`, mount UUIDs, audio device IDs, or remote-host details. Treat these as machine-specific.
+
+## Generated configuration
+
+- `~/.config/colors/colors.sh` is the palette source of truth. Edit its five color values and run it rather than independently changing generated palette outputs.
+- The color script generates `colors.css`, `colors.rasi`, `hyprland-colors.conf`, `~/.config/swaync/style.css`, `~/.config/swaync/config.json`, and `~/.config/swayosd/style.css`.
+- `~/.config/waybar/scripts/select.sh` replaces `~/.config/waybar/config` and `style.css` from files under `~/.config/waybar/themes`.
+- SwayNC files and selected Waybar files are rendered outputs; change their producer when the desired change should survive regeneration.
+
+## System snapshots
+
+- `~/.config/asahi` stores host snapshots refreshed by the user's crontab every 15 minutes.
+- `crontab` mirrors `crontab -l`; `grub` mirrors `/etc/default/grub`; `fstab` mirrors `/etc/fstab`.
+- `systemd` lists enabled system unit files. `packages` is a sorted inventory of installed RPM package names, versions, releases, and architectures.
+- Snapshot files describe current state; they are not restoration scripts and should not be edited directly.
+- To change snapshot jobs, edit `~/.config/asahi/crontab` and immediately install it with `crontab ~/.config/asahi/crontab`; otherwise the next snapshot may overwrite the edit.
+
+## Systemd configuration
+
+- User units and enablement links are under `~/.config/systemd/user`.
+- Enablement symlinks under `*target.wants` may target local units, `/usr/lib/systemd/user`, or `/dev/null`; preserve symlinks when editing or copying.
+- Remote desktop and WayVNC units can expose network services. Do not change bind addresses, startup behavior, or enablement without explicit approval.
+- After user-unit changes, verify with `systemd-analyze --user verify <unit>` where applicable, then run `systemctl --user daemon-reload` only when applying the change is intended.
+
+## Sensitive and application-owned state
+
+- Never print, summarize, or casually modify credential material under `~/.config/rclone`, `~/.config/sunshine/credentials`, `~/.config/wayvnc/certs`, `~/.config/pulse/cookie`, Go telemetry tokens, OBS service settings, or OBS WebSocket settings.
+- Treat browser profiles, crash reports, recent-file histories, Aseprite sessions/logs, Audacity registries, `~/.config/dconf/user`, Go telemetry state, OBS logs/profiler data, and Neovim's pack lock as application-owned unless the task explicitly targets them.
+- `~/.config/vivaldi-snapshot` and local dependency files under `~/.config/opencode` are ignored local state and should remain untracked.
+
+## Scoped instructions
+
+- `~/.config/opencode/AGENTS.md` contains notification instructions for work in that subtree.
