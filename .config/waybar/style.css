@@ -18,7 +18,7 @@ window#waybar > box {
 }
 .modules-center {
     padding: 6px 0px;
-    margin-left: 90px; /* notch */
+    margin-left: 75px; /* notch */
 }
 .modules-right {
     padding: 0px 25px;

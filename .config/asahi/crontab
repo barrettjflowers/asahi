@@ -12,6 +12,12 @@
 */15 * * * * crontab -l > /home/barrettjflowers/.config/asahi/crontab
 #backup grub crontab to dotfiles
 */15 * * * * cat /etc/default/grub > /home/barrettjflowers/.config/asahi/grub
+# backup enabled systemd units to dotfiles
+*/15 * * * * systemctl list-unit-files --state=enabled --no-pager > /home/barrettjflowers/.config/asahi/systemd
+# backup fstab to dotfiles
+*/15 * * * * cat /etc/fstab > /home/barrettjflowers/.config/asahi/fstab
+# backup installed packages and versions to dotfiles
+*/15 * * * * rpm -qa | LC_ALL=C sort > /home/barrettjflowers/.config/asahi/packages
 
 # ===== obsidian vault ======
 # copy blog to vault
