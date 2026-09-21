@@ -20,13 +20,88 @@
 !/.scripts/
 !/.scripts/*
 
-# Unignore .config directory and its contents
-!/.config
-!/.config/**
+# Curated .config allow-list. Everything else remains ignored by `*` above.
+!/.config/
 
-# Ignore these config directories
-/.config/herd-lite
-/.config/github-copilot
+# System snapshots and desktop configuration
+!/.config/asahi/
+!/.config/asahi/**
+!/.config/autostart/
+!/.config/autostart/**
+!/.config/btop/
+!/.config/btop/**
+!/.config/colors/
+!/.config/colors/**
+!/.config/css/
+!/.config/css/**
+!/.config/fastfetch/
+!/.config/fastfetch/**
+!/.config/fontconfig/
+!/.config/fontconfig/**
+!/.config/hypr/
+!/.config/hypr/**
+!/.config/kanata/
+!/.config/kanata/**
+!/.config/kitty/
+!/.config/kitty/**
+!/.config/menus/
+!/.config/menus/**
+!/.config/nvim/
+!/.config/nvim/**
+!/.config/qt5ct/
+!/.config/qt5ct/**
+!/.config/qt6ct/
+!/.config/qt6ct/**
+!/.config/rofi/
+!/.config/rofi/**
+!/.config/swaync/
+!/.config/swaync/**
+!/.config/systemd/
+!/.config/systemd/**
+!/.config/waybar/
+!/.config/waybar/**
+!/.config/xsettingsd/
+!/.config/xsettingsd/**
+
+# GTK configuration, excluding machine-specific bookmarks
+!/.config/gtk-3.0/
+!/.config/gtk-3.0/assets/
+!/.config/gtk-3.0/assets/**
+!/.config/gtk-3.0/colors.css
+!/.config/gtk-3.0/gtk.css
+!/.config/gtk-3.0/settings.ini
+!/.config/gtk-3.0/window_decorations.css
+!/.config/gtk-4.0/
+!/.config/gtk-4.0/colors.css
+!/.config/gtk-4.0/gtk.css
+!/.config/gtk-4.0/settings.ini
+!/.config/gtk-4.0/window_decorations.css
+
+# Keep only non-secret remote service configuration
+!/.config/sunshine/
+!/.config/sunshine/apps.json
+!/.config/sunshine/sunshine.conf
+!/.config/wayvnc/
+!/.config/wayvnc/config
+
+# OpenCode configuration without local dependencies
+!/.config/opencode/
+!/.config/opencode/AGENTS.md
+!/.config/opencode/opencode.jsonc
+
+# Standalone application and desktop settings
+!/.config/.gtkrc-2.0
+!/.config/QtProject.conf
+!/.config/gtkrc
+!/.config/gtkrc-2.0
+!/.config/kdeglobals
+!/.config/kdenlive.kmessagebox
+!/.config/kdenliverc
+!/.config/mimeapps.list
+!/.config/powermanagementprofilesrc
+!/.config/sealert.conf
+!/.config/user-dirs.dirs
+!/.config/user-dirs.locale
 
 # Unignore .github directory and its contents
 !/.github
