@@ -55,6 +55,8 @@
 !/.config/waybar/**
 !/.config/xsettingsd/
 !/.config/xsettingsd/**
+!/.config/yazi/
+!/.config/yazi/**
 
 # GTK configuration, excluding machine-specific bookmarks
 !/.config/gtk-3.0/
