@@ -30,7 +30,7 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd("ydotoold")
     hl.exec_cmd("wl-paste --type text --watch cliphist store")
     hl.exec_cmd("hyprpaper")
-    hl.exec_cmd("swayosd-server --top-margin 0.95")
+    hl.exec_cmd("swayosd-server --top-margin 1.5")
     hl.exec_cmd("waybar")
     hl.exec_cmd("hyprsunset --temperature 4100") -- warm up display
 
@@ -61,12 +61,12 @@ hl.env("XDG_SESSION_DESKTOP", "Hyprland")
 ---- COLORS ----
 ---------------
 
--- from ~/.config/colors/hyprland-colors.conf
-local background = "rgba(1C1A14ee)"
-local text       = "rgb(68694F)"
-local accent     = "rgb(737458)"
-local inactive   = "rgb(2C2A24)"
-local urgent     = "rgb(f53c3c)"
+local colors     = dofile(os.getenv("HOME") .. "/.config/colors/hyprland-colors.lua")
+local background = colors.background
+local text       = colors.text
+local accent     = colors.accent
+local inactive   = colors.inactive
+local urgent     = colors.urgent
 
 ---------------------
 ---- KEYBINDINGS ----

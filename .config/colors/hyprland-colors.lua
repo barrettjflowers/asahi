@@ -1,0 +1,8 @@
+-- Auto-generated from colors.sh
+return {
+    background = "rgba(2a2d2aee)",
+    text = "rgb(a1b5a1)",
+    accent = "rgb(a1b5a1)",
+    inactive = "rgb(353b35)",
+    urgent = "rgb(cbe25a)",
+}

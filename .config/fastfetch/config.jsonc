@@ -1,33 +1,55 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+    "padding": { "top": 1, "left": 2, "right": 4 }
+  },
+  "display": {
+    "separator": "  ",
+    "key": { "width": 16 },
+    "size": { "binaryPrefix": "si", "ndigits": 1 },
+    "percent": { "type": 9 },
+    "bar": { "width": 12 },
+    "color": { "keys": "blue", "title": "magenta" }
+  },
   "modules": [
-    "title",
-    "separator",
-    {
-      "type": "os",
-      "format": "{name} {version-id}"
-    },
-    "host",
-    "kernel",
-    "uptime",
-    "packages",
-    "shell",
-    "display",
-    "de",
-    "wm",
-    "wmtheme",
-    "cursor",
-    "terminal",
-    "terminalfont",
-    "cpu",
-    "gpu",
-    "memory",
-    "swap",
-    "disk",
-    "localip",
-    "battery",
-    "poweradapter",
     "break",
-    "colors"
+    { "type": "title", "format": "{user-name-colored}{at-symbol-colored}{host-name-colored}" },
+    { "type": "separator", "string": "─" },
+
+    { "type": "custom", "format": "{#90}╭─ {#1;35}system" },
+    { "type": "os",       "key": "│   os",       "keyColor": "magenta", "format": "{name} {version-id}" },
+    { "type": "host",     "key": "│   host",     "keyColor": "magenta" },
+    { "type": "kernel",   "key": "│   kernel",   "keyColor": "magenta" },
+    { "type": "uptime",   "key": "│   uptime",   "keyColor": "magenta" },
+    { "type": "packages", "key": "│   packages", "keyColor": "magenta" },
+    { "type": "shell",    "key": "│   shell",    "keyColor": "magenta" },
+    { "type": "custom", "format": "{#90}╰─" },
+
+    { "type": "custom", "format": "{#90}╭─ {#1;34}desktop" },
+    { "type": "display",      "key": "│   display",  "keyColor": "blue" },
+    { "type": "de",           "key": "│   de",       "keyColor": "blue" },
+    { "type": "wm",           "key": "│   wm",       "keyColor": "blue" },
+    { "type": "wmtheme",      "key": "│   theme",    "keyColor": "blue" },
+    { "type": "cursor",       "key": "│   cursor",   "keyColor": "blue" },
+    { "type": "terminal",     "key": "│   terminal", "keyColor": "blue" },
+    { "type": "terminalfont", "key": "│   font",     "keyColor": "blue" },
+    { "type": "custom", "format": "{#90}╰─" },
+
+    { "type": "custom", "format": "{#90}╭─ {#1;32}hardware" },
+    { "type": "cpu",    "key": "│   cpu",    "keyColor": "green" },
+    { "type": "gpu",    "key": "│   gpu",    "keyColor": "green" },
+    { "type": "memory", "key": "│   memory", "keyColor": "green" },
+    { "type": "swap",   "key": "│   swap",   "keyColor": "green" },
+    { "type": "disk",   "key": "│   disk",   "keyColor": "green" },
+    { "type": "custom", "format": "{#90}╰─" },
+
+    { "type": "custom", "format": "{#90}╭─ {#1;33}status" },
+    { "type": "localip",      "key": "│   local ip", "keyColor": "yellow" },
+    { "type": "battery",      "key": "│   battery",  "keyColor": "yellow" },
+    { "type": "poweradapter", "key": "│   power",    "keyColor": "yellow" },
+    { "type": "custom", "format": "{#90}╰─" },
+
+    "break",
+    { "type": "colors", "symbol": "circle", "paddingLeft": 2 }
   ]
 }

@@ -2,6 +2,6 @@ UUID=89cb3d63-91a4-4916-a6c4-de361910eb92 / btrfs x-systemd.growfs,compress=zstd
 UUID=725fee20-48b3-48c2-ba73-5c165384aa8c /boot ext4 defaults 0 0
 UUID=89cb3d63-91a4-4916-a6c4-de361910eb92 /home btrfs x-systemd.growfs,compress=zstd:1,subvol=home 0 0
 UUID=2FA7-65AB /boot/efi vfat defaults,umask=0077,shortname=winnt 0 0
-UUID=C250-0E41 /mnt/x9pro exfat defaults,nofail,uid=1000,gid=1000,umask=022 0 0
-UUID=3338-3839 /mnt/sdcard exfat defaults,nofail,uid=1000,gid=1000,umask=022 0 0
-/dev/sdb1 /mnt/sd exfat defaults,nofail,uid=1000,gid=1000,umask=022 0 0
+UUID=C250-0E41 /mnt/ssd exfat defaults,nofail,uid=1000,gid=1000,umask=022 0 0
+UUID=3338-3839 /mnt/sd1 exfat defaults,nofail,uid=1000,gid=1000,umask=022 0 0
+/dev/sdb1 /mnt/sd2 exfat defaults,nofail,uid=1000,gid=1000,umask=022 0 0
