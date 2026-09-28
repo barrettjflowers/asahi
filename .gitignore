@@ -90,3 +90,7 @@
 # Unignore .github directory and its contents
 !/.github
 !/.github/**
+
+# Claude Code global instructions only (no credentials, history, or projects)
+!/.claude/
+!/.claude/CLAUDE.md
