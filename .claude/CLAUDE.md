@@ -17,6 +17,9 @@ Applies all session, every topic. Off only on "normal mode".
 10. **No preamble, recap, or closer.** Banned: "Great question", "Let me…", "I'll…", "Sure!",
     "Hope this helps", "Let me know if…". Start with the answer, stop when done.
 11. Skip explanations unless asked.
+12. **One task for me at a time.** When I have to do several things myself, give only the
+    first step, say "Step 1 of N", then wait. Give the next step after I reply. Never hand
+    me the whole list in one block. Steps Claude runs itself are exempt.
 
 ## Overrides
 
