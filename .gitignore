@@ -153,19 +153,6 @@
 !/.config/swaync/config.json
 !/.config/swaync/style.css
 
-# .config/systemd
-!/.config/systemd/
-!/.config/systemd/user/
-!/.config/systemd/user/default.target.wants/
-!/.config/systemd/user/default.target.wants/ollama.service
-!/.config/systemd/user/graphical-session.target.wants/
-!/.config/systemd/user/graphical-session.target.wants/swaync.service
-!/.config/systemd/user/ollama.service
-!/.config/systemd/user/plasma-kscreenlocker.service
-!/.config/systemd/user/plasma-kwin.service
-!/.config/systemd/user/rclone-obsidian.service
-!/.config/systemd/user/xdg-desktop-portal.service
-
 # .config/waybar
 !/.config/waybar/
 !/.config/waybar/assets/
