@@ -1,101 +1,225 @@
-# Ignore everything
+# Ignore everything. A file is tracked only if it is listed below by exact path.
+# No wildcards: a new file stays untracked until its own line is added here.
 *
 
-# Root dotfiles and scripts
-!/.gitignore
+# root dotfiles
 !/.bashrc
-!/.zshrc
-!/.tmux.conf
+!/.gitignore
 !/.gtkrc-2.0
-!/.scripts/
-!/.scripts/*
+!/.tmux.conf
+!/.zshrc
 
-# Curated .config allow-list. Everything else remains ignored by `*` above
+# .claude
+!/.claude/
+!/.claude/CLAUDE.md
+
+# .config
 !/.config/
+!/.config/gtkrc
+!/.config/.gtkrc-2.0
+!/.config/gtkrc-2.0
+!/.config/kdeglobals
+!/.config/kdenliverc
+!/.config/powermanagementprofilesrc
+!/.config/QtProject.conf
 
-# System snapshots and desktop configuration
+# .config/asahi
 !/.config/asahi/
-!/.config/asahi/**
-!/.config/autostart/
-!/.config/autostart/**
-!/.config/btop/
-!/.config/btop/**
-!/.config/colors/
-!/.config/colors/**
-!/.config/css/
-!/.config/css/**
-!/.config/fastfetch/
-!/.config/fastfetch/**
-!/.config/fontconfig/
-!/.config/fontconfig/**
-!/.config/hypr/
-!/.config/hypr/**
-!/.config/kanata/
-!/.config/kanata/**
-!/.config/kitty/
-!/.config/kitty/**
-!/.config/nvim/
-!/.config/nvim/**
-!/.config/qt5ct/
-!/.config/qt5ct/**
-!/.config/qt6ct/
-!/.config/qt6ct/**
-!/.config/rofi/
-!/.config/rofi/**
-!/.config/swaync/
-!/.config/swaync/**
-!/.config/systemd/
-!/.config/systemd/**
-!/.config/waybar/
-!/.config/waybar/**
-!/.config/xsettingsd/
-!/.config/xsettingsd/**
-!/.config/yazi/
-!/.config/yazi/**
+!/.config/asahi/crontab
+!/.config/asahi/fstab
+!/.config/asahi/grub
+!/.config/asahi/packages
+!/.config/asahi/systemd
 
-# GTK configuration, excluding machine-specific bookmarks
+# .config/autostart
+!/.config/autostart/
+!/.config/autostart/remmina-applet.desktop
+
+# .config/btop
+!/.config/btop/
+!/.config/btop/btop.conf
+
+# .config/colors
+!/.config/colors/
+!/.config/colors/colors.css
+!/.config/colors/colors.rasi
+!/.config/colors/colors.sh
+!/.config/colors/hyprland-colors.conf
+!/.config/colors/hyprland-colors.lua
+
+# .config/css
+!/.config/css/
+!/.config/css/browser.css
+!/.config/css/teams.css
+!/.config/css/vivaldi/
+!/.config/css/vivaldi/vivaldi.css
+
+# .config/fastfetch
+!/.config/fastfetch/
+!/.config/fastfetch/config.jsonc
+!/.config/fastfetch/config.jsonc.bak
+
+# .config/fontconfig
+!/.config/fontconfig/
+!/.config/fontconfig/fonts.conf
+
+# .config/gtk-3.0
 !/.config/gtk-3.0/
 !/.config/gtk-3.0/assets/
-!/.config/gtk-3.0/assets/**
+!/.config/gtk-3.0/assets/close-active.svg
+!/.config/gtk-3.0/assets/close-backdrop-active.svg
+!/.config/gtk-3.0/assets/close-backdrop-hover.svg
+!/.config/gtk-3.0/assets/close-backdrop-normal.svg
+!/.config/gtk-3.0/assets/close-hover.svg
+!/.config/gtk-3.0/assets/close-normal.svg
+!/.config/gtk-3.0/assets/maximize-active.svg
+!/.config/gtk-3.0/assets/maximize-backdrop-active.svg
+!/.config/gtk-3.0/assets/maximize-backdrop-hover.svg
+!/.config/gtk-3.0/assets/maximize-backdrop-normal.svg
+!/.config/gtk-3.0/assets/maximized-active.svg
+!/.config/gtk-3.0/assets/maximized-backdrop-active.svg
+!/.config/gtk-3.0/assets/maximized-backdrop-hover.svg
+!/.config/gtk-3.0/assets/maximized-backdrop-normal.svg
+!/.config/gtk-3.0/assets/maximized-hover.svg
+!/.config/gtk-3.0/assets/maximized-normal.svg
+!/.config/gtk-3.0/assets/maximize-hover.svg
+!/.config/gtk-3.0/assets/maximize-normal.svg
+!/.config/gtk-3.0/assets/minimize-active.svg
+!/.config/gtk-3.0/assets/minimize-backdrop-active.svg
+!/.config/gtk-3.0/assets/minimize-backdrop-hover.svg
+!/.config/gtk-3.0/assets/minimize-backdrop-normal.svg
+!/.config/gtk-3.0/assets/minimize-hover.svg
+!/.config/gtk-3.0/assets/minimize-normal.svg
 !/.config/gtk-3.0/colors.css
 !/.config/gtk-3.0/gtk.css
 !/.config/gtk-3.0/settings.ini
 !/.config/gtk-3.0/window_decorations.css
+
+# .config/gtk-4.0
 !/.config/gtk-4.0/
 !/.config/gtk-4.0/colors.css
 !/.config/gtk-4.0/gtk.css
 !/.config/gtk-4.0/settings.ini
 !/.config/gtk-4.0/window_decorations.css
 
-# Sunshine: app list and encoder settings only (credentials stay ignored)
+# .config/hypr
+!/.config/hypr/
+!/.config/hypr/hyprland.conf.bak
+!/.config/hypr/hyprland.lua
+!/.config/hypr/hyprlock.conf
+!/.config/hypr/hyprpaper.conf
+!/.config/hypr/hyprtoolkit.conf
+!/.config/hypr/scripts/
+!/.config/hypr/scripts/battery-saver.sh
+!/.config/hypr/scripts/brightness.sh
+!/.config/hypr/scripts/camoverlay.sh
+!/.config/hypr/scripts/clipboard.sh
+!/.config/hypr/scripts/screenrecord.sh
+!/.config/hypr/scripts/transcribe.sh
+!/.config/hypr/scripts/voice-agent.sh
+!/.config/hypr/scripts/volume.sh
+!/.config/hypr/shaders/
+!/.config/hypr/shaders/crt.glsl
+
+# .config/kanata
+!/.config/kanata/
+!/.config/kanata/config.kbd.old
+
+# .config/kitty
+!/.config/kitty/
+!/.config/kitty/current-theme.conf
+!/.config/kitty/kitty.conf
+!/.config/kitty/kitty.conf.bak
+!/.config/kitty/light-theme.auto.conf
+
+# .config/nvim
+!/.config/nvim/
+!/.config/nvim/init.lua
+!/.config/nvim/nvim-pack-lock.json
+
+# .config/qt5ct
+!/.config/qt5ct/
+!/.config/qt5ct/qt5ct.conf
+
+# .config/qt6ct
+!/.config/qt6ct/
+!/.config/qt6ct/qt6ct.conf
+
+# .config/rofi
+!/.config/rofi/
+!/.config/rofi/config.rasi
+
+# .config/sunshine
 !/.config/sunshine/
 !/.config/sunshine/apps.json
 !/.config/sunshine/sunshine.conf
 
-# Standalone application and desktop settings
-!/.config/.gtkrc-2.0
-!/.config/QtProject.conf
-!/.config/gtkrc
-!/.config/gtkrc-2.0
-!/.config/kdeglobals
-!/.config/kdenliverc
-!/.config/powermanagementprofilesrc
+# .config/swaync
+!/.config/swaync/
+!/.config/swaync/config.json
+!/.config/swaync/style.css
 
-# Repo docs
+# .config/systemd
+!/.config/systemd/
+!/.config/systemd/user/
+!/.config/systemd/user/default.target.wants/
+!/.config/systemd/user/default.target.wants/ollama.service
+!/.config/systemd/user/graphical-session.target.wants/
+!/.config/systemd/user/graphical-session.target.wants/swaync.service
+!/.config/systemd/user/ollama.service
+!/.config/systemd/user/plasma-kscreenlocker.service
+!/.config/systemd/user/plasma-kwin.service
+!/.config/systemd/user/rclone-obsidian.service
+!/.config/systemd/user/xdg-desktop-portal.service
+
+# .config/waybar
+!/.config/waybar/
+!/.config/waybar/assets/
+!/.config/waybar/assets/experimental.png
+!/.config/waybar/assets/line.png
+!/.config/waybar/assets/main.png
+!/.config/waybar/assets/zen.png
+!/.config/waybar/config
+!/.config/waybar/scripts/
+!/.config/waybar/scripts/colorpicker.sh
+!/.config/waybar/scripts/local-ip.sh
+!/.config/waybar/scripts/memory.sh
+!/.config/waybar/scripts/record-indicator.sh
+!/.config/waybar/scripts/refresh.sh
+!/.config/waybar/scripts/select.sh
+!/.config/waybar/scripts/uptime.sh
+!/.config/waybar/scripts/weather.sh
+!/.config/waybar/style.css
+!/.config/waybar/themes/
+!/.config/waybar/themes/default/
+!/.config/waybar/themes/default/config-default
+!/.config/waybar/themes/default/style-default.css
+!/.config/waybar/themes/experimental/
+!/.config/waybar/themes/experimental/config-experimental
+!/.config/waybar/themes/experimental/style-experimental.css
+!/.config/waybar/themes/line/
+!/.config/waybar/themes/line/config-line
+!/.config/waybar/themes/line/style-line.css
+!/.config/waybar/themes/zen/
+!/.config/waybar/themes/zen/config-zen
+!/.config/waybar/themes/zen/style-zen.css
+
+# .config/xsettingsd
+!/.config/xsettingsd/
+!/.config/xsettingsd/xsettingsd.conf
+
+# .config/yazi
+!/.config/yazi/
+!/.config/yazi/yazi.toml
+
+# .github
 !/.github/
-!/.github/**
+!/.github/AGENTS.md
+!/.github/README.md
 
-# Claude Code global instructions only (no credentials, history, or projects)
-!/.claude/
-!/.claude/CLAUDE.md
-
-# VNC units stay local and untracked
-/.config/systemd/user/wayvnc*.service
-/.config/systemd/user/novnc.service
-/.config/systemd/user/*.wants/wayvnc*.service
-/.config/systemd/user/*.wants/novnc.service
-
-# Editor swap files and macOS AppleDouble files
-.*.sw[a-p]
-.sw[a-p]
-._*
+# .scripts
+!/.scripts/
+!/.scripts/couch-tunnel.sh
+!/.scripts/igw-web.sh
+!/.scripts/ntfy.sh
+!/.scripts/rofi-dict.sh
