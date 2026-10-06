@@ -1,19 +1,14 @@
 # Ignore everything
 *
 
-# Except...
-!*.vimrc
-!*.vim
-!*.zshrc
-!*.bashrc
-!.gitignore
-!.gitignore_global
-!.bashrc
-!.fzf
+# Root dotfiles and scripts
+!/.gitignore
+!/.bashrc
+!/.zshrc
+!/.tmux.conf
+!/.gtkrc-2.0
 !/.scripts/
 !/.scripts/*
-!.tmux.conf
-!.gtkrc-2.0
 
 # Curated .config allow-list. Everything else remains ignored by `*` above
 !/.config/
@@ -72,6 +67,7 @@
 !/.config/gtk-4.0/settings.ini
 !/.config/gtk-4.0/window_decorations.css
 
+# Sunshine: app list and encoder settings only (credentials stay ignored)
 !/.config/sunshine/
 !/.config/sunshine/apps.json
 !/.config/sunshine/sunshine.conf
@@ -85,8 +81,8 @@
 !/.config/kdenliverc
 !/.config/powermanagementprofilesrc
 
-# Unignore .github directory and its contents
-!/.github
+# Repo docs
+!/.github/
 !/.github/**
 
 # Claude Code global instructions only (no credentials, history, or projects)
