@@ -29,10 +29,6 @@
 !/.config/asahi/packages
 !/.config/asahi/systemd
 
-# .config/autostart
-!/.config/autostart/
-!/.config/autostart/remmina-applet.desktop
-
 # .config/btop
 !/.config/btop/
 !/.config/btop/btop.conf
