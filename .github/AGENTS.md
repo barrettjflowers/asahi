@@ -4,14 +4,14 @@
 
 - This is the home-directory dotfiles repository for an M2 MacBook Air running Fedora Linux Asahi Remix with Hyprland and KDE/Wayland applications.
 - The repository root is the user's home directory. Configuration is tracked in place under `~/.config`; there is no Stow, chezmoi, or deployment layer.
-- `.gitignore` ignores everything by default and uses an explicit allow-list for selected root dotfiles, `.scripts`, `.config` paths, and `.github`.
+- `.gitignore` ignores everything by default and lists every tracked file by exact path, with no wildcards. A new file, even inside an already-tracked directory, stays ignored until its own `!/path` line is added.
 - Read `.github/README.md` before changing desktop configuration. It describes the intended theme, applications, and major config areas.
 
 ## Editing conventions
 
 - Preserve the existing visual language and the Apple Silicon/Asahi-specific settings.
 - Prefer focused edits to hand-authored configuration. Do not normalize or clean unrelated application-generated files.
-- Do not stage the entire repository blindly. Inspect `git status` and stage only intended paths. Most credential and volatile application-state paths under `.config` are intentionally ignored; add new config paths to the curated root `.gitignore` allow-list only after checking their contents.
+- Do not stage the entire repository blindly. Inspect `git status` and stage only intended paths. Most credential and volatile application-state paths under `.config` are intentionally ignored; add a file's line to the root `.gitignore` only when the user explicitly asks to track that file, and only after checking its contents. Never use `git add -f` or wildcard rules to get around it.
 - Many files contain absolute paths under `/home/barrettjflowers`, monitor name `eDP-1`, mount UUIDs, audio device IDs, or remote-host details. Treat these as machine-specific.
 
 ## Generated configuration
@@ -33,7 +33,7 @@
 
 - User units and enablement links are under `~/.config/systemd/user`.
 - Enablement symlinks under `*target.wants` may target local units, `/usr/lib/systemd/user`, or `/dev/null`; preserve symlinks when editing or copying.
-- WayVNC and noVNC units and `~/.config/wayvnc` exist locally but are intentionally untracked (ignored in `.gitignore`); do not re-add them.
+- WayVNC and noVNC units and `~/.config/wayvnc` exist locally but are intentionally untracked; do not re-add them.
 - Remote desktop and WayVNC units can expose network services. Do not change bind addresses, startup behavior, or enablement without explicit approval.
 - After user-unit changes, verify with `systemd-analyze --user verify <unit>` where applicable, then run `systemctl --user daemon-reload` only when applying the change is intended.
 
