@@ -33,13 +33,12 @@
 
 - User units and enablement links are under `~/.config/systemd/user`. They are local only and intentionally untracked; do not re-add them.
 - Enablement symlinks under `*target.wants` may target local units, `/usr/lib/systemd/user`, or `/dev/null`; preserve symlinks when editing or copying.
-- `~/.config/wayvnc` exists locally but is intentionally untracked; do not re-add it.
-- Remote desktop and WayVNC units can expose network services. Do not change bind addresses, startup behavior, or enablement without explicit approval.
+- Sunshine is the only remote desktop service; WayVNC and noVNC were removed. Remote desktop units can expose network services. Do not change bind addresses, startup behavior, or enablement without explicit approval.
 - After user-unit changes, verify with `systemd-analyze --user verify <unit>` where applicable, then run `systemctl --user daemon-reload` only when applying the change is intended.
 
 ## Sensitive and application-owned state
 
-- Never print, summarize, or casually modify credential material under `~/.config/rclone`, `~/.config/sunshine/credentials`, `~/.config/wayvnc/certs`, `~/.config/pulse/cookie`, Go telemetry tokens, OBS service settings, or OBS WebSocket settings.
+- Never print, summarize, or casually modify credential material under `~/.config/rclone`, `~/.config/sunshine/credentials`, `~/.config/pulse/cookie`, Go telemetry tokens, OBS service settings, or OBS WebSocket settings.
 - Treat browser profiles, crash reports, recent-file histories, Aseprite sessions/logs, Audacity registries, `~/.config/dconf/user`, Go telemetry state, OBS logs/profiler data, and Neovim's pack lock as application-owned unless the task explicitly targets them.
 - `~/.config/vivaldi-snapshot` and local dependency files under `~/.config/opencode` are ignored local state and should remain untracked.
 
