@@ -33,6 +33,7 @@
 
 - User units and enablement links are under `~/.config/systemd/user`.
 - Enablement symlinks under `*target.wants` may target local units, `/usr/lib/systemd/user`, or `/dev/null`; preserve symlinks when editing or copying.
+- WayVNC and noVNC units and `~/.config/wayvnc` exist locally but are intentionally untracked (ignored in `.gitignore`); do not re-add them.
 - Remote desktop and WayVNC units can expose network services. Do not change bind addresses, startup behavior, or enablement without explicit approval.
 - After user-unit changes, verify with `systemd-analyze --user verify <unit>` where applicable, then run `systemctl --user daemon-reload` only when applying the change is intended.
 
