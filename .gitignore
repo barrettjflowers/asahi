@@ -75,8 +75,6 @@
 !/.config/sunshine/
 !/.config/sunshine/apps.json
 !/.config/sunshine/sunshine.conf
-!/.config/wayvnc/
-!/.config/wayvnc/config
 
 # Standalone application and desktop settings
 !/.config/.gtkrc-2.0
@@ -94,3 +92,14 @@
 # Claude Code global instructions only (no credentials, history, or projects)
 !/.claude/
 !/.claude/CLAUDE.md
+
+# VNC units stay local and untracked
+/.config/systemd/user/wayvnc*.service
+/.config/systemd/user/novnc.service
+/.config/systemd/user/*.wants/wayvnc*.service
+/.config/systemd/user/*.wants/novnc.service
+
+# Editor swap files and macOS AppleDouble files
+.*.sw[a-p]
+.sw[a-p]
+._*
