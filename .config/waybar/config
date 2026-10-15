@@ -7,7 +7,7 @@
         "margin-bottom": -6,
         "margin-left": 3,
         "margin-right": 3,
-        "modules-left": ["hyprland/workspaces", "hyprland/window"],
+        "modules-left": ["custom/power", "hyprland/workspaces", "hyprland/window"],
         "hyprland/window": {
             "format": "›  {class}",
         },
@@ -21,6 +21,11 @@
                 "*": [ 1,2,3,4,5 ]
             }
         },
+        "custom/power": {
+            "format": "󰐥 Power",
+            "tooltip-format": "systemctl poweroff",
+            "on-click": "systemctl poweroff"
+        },
         "custom/notification": {
             "tooltip": false,
             "format": "",
@@ -31,12 +36,12 @@
             "format": "󱑃 {:%a %d %b %I:%M}",
             "interval": 1,   
             "tooltip-format": "<tt>{calendar}</tt>",
+            "on-click": "d=$(date +%F); printf %s \"$d\" | wl-copy && notify-send -a Clock 'Date copied' \"$d\"",
             "calendar": {
                 "format": {
-                    "today": ""
+                    "today": "<span background='#3f423f'>{}</span>"
                 }
-            },
-            "on-click": "kitty vim /home/barrettjflowers/Documents/Vault/barrettjflowers/calendar/calendar.md"
+            }
         },
         "network": {
             "format-wifi": "󰖩 {essid}",

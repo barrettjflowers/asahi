@@ -20,7 +20,7 @@ hl.monitor({
 local control  = "SUPER" -- was $control
 local command  = "CTRL"  -- was $command
 local terminal = "kitty"
-local menu     = "rofi -show drun"
+local menu     = "pkill -x rofi || rofi -show drun"
 
 -------------------
 ---- AUTOSTART ----

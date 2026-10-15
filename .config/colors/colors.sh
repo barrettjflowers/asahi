@@ -23,12 +23,19 @@ INACTIVE_B=$((16#${INACTIVE:4:2}))
 
 BR_INACTIVE="$INACTIVE_R, $INACTIVE_G, $INACTIVE_B"
 
+# SURFACE: BACKGROUND lightened 10% toward white (Waybar module backgrounds)
+SURFACE_R=$(( BG_R + (255 - BG_R) / 10 ))
+SURFACE_G=$(( BG_G + (255 - BG_G) / 10 ))
+SURFACE_B=$(( BG_B + (255 - BG_B) / 10 ))
+SURFACE=$(printf '%02x%02x%02x' $SURFACE_R $SURFACE_G $SURFACE_B)
+
 cat > "$DIR/colors.css" << EOF
 @define-color background rgba($BG_R, $BG_G, $BG_B, 1.0);
 @define-color text #$TEXT;
 @define-color accent #$ACCENT;
 @define-color inactive #$INACTIVE;
 @define-color urgent #$URGENT;
+@define-color surface #$SURFACE;
 EOF
 
 cat > "$DIR/colors.rasi" << EOF
@@ -41,6 +48,7 @@ cat > "$DIR/colors.rasi" << EOF
     on:                          #$ACCENT;
     off:                         #$INACTIVE;
     urgent:                      #$URGENT;
+    surface:                     #$SURFACE;
 }
 EOF
 
@@ -63,6 +71,9 @@ return {
     urgent = "rgb($URGENT)",
 }
 EOF
+
+# Waybar calendar tooltip: Pango markup can't read @define-color, so write SURFACE in directly
+sed -i -E "s|(\"today\": \"<span background='#)[0-9a-fA-F]{6}|\\1$SURFACE|" ~/.config/waybar/config
 
 mkdir -p ~/.config/swayosd
 cat > ~/.config/swayosd/style.css << CSSEOF
@@ -133,16 +144,21 @@ cat > ~/.config/swaync/style.css << CSSEOF
   margin: 8px 10px;
 }
 
+/* push popups below the Waybar */
+.floating-notifications {
+  padding-top: 7px;
+}
+
 .notification-row:focus,
 .notification-row:hover {
-  background: rgba($BG_R, $BG_G, $BG_B, 0.15);
+  background: transparent;
   border-radius: 10px;
 }
 
 .notification {
   border-radius: 10px;
-  border: 2px solid #$ACCENT;
-  background: rgba($BG_R, $BG_G, $BG_B, 0.87);
+  border: none;
+  background: #$SURFACE;
   padding: 0;
   margin: 0;
 }
@@ -152,11 +168,18 @@ cat > ~/.config/swaync/style.css << CSSEOF
   padding: 12px;
 }
 
-.notification-default-action,
+.notification-default-action {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: transparent;
+  color: #$TEXT;
+  border: 1px solid transparent;
+}
+
 .notification-action {
   padding: 8px 12px;
   border-radius: 8px;
-  background: rgba($BR_INACTIVE, 0.6);
+  background: #$INACTIVE;
   color: #$TEXT;
   border: 1px solid transparent;
 }
