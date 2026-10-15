@@ -3,6 +3,7 @@
 * {
   font-family: "Iosevka Nerd Font Mono", monospace;
   font-size: 16px;
+  font-weight: 500;
 }
 
 .notification-row {
@@ -76,7 +77,7 @@
 }
 
 .summary {
-  font-weight: bold;
+  font-weight: 500;
   color: #a1b5a1;
 }
 

@@ -137,6 +137,7 @@ cat > ~/.config/swaync/style.css << CSSEOF
 * {
   font-family: "Iosevka Nerd Font Mono", monospace;
   font-size: 16px;
+  font-weight: 500;
 }
 
 .notification-row {
@@ -210,7 +211,7 @@ cat > ~/.config/swaync/style.css << CSSEOF
 }
 
 .summary {
-  font-weight: bold;
+  font-weight: 500;
   color: #$TEXT;
 }
 
