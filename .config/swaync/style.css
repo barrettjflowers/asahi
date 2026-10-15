@@ -25,7 +25,7 @@
 .notification {
   border-radius: 10px;
   border: none;
-  background: #3f423f;
+  background: #383637;
   padding: 0;
   margin: 0;
 }
@@ -39,22 +39,22 @@
   padding: 8px 12px;
   border-radius: 8px;
   background: transparent;
-  color: #a1b5a1;
+  color: #9f999b;
   border: 1px solid transparent;
 }
 
 .notification-action {
   padding: 8px 12px;
   border-radius: 8px;
-  background: #353b35;
-  color: #a1b5a1;
+  background: #2f2d2e;
+  color: #9f999b;
   border: 1px solid transparent;
 }
 
 .notification-default-action:hover,
 .notification-action:hover {
-  background: #353b35;
-  border: 1px solid #a1b5a1;
+  background: #2f2d2e;
+  border: 1px solid #9f999b;
 }
 
 .notification-action:not(:last-child) {
@@ -66,8 +66,8 @@
 }
 
 .close-button {
-  background: #cbe25a;
-  color: #2a2d2a;
+  background: #ad1f51;
+  color: #222021;
   border-radius: 50%;
   padding: 2px;
 }
@@ -78,29 +78,29 @@
 
 .summary {
   font-weight: 500;
-  color: #a1b5a1;
+  color: #9f999b;
 }
 
 .body {
-  color: rgba(161, 181, 161, 0.9);
+  color: rgba(159, 153, 155, 0.9);
 }
 
 .time {
-  color: rgba(161, 181, 161, 0.6);
+  color: rgba(159, 153, 155, 0.6);
 }
 
 .notification.critical {
-  border: 2px solid #cbe25a;
+  border: 2px solid #ad1f51;
 }
 
 .notification.critical .notification-default-action {
-  border-top: 3px solid #cbe25a;
+  border-top: 3px solid #ad1f51;
 }
 
 .control-center {
   border-radius: 10px;
-  border: 2px solid #a1b5a1;
-  background: rgba(42, 45, 42, 0.92);
+  border: 2px solid #9f999b;
+  background: rgba(34, 32, 33, 0.92);
   padding: 8px;
 }
 
@@ -109,23 +109,23 @@
 }
 
 .control-center-list-placeholder {
-  color: #a1b5a1;
+  color: #9f999b;
   opacity: 0.6;
 }
 
 .control-center-clear-all {
-  color: #a1b5a1;
-  background: rgba(53, 59, 53, 0.6);
+  color: #9f999b;
+  background: rgba(47, 45, 46, 0.6);
 }
 
 .control-center-clear-all:hover {
-  background: #353b35;
-  color: #a1b5a1;
+  background: #2f2d2e;
+  color: #9f999b;
 }
 
 .floating-bar {
-  background: rgba(42, 45, 42, 0.9);
-  color: #a1b5a1;
+  background: rgba(34, 32, 33, 0.9);
+  color: #9f999b;
   border-radius: 10px;
-  border: 1px solid #353b35;
+  border: 1px solid #2f2d2e;
 }

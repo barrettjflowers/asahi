@@ -1,19 +1,22 @@
-{
+[
+    // left half: ends at the notch (width 1600 logical / 2 = 800)
+    {
+        "name": "left",
         "layer": "top",
+        "height": 31,
+        "fixed-center": false, // no reserved middle section, so each side can use the full half
         "position": "top",
         "reload_style_on_change": true,
         "spacing": 7,
         "margin-top": 6,
         "margin-bottom": -4,
         "margin-left": 3,
-        "margin-right": 3,
-        "modules-left": ["custom/power", "hyprland/workspaces", "hyprland/window"],
+        "margin-right": 800,
+        "modules-right": ["custom/power", "hyprland/workspaces", "hyprland/window", "disk", "custom/recording"],
+
         "hyprland/window": {
             "format": "›  {class}",
         },
-        "modules-center": ["disk","custom/recording","cpu","custom/memory","custom/weather"],
-        "modules-right": ["battery","network","clock"],
-
 
         "hyprland/workspaces": {
             "format": "{id}",
@@ -32,25 +35,17 @@
             "on-click": "swaync-client -t -sw",
             "escape": true
         },
-        "clock": {
-            "format": "󱑃 {:%a %d %b %I:%M}",
-            "interval": 1,   
-            "tooltip-format": "<tt>{calendar}</tt>",
-            "on-click": "d=$(date +%F); printf %s \"$d\" | wl-copy && notify-send -a Clock 'Date copied' \"$d\"",
-            "calendar": {
-                "format": {
-                    "today": "<span background='#3f423f'>{}</span>"
-                }
-            }
+        "disk": {
+            "format": "󰣳 {specific_used:0.1f}/{specific_total:0.1f}GB",
+            "unit": "GB",
+            "interval": 60
         },
-        "network": {
-            "format-wifi": "󰖩 {essid}",
-            "format-ethernet":"",
-            "format-disconnected": "",
-            "tooltip-format-disconnected": "Error",
-            "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
-            "tooltip-format-ethernet": "{ifname} 🖧 ",
-            "on-click": "kitty nmtui"
+        "custom/recording": {
+            "format": "{}",
+            "return-type": "json",
+            "interval": 1,
+            "exec": "~/.config/waybar/scripts/record-indicator.sh",
+            "tooltip": false
         },
         "bluetooth": {
             "format-on": "󰂯",
@@ -63,6 +58,56 @@
             "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
             "tooltip-format-enumerate-connected-battery": "{device_alias}\n{device_address}\n{device_battery_percentage}%",
             "on-click-right": "blueman-manager",
+        },
+        "custom/pacman": {
+            "format": "󰅢 {}",
+            "interval": 30,   
+            "exec": "checkupdates | wc -l",
+            "exec-if": "exit 0",
+            "on-click": "kitty sh -c 'yay -Syu; echo Done - Press enter to exit; read'; pkill -SIGRTMIN+8 waybar",
+            "signal": 8,
+            "tooltip": false,
+        },
+        "tray": {
+            "icon-size": 14,
+            "spacing": 10
+        },
+    },
+    // right half: starts at the notch
+    {
+        "name": "right",
+        "exclusive": false, // the left bar reserves the space; two reservations would stack
+        "layer": "top",
+        "height": 31,
+        "fixed-center": false, // no reserved middle section, so each side can use the full half
+        "position": "top",
+        "reload_style_on_change": true,
+        "spacing": 7,
+        "margin-top": -27, // 6 minus the left bar's 33px reserved strip
+        "margin-bottom": -4,
+        "margin-left": 800,
+        "margin-right": 3,
+        "modules-left": ["cpu", "custom/memory", "custom/weather", "battery", "network", "clock"],
+
+        "clock": {
+            "format": "󱑃 {:%a %d %b %I:%M}",
+            "interval": 1,   
+            "tooltip-format": "<tt>{calendar}</tt>",
+            "on-click": "d=$(date +%F); printf %s \"$d\" | wl-copy && notify-send -a Clock 'Date copied' \"$d\"",
+            "calendar": {
+                "format": {
+                    "today": "<span background='#383637'>{}</span>"
+                }
+            }
+        },
+        "network": {
+            "format-wifi": "󰖩 {essid}",
+            "format-ethernet":"",
+            "format-disconnected": "",
+            "tooltip-format-disconnected": "Error",
+            "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+            "tooltip-format-ethernet": "{ifname} 🖧 ",
+            "on-click": "kitty nmtui"
         },
         "battery": {
             "interval":30,
@@ -86,23 +131,6 @@
                 ""
             ],
         },
-        "custom/pacman": {
-            "format": "󰅢 {}",
-            "interval": 30,   
-            "exec": "checkupdates | wc -l",
-            "exec-if": "exit 0",
-            "on-click": "kitty sh -c 'yay -Syu; echo Done - Press enter to exit; read'; pkill -SIGRTMIN+8 waybar",
-            "signal": 8,
-            "tooltip": false,
-        },
-        "custom/recording": {
-            "format": "{}",
-            "return-type": "json",
-            "interval": 1,
-            "exec": "~/.config/waybar/scripts/record-indicator.sh",
-            "tooltip": false
-        },
-
         "cpu": {
             "format": " {usage}%",
             "interval": 2,
@@ -123,14 +151,5 @@
             "tooltip": true,
             "on-click": ""
         },
-        "tray": {
-            "icon-size": 14,
-            "spacing": 10
-        },
-        "disk": {
-            "format": "󰣳 {specific_used:0.1f}/{specific_total:0.1f}GB",
-            "unit": "GB",
-            "interval": 60
-        },
-} 
-
+    }
+]

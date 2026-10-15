@@ -1,11 +1,11 @@
 #!/bin/bash
 # One source of truth — edit the 5 hex values below, then run ./colors.sh
 
-BACKGROUND="2a2d2a"
-TEXT="a1b5a1"
-ACCENT="a1b5a1"
-INACTIVE="353b35"
-URGENT="cbe25a"
+BACKGROUND="222021"
+TEXT="9f999b"
+ACCENT="9f999b"
+INACTIVE="2f2d2e"
+URGENT="ad1f51"
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
 
