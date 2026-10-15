@@ -109,6 +109,7 @@
 !/.config/hypr/scripts/camoverlay.sh
 !/.config/hypr/scripts/clipboard.sh
 !/.config/hypr/scripts/screenrecord.sh
+!/.config/hypr/scripts/screenshot.sh
 !/.config/hypr/scripts/transcribe.sh
 !/.config/hypr/scripts/voice-agent.sh
 !/.config/hypr/scripts/volume.sh
@@ -197,6 +198,8 @@
 !/.github/
 !/.github/AGENTS.md
 !/.github/README.md
+!/.github/screenshots/
+!/.github/screenshots/fastfetch.png
 
 # .scripts
 !/.scripts/
