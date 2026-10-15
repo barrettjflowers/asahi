@@ -11,16 +11,16 @@ Wayland compositing with [Hyprland](https://hyprland.org/), with a unified color
 
 ## config
 
-- [asahi](#asahi) — system-level backups (crontab + GRUB)
-- [colors](#colors) — single source of truth for the palette
-- [css](#css) — injected CSS / Discord / Vivaldi
-- [hypr](#hypr) — Hyprland compositor config
-- [kitty](#kitty) — terminal emulator
-- [nvim](#nvim) — Neovim config
-- [rofi](#rofi) — app launcher / dmenu
-- [sunshine](#sunshine) — Moonlight host for remote monitors
-- [swaync](#swaync) — notification daemon
-- [waybar](#waybar) — status bar
+- [asahi](#asahi): backs up system-level config (crontab + GRUB)
+- [colors](#colors): defines the palette in one place
+- [css](#css): injects CSS into the browser, Discord, and Vivaldi
+- [hypr](#hypr): configures the Hyprland compositor
+- [kitty](#kitty): configures the terminal emulator
+- [nvim](#nvim): configures Neovim
+- [rofi](#rofi): launches apps and dmenu prompts
+- [sunshine](#sunshine): streams the desktop to Moonlight for remote monitors
+- [swaync](#swaync): shows notifications
+- [waybar](#waybar): draws the status bar
 
 ## asahi
 
@@ -28,18 +28,18 @@ Backups of system-level config that gets regenerated on the machine.
 
 | File      | Purpose                                                                                          |
 | --------- | ------------------------------------------------------------------------------------------------- |
-| `crontab` | Auto-backup of `crontab -l` and `/etc/default/grub` every 15 min, plus Obsidian vault sync jobs    |
-| `grub`    | `/etc/default/grub` — Fedora Asahi Remix, Apple Silicon kernel args (`appledrm.show_notch=1`, `hid-apple.swap_fn_leftctrl=1`), 1s timeout |
+| `crontab` | Backs up `crontab -l` and `/etc/default/grub` every 15 min, plus Obsidian vault sync jobs    |
+| `grub`    | Mirrors `/etc/default/grub`: Fedora Asahi Remix, Apple Silicon kernel args (`appledrm.show_notch=1`, `hid-apple.swap_fn_leftctrl=1`), 1s timeout |
 
 ## colors
 
 `colors.sh` is the **single source of truth**. Edit the 5 hex values at the top, run the script, and it regenerates:
 
-- `colors.css` — GTK/Sway `@define-color` theme (consumed by waybar, swaync)
-- `colors.rasi` — rofi theme variables
-- `hyprland-colors.conf` — Hyprland `$background` / `$text` / `$accent` / `$inactive` / `$urgent`
-- `~/.config/swayosd/style.css` — on-screen-display styles (to be deprecated)
-- `~/.config/swaync/style.css` + `config.json` — notifications
+- `colors.css`: defines the GTK/Sway `@define-color` theme (consumed by waybar, swaync)
+- `colors.rasi`: sets rofi theme variables
+- `hyprland-colors.conf`: sets Hyprland `$background` / `$text` / `$accent` / `$inactive` / `$urgent`
+- `~/.config/swayosd/style.css`: styles the on-screen display (to be deprecated)
+- `~/.config/swaync/style.css` + `config.json`: styles notifications
 
 ## css
 
@@ -48,26 +48,26 @@ User-injected CSS fragments used by apps via custom style injection.
 | File             | Purpose                                                            |
 | ---------------- | ------------------------------------------------------------------ |
 | `browser.css`    | Forces **Iosevka Nerd Font Mono** weight 600 + hides scrollbars     |
-| `teams.css`      | Monospace font, squashed header, fixed avatar trigger (Discord avatar) |
-| `vivaldi/vivaldi.css` | Full Vivaldi DOM restyle: mono font, no scrollbars, no window radius/gap, hides bookmark/RSS/reader buttons |
+| `teams.css`      | Sets a monospace font, squashes the header, fixes the avatar trigger (Discord avatar) |
+| `vivaldi/vivaldi.css` | Restyles the full Vivaldi DOM: mono font, no scrollbars, no window radius/gap, hides bookmark/RSS/reader buttons |
 
 ## hypr
 
-Hyprland config — the main file is **Lua** (`hyprland.lua`), migrated from the old hyprlang format (kept at `hyprland.conf.bak`).
+Hyprland config. The main file is **Lua** (`hyprland.lua`), migrated from the old hyprlang format (kept at `hyprland.conf.bak`).
 
-- `hyprland.lua` — monitors (eDP-1 2560x1664 @ 1.6 scale), autostart apps, env vars, keybinds, window/layer rules, dwindle layout, gestures (3-finger workspace/scratchpad)
-- `hyprlock.conf` — lock screen: blurred redwoods wallpaper, big date/clock, centered password field
-- `hyprpaper.conf` — solid `#222021` wallpaper (todo integrate into colors.sh)
-- `hyprtoolkit.conf` — GTK-ish theme for Hypr tooling
-- `scripts/` — `battery-saver.sh`, `brightness.sh`, `camoverlay.sh`, `clipboard.sh` (cliphist + rofi), `screenrecord.sh`, `transcribe.sh` (whisper), `voice-agent.sh`, `volume.sh`
-- `shaders/crt.glsl` — optional CRT screen-shader (currently commented out)
+- `hyprland.lua`: sets monitors (eDP-1 2560x1664 @ 1.6 scale), autostart apps, env vars, keybinds, window/layer rules, dwindle layout, gestures (3-finger workspace/scratchpad)
+- `hyprlock.conf`: draws the lock screen with a blurred redwoods wallpaper, big date/clock, and centered password field
+- `hyprpaper.conf`: sets a solid `#222021` wallpaper (todo integrate into colors.sh)
+- `hyprtoolkit.conf`: themes Hypr tooling GTK-style
+- `scripts/`: runs `battery-saver.sh`, `brightness.sh`, `camoverlay.sh`, `clipboard.sh` (cliphist + rofi), `screenrecord.sh`, `screenshot.sh` (saves to `~/Pictures/Screenshots` + copies), `transcribe.sh` (whisper), `voice-agent.sh`, `volume.sh`
+- `shaders/crt.glsl`: adds an optional CRT screen shader (currently commented out)
 
 ## kitty
 
 Terminal emulator config.
 
-- `kitty.conf` — zsh shell, Iosevka Nerd Font Mono SemiBold 13, 12px padding, block cursor, ctrl+v/c copy-paste, opencat font-size shortcuts
-- `current-theme.conf` — **Sierra** colorscheme (in the kitty palette)
+- `kitty.conf`: sets zsh shell, Iosevka Nerd Font Mono SemiBold 13, 12px padding, block cursor, ctrl+v/c copy-paste, opencat font-size shortcuts
+- `current-theme.conf`: sets the **Sierra** colorscheme (in the kitty palette)
 
 ## nvim
 
@@ -83,11 +83,11 @@ Application launcher (`rofi -show drun`) imported from `colors.rasi`. Transparen
 
 ## sunshine
 
-[Moonlight](https://github.com/LizardByte/Sunshine) streaming host, tuned for Apple Silicon — no GPU encoder available, so:
+[Moonlight](https://github.com/LizardByte/Sunshine) streaming host, tuned for Apple Silicon, which has no GPU encoder, so:
 
 - `encoder = software` (x264, all 8 CPU cores)
-- `sw_preset = ultrafast`, `sw_tune = zerolatency` — minimal encode latency
-- `qp = 51` — crisp text
+- `sw_preset = ultrafast`, `sw_tune = zerolatency`: minimizes encode latency
+- `qp = 51`: keeps text crisp
 - `minimum_fps_target = 60`
 
 `apps.json` registers **Desktop** and **Steam Big Picture** streams.
@@ -100,8 +100,8 @@ Notification daemon. Config + style are **generated by `colors.sh`** (top-right,
 
 Status bar, top edge, transparent with accent-colored hover states.
 
-- `config` — modules: power button (`systemctl poweroff`), workspaces, focused window, disk, recording indicator, cpu, memory, weather (open-meteo, Indianapolis), battery, network, clock (click → copy ISO date + notification)
-- `style.css` — imports `../colors/colors.css`; `config` defines two half-width bars (`left`, `right`) that meet at the screen centre, each padded 124px from it to clear the hardware notch
-- `scripts/` — `colorpicker.sh`, `kanata-layer.sh` (reads kanata UDP layer state), `local-ip.sh`, `record-indicator.sh`, `select.sh` (swaps waybar themes via wofi), `uptime.sh`, `weather.sh`
-- `themes/` — `default`, `experimental`, `line`, `zen` style/config variants à la wallpaper-selector
-- `assets/` — preview images for the wofi theme picker
+- `config`: defines modules: power button (`systemctl poweroff`), workspaces, focused window, disk, recording indicator, cpu, memory, weather (open-meteo, Indianapolis), battery, network, clock (click → copy ISO date + notification)
+- `style.css`: imports `../colors/colors.css`; `config` defines two half-width bars (`left`, `right`) that meet at the screen centre, each padded 124px from it to clear the hardware notch
+- `scripts/`: provides `colorpicker.sh`, `kanata-layer.sh` (reads kanata UDP layer state), `local-ip.sh`, `record-indicator.sh`, `select.sh` (swaps waybar themes via wofi), `uptime.sh`, `weather.sh`
+- `themes/`: holds `default`, `experimental`, `line`, `zen` style/config variants à la wallpaper-selector
+- `assets/`: previews themes in the wofi picker
