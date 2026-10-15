@@ -1,5 +1,6 @@
 7zip-26.02-1.fc44.aarch64
 7zip-standalone-26.02-1.fc44.aarch64
+GraphicsMagick-1.3.45-7.fc44.aarch64
 ImageMagick-7.1.2.27-1.fc44.aarch64
 ImageMagick-libs-7.1.2.27-1.fc44.aarch64
 LibRaw-0.22.2-1.fc44.aarch64
@@ -182,6 +183,7 @@ cmake-filesystem-4.3.0-1.fc44.aarch64
 codec2-1.2.0-9.fc44.aarch64
 color-filesystem-1-38.fc44.noarch
 colord-1.4.8-4.fc44.aarch64
+colord-gtk-0.3.1-6.fc44.aarch64
 colord-libs-1.4.8-4.fc44.aarch64
 compat-lua-libs-5.1.5-31.fc44.aarch64
 compiler-rt-22.1.8-4.fc44.aarch64
@@ -222,6 +224,7 @@ curl-8.18.0-8.fc44.aarch64
 cyrus-sasl-gssapi-2.1.28-35.fc44.aarch64
 cyrus-sasl-lib-2.1.28-35.fc44.aarch64
 cyrus-sasl-plain-2.1.28-35.fc44.aarch64
+darktable-5.6.1-2.fc44.aarch64
 dbus-1.16.2-1.fc44.aarch64
 dbus-broker-37-8.fc44.aarch64
 dbus-common-1.16.2-1.fc44.noarch
@@ -475,6 +478,7 @@ glslc-2026.1-1.fc44.aarch64
 glx-utils-9.0.0-11.fc44.aarch64
 glycin-libs-2.1.5-1.fc44.aarch64
 glycin-loaders-2.1.5-1.fc44.aarch64
+gmic-libs-3.7.4-1.fc44.aarch64
 gmp-6.3.0-5.fc44.aarch64
 gmp-c++-6.3.0-5.fc44.aarch64
 gmp-devel-6.3.0-5.fc44.aarch64
@@ -855,6 +859,7 @@ lame-libs-3.100-21.fc44.aarch64
 langtable-0.0.71-1.fc44.noarch
 lasi-1.1.3-18.fc44.aarch64
 lcms2-2.16-7.fc44.aarch64
+lensfun-0.3.4-11.fc44.aarch64
 leptonica-1.87.0-4.fc44.aarch64
 less-704-4.fc44.aarch64
 less-color-704-4.fc44.aarch64
@@ -1361,6 +1366,7 @@ meson-1.11.2-1.fc44.noarch
 minicom-2.11.1-1.fc44.aarch64
 miniupnpc-2.3.3-4.fc44.aarch64
 minizip-ng-compat-4.1.0-1.fc44.aarch64
+mkfontscale-1.2.3-4.fc44.aarch64
 mkpasswd-5.6.6-1.fc44.aarch64
 mlt-7.40.0-1.fc44.aarch64
 mlt-qt6-7.40.0-1.fc44.aarch64
@@ -1490,6 +1496,7 @@ orca-50.2-1.fc44.noarch
 os-prober-1.81-11.fc44.aarch64
 osinfo-db-20251212-1.fc44.noarch
 osinfo-db-tools-1.12.0-5.fc44.aarch64
+osm-gps-map-1.2.1-1.fc44.aarch64
 ostree-libs-2026.3-1.fc44.aarch64
 p11-kit-0.26.5-1.fc44.aarch64
 p11-kit-devel-0.26.5-1.fc44.aarch64
@@ -1688,6 +1695,7 @@ poppler-utils-26.01.0-3.fc44.aarch64
 popt-1.19-10.fc44.aarch64
 portaudio-19.7.0-3.fc44.aarch64
 portmidi-217-79.fc44.aarch64
+potrace-1.16-16.fc44.aarch64
 ppp-2.5.1-7.fc44.aarch64
 prefixdevname-0.2.0-8.fc44.aarch64
 procps-ng-4.0.6-1.fc44.aarch64
@@ -2069,6 +2077,7 @@ urw-base35-c059-fonts-20200910-27.fc44.noarch
 urw-base35-d050000l-fonts-20200910-27.fc44.noarch
 urw-base35-fonts-20200910-27.fc44.noarch
 urw-base35-fonts-common-20200910-27.fc44.noarch
+urw-base35-fonts-legacy-20200910-27.fc44.noarch
 urw-base35-gothic-fonts-20200910-27.fc44.noarch
 urw-base35-nimbus-mono-ps-fonts-20200910-27.fc44.noarch
 urw-base35-nimbus-roman-fonts-20200910-27.fc44.noarch

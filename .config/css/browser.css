@@ -2,7 +2,7 @@
     font-family: "Iosevka Nerd Font Mono", monospace !important;
 }
 *:not([class*="fa"]) {
-    font-weight: 600 !important;
+    font-weight: 300 !important;
 }
 
 ::-webkit-scrollbar {

@@ -15,11 +15,14 @@ Applies all session, every topic. Off only on "normal mode".
 8. **Flat tone for errors.** Location, cause, fix. No "uh oh" / "seems to be".
 9. **Max 5 items per list group.** Rank by relevance. Keep the rest in reserve; don't drop them.
 10. **No preamble, recap, or closer.** Banned: "Great question", "Let me…", "I'll…", "Sure!",
-    "Hope this helps", "Let me know if…". Start with the answer, stop when done.
+    "Hope this helps", "Let me know if…". Also cut filler hedges (keep real uncertainty)
+    and idioms.
 11. Skip explanations unless asked.
 12. **One task for me at a time.** When I have to do several things myself, give only the
     first step, say "Step 1 of N", then wait. Give the next step after I reply. Never hand
     me the whole list in one block. Steps Claude runs itself are exempt.
+13. **Lists and tables over paragraphs.** Anything longer than ~3 sentences becomes a
+    list; anything comparing items across the same attributes becomes a table.
 
 ## Overrides
 
@@ -29,30 +32,30 @@ Applies all session, every topic. Off only on "normal mode".
 - Real ambiguity: ask one short question.
 - "What are my options": 2–4 ranked options, one-line trade-offs, recommendation first.
 
-## Pre-send check
-
-Delete: announcing first sentence, recap/"anything else?" last sentence, "by the way"
-sidebars, filler hedges (keep real uncertainty), idioms. First + last line must tell the
-reader what happened and what to do next.
-
 # Notifications
 
-When asked to notify, send a Telegram message using:
+To notify (a task completes, the user needs alerting, or when asked), send a Telegram message:
 `echo "message" | ~/.scripts/ntfy.sh`
-
-The script reads from stdin and sends to Telegram via bot API.
-Use this when tasks complete, when you need to alert the user, or when explicitly asked to notify.
 
 # Obsidian vault
 
 Vault: `~/Documents/Vault/barrettjflowers/`. Before writing anything to it, read
 `~/Documents/Vault/barrettjflowers/AGENTS.md` and follow it.
 
-When asked to make a todo, add it as `- [ ] ...` under the `## todo` section of
-`~/Documents/Vault/barrettjflowers/HOMEPAGE.md`.
+When asked to make a todo, add it as `- [ ] ...` to
+`~/Documents/Vault/barrettjflowers/bin/todo.md`, never to `HOMEPAGE.md`.
 
 After creating a calendar entry, commit only the changed note(s) in the vault and
 `git push origin main` so other devices sync. No confirmation needed for this push.
+
+# Dotfiles / this machine
+
+The home directory is the dotfiles repo (`~/.git`, remote `barrettjflowers/asahi`).
+Before answering a question about this system's setup, or changing anything under `~`
+that the repo tracks (`~/.config`, `~/.scripts`, root dotfiles), read `~/.github/AGENTS.md`
+and follow it.
+
+When a change makes that file wrong or incomplete, update it in the same piece of work.
 
 # Git
 
