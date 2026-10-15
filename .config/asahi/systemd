@@ -33,7 +33,6 @@ rsyslog.service                    enabled enabled
 rtkit-daemon.service               enabled enabled
 selinux-autorelabel-mark.service   enabled enabled
 smartd.service                     enabled enabled
-sshd.service                       enabled disabled
 sssd.service                       enabled enabled
 switcheroo-control.service         enabled enabled
 systemd-boot-clear-sysfail.service enabled enabled
@@ -75,4 +74,4 @@ plocate-updatedb.timer             enabled enabled
 raid-check.timer                   enabled enabled
 unbound-anchor.timer               enabled enabled
 
-75 unit files listed.
+74 unit files listed.

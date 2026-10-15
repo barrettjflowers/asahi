@@ -1,6 +1,6 @@
 # ~/.zshrc
 # prompt
-prompt=$'%F{250}%B%F{250}%~ › %F{250}$(git_branch_name) \n%F{250}➞%b%f '
+prompt=$'%F{250}%~ › %F{250}$(git_branch_name) \n%F{250}➞%f '
 
 ##### a bunch of random functions i frequent #####
 
@@ -41,6 +41,7 @@ alias ls='ls --color=auto'
 setopt prompt_subst
 source /usr/share/fzf/shell/key-bindings.zsh
 source ~/.fzf-tab/fzf-tab.plugin.zsh
+zstyle ':fzf-tab:*' fzf-flags --color=bw
 
 # syntax highlighting
 #source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -55,7 +56,7 @@ alias hypr='nvim ~/.config/hypr/hyprland.lua'
 alias wlc='wl-copy'
 alias open='xdg-open'
 alias ascii='/home/barrettjflowers/Dev/ascii-view/ascii-view'
-alias indyhost='cd ~/Dev/AgentRoot/Indyhost/ && git pull --ff-only && claude'
+alias ih='cd ~/Dev/AgentRoot/Indyhost/ && git pull --ff-only && claude'
 
 # notes
 alias ob='cd /home/barrettjflowers/Documents/Vault/barrettjflowers'
@@ -71,7 +72,7 @@ alias igw-web='~/.scripts/igw-web.sh
 alias fman='bash -c '\''compgen -c | fzf --height 20 --no-preview | xargs man'\'
 alias fd='cd "$(find . -maxdepth 3 -type d -not -name ".Trash" 2>/dev/null | fzf --height 20 --no-preview)"'
 alias falias='alias | awk -F= '\''{print $1}'\'' | fzf --height 20 --no-preview | xargs -I{} zsh -ic {}'
-alias fh='history 100 | fzf --height 20 --no-preview'
+fh() { local c; c=$(fc -ln -100 | fzf --tac --height 20 --no-preview --color=bw --bind tab:accept) && print -z -- "$c" }
 
 # pomodoro! thanks bashbunni
 alias work="timer 10s && terminal-notifier -message 'Pomodoro'\

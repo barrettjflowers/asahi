@@ -7,7 +7,7 @@
         "fixed-center": false, // no reserved middle section, so each side can use the full half
         "position": "top",
         "reload_style_on_change": true,
-        "spacing": 7,
+        "spacing": 0, // gaps come from CSS margins, so the empty window module takes no slot
         "margin-top": 6,
         "margin-bottom": -4,
         "margin-left": 3,
@@ -15,7 +15,8 @@
         "modules-right": ["custom/power", "hyprland/workspaces", "hyprland/window", "disk", "custom/recording"],
 
         "hyprland/window": {
-            "format": "›  {class}",
+            "format": "{class}",
+            "rewrite": { "(.+)": "›  $1" }, // empty class stays empty, so waybar hides the module
         },
 
         "hyprland/workspaces": {

@@ -76,11 +76,13 @@ tooltip label {
     padding: 0px 7px;
     color: @text;
 }
-/* no focused window: hide the module entirely (the "›" prefix still renders otherwise) */
+/* left bar has "spacing": 0; these margins are its gaps */
+#custom-power, #workspaces, #window, #disk, #custom-recording {
+    margin-left: 7px;
+}
+/* no focused window: label is empty (see "rewrite"), so zero padding/margin makes it vanish */
 window#waybar.empty #window {
     background: transparent;
-    color: transparent;
-    font-size: 0px;
     padding: 0px;
     margin: 0px;
 }
