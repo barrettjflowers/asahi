@@ -1,7 +1,7 @@
 @import "../colors/colors.rasi"
 
 configuration {
-    font:                        "Iosevka Nerd Font Mono SemiBold 12";
+    font:                        "Iosevka Nerd Font Mono Medium 12";
     location:                    2;
     drun-display-format:         "{name}";
     display-drun:                "Binaries";

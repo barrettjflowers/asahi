@@ -4,7 +4,7 @@
         "reload_style_on_change": true,
         "spacing": 7,
         "margin-top": 6,
-        "margin-bottom": -6,
+        "margin-bottom": -4,
         "margin-left": 3,
         "margin-right": 3,
         "modules-left": ["custom/power", "hyprland/workspaces", "hyprland/window"],
