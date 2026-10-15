@@ -7,4 +7,5 @@
     on:                          #a1b5a1;
     off:                         #353b35;
     urgent:                      #cbe25a;
+    surface:                     #3f423f;
 }

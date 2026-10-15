@@ -10,16 +10,21 @@
   margin: 8px 10px;
 }
 
+/* push popups below the Waybar */
+.floating-notifications {
+  padding-top: 7px;
+}
+
 .notification-row:focus,
 .notification-row:hover {
-  background: rgba(42, 45, 42, 0.15);
+  background: transparent;
   border-radius: 10px;
 }
 
 .notification {
   border-radius: 10px;
-  border: 2px solid #a1b5a1;
-  background: rgba(42, 45, 42, 0.87);
+  border: none;
+  background: #3f423f;
   padding: 0;
   margin: 0;
 }
@@ -29,11 +34,18 @@
   padding: 12px;
 }
 
-.notification-default-action,
+.notification-default-action {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: transparent;
+  color: #a1b5a1;
+  border: 1px solid transparent;
+}
+
 .notification-action {
   padding: 8px 12px;
   border-radius: 8px;
-  background: rgba(53, 59, 53, 0.6);
+  background: #353b35;
   color: #a1b5a1;
   border: 1px solid transparent;
 }

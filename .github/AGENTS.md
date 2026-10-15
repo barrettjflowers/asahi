@@ -17,7 +17,7 @@
 ## Generated configuration
 
 - `~/.config/colors/colors.sh` is the palette source of truth. Edit its five color values and run it rather than independently changing generated palette outputs.
-- The color script generates `colors.css`, `colors.rasi`, `hyprland-colors.conf`, `~/.config/swaync/style.css`, `~/.config/swaync/config.json`, and `~/.config/swayosd/style.css`.
+- The color script generates `colors.css`, `colors.rasi`, `hyprland-colors.conf`, `~/.config/swaync/style.css`, `~/.config/swaync/config.json`, and `~/.config/swayosd/style.css`. It also rewrites the hex in the calendar `today` markup in `~/.config/waybar/config` with `SURFACE` (`BACKGROUND` lightened 10%), since Pango markup cannot read `@define-color`.
 - `~/.config/waybar/scripts/select.sh` replaces `~/.config/waybar/config` and `style.css` from files under `~/.config/waybar/themes`.
 - SwayNC files and selected Waybar files are rendered outputs; change their producer when the desired change should survive regeneration.
 
