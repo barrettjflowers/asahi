@@ -13,14 +13,12 @@ window#waybar > box {
     background: transparent;
     border-radius: 8px;
 }
-.modules-left {
-    padding: 0px 60px;
+/* two half bars meet at the screen centre; padding = half the notch gap */
+window#waybar.left .modules-right {
+    padding-right: 124px;
 }
-.modules-center {
-    margin-left: 75px; /* notch */
-}
-.modules-right {
-    padding: 0px 60px;
+window#waybar.right .modules-left {
+    padding-left: 124px;
 }
 /* module backgrounds */
 #custom-power, #workspaces, #window, #disk, #cpu, #custom-memory, #custom-weather,
@@ -155,9 +153,6 @@ window#waybar.empty #window {
     color: @accent;
 }
 
-#cpu {
-		margin-left: 240px; /* notch */
-	}
 
 #custom-endpoint{
     color:transparent;
@@ -180,7 +175,6 @@ window#waybar.empty #window {
 }
 
 #custom-recording {
-    margin-right: -40px;
     padding-right: 15px;
 		padding-left: 15px;
     transition: all .3s ease;
