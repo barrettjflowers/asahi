@@ -79,7 +79,7 @@ hl.bind("SUPER + V",            hl.dsp.exec_cmd("~/.config/hypr/scripts/clipboar
 hl.bind(control .. " + D",      hl.dsp.exec_cmd("~/.scripts/rofi-dict.sh"))
 
 -- script binds
-hl.bind("SUPER + SHIFT + S",    hl.dsp.exec_cmd("grim -g \"$(slurp)\" - | wl-copy"))
+hl.bind("SUPER + SHIFT + S",    hl.dsp.exec_cmd("~/.config/hypr/scripts/screenshot.sh"))
 hl.bind("SUPER + SHIFT + P",    hl.dsp.exec_cmd("~/.config/waybar/scripts/colorpicker.sh"))
 hl.bind("SUPER + SHIFT + R",    hl.dsp.exec_cmd("~/.config/hypr/scripts/screenrecord.sh"))
 hl.bind("SUPER + SHIFT + C",    hl.dsp.exec_cmd("~/.config/hypr/scripts/camoverlay.sh"))
