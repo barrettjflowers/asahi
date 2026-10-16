@@ -12,11 +12,15 @@
         "margin-bottom": -4,
         "margin-left": 3,
         "margin-right": 800,
-        "modules-right": ["custom/power", "hyprland/workspaces", "hyprland/window", "disk", "custom/recording"],
+        "modules-right": ["custom/power", "custom/backlight", "hyprland/workspaces", "hyprland/window", "disk", "custom/recording"],
 
         "hyprland/window": {
             "format": "{class}",
-            "rewrite": { "(.+)": "›  $1" }, // empty class stays empty, so waybar hides the module
+            // jsoncpp sorts keys and every matching rule applies in turn: cap at 15 (key "("), then prefix (key "^")
+            "rewrite": {
+                "(.{15}).+": "$1… ",
+                "^(.+)$": "›  $1", // empty class stays empty, so waybar hides the module
+            },
         },
 
         "hyprland/workspaces": {
@@ -29,6 +33,13 @@
             "format": "󰐥 Power",
             "tooltip-format": "systemctl poweroff",
             "on-click": "systemctl poweroff"
+        },
+        "custom/backlight": {
+            "exec": "~/.config/waybar/scripts/kbd-backlight.sh",
+            "return-type": "json",
+            "interval": 5, // catches manual brightness changes
+            "signal": 9,
+            "on-click": "~/.config/waybar/scripts/kbd-backlight.sh toggle"
         },
         "custom/notification": {
             "tooltip": false,
