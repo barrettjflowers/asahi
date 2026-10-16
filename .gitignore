@@ -164,6 +164,7 @@
 !/.config/waybar/config
 !/.config/waybar/scripts/
 !/.config/waybar/scripts/colorpicker.sh
+!/.config/waybar/scripts/kbd-backlight.sh
 !/.config/waybar/scripts/local-ip.sh
 !/.config/waybar/scripts/memory.sh
 !/.config/waybar/scripts/record-indicator.sh
