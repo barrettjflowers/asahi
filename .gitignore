@@ -164,6 +164,7 @@
 !/.config/waybar/config
 !/.config/waybar/scripts/
 !/.config/waybar/scripts/colorpicker.sh
+!/.config/waybar/scripts/disk.sh
 !/.config/waybar/scripts/kbd-backlight.sh
 !/.config/waybar/scripts/local-ip.sh
 !/.config/waybar/scripts/memory.sh
@@ -208,3 +209,4 @@
 !/.scripts/igw-web.sh
 !/.scripts/ntfy.sh
 !/.scripts/rofi-dict.sh
+!/.scripts/rofi-unicode.sh
