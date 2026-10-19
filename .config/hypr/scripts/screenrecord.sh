@@ -1,50 +1,49 @@
 #!/bin/bash
+# Toggle screen recording with desktop audio + mic mixed into one track.
+# Uses only PipeWire tools (no pactl). Every link targets the mix sink with
+# node.dont-reconnect, so nothing can fall back to the speakers and feed back.
 PIDFILE=/tmp/wf-recorder-pid
-LOOP1_PIDFILE=/tmp/wf-recorder-loop1-pid
-LOOP2_PIDFILE=/tmp/wf-recorder-loop2-pid
-NULL_MODULE_FILE=/tmp/wf-recorder-null-module
-REMAP_MODULE_FILE=/tmp/wf-recorder-remap-module
+LOOPS_PIDFILE=/tmp/wf-recorder-loops-pid
 OUTDIR=$HOME/Pictures/Screenshots
-COMBINED_SINK=combined_record
+MIX=combined_record
 
 if [ -f "$PIDFILE" ]; then
     kill "$(cat "$PIDFILE")" 2>/dev/null
-    kill "$(cat "$LOOP1_PIDFILE")" 2>/dev/null
-    kill "$(cat "$LOOP2_PIDFILE")" 2>/dev/null
-    pactl unload-module "$(cat "$REMAP_MODULE_FILE")" 2>/dev/null
-    pactl unload-module "$(cat "$NULL_MODULE_FILE")" 2>/dev/null
-    rm -f "$PIDFILE" "$LOOP1_PIDFILE" "$LOOP2_PIDFILE" "$NULL_MODULE_FILE" "$REMAP_MODULE_FILE"
+    sleep 0.5   # let wf-recorder finalize the file before its source disappears
+    kill $(cat "$LOOPS_PIDFILE") 2>/dev/null
+    rm -f "$PIDFILE" "$LOOPS_PIDFILE"
     exit 0
 fi
 
 mkdir -p "$OUTDIR"
 OUTFILE="$OUTDIR/$(date +%a_%d_%b_%H%M).mp4"
 
-# Create null sink to combine desktop audio + mic
-pactl load-module module-null-sink sink_name=$COMBINED_SINK > "$NULL_MODULE_FILE"
-
-# Create stereo remapped source from mono mic (duplicates mono to both L+R)
-pactl load-module module-remap-source \
-    master=alsa_input.platform-sound.HiFi__Headset__source \
-    source_name=mic_stereo \
-    channels=2 \
-    channel_map=front-left,front-right > "$REMAP_MODULE_FILE"
-
-# Route desktop audio to combined sink
-setsid pw-loopback \
-    --capture-props='node.name="alsa_output.platform-sound.HiFi__Headphones__sink.monitor"' \
-    --playback-props='node.target="'$COMBINED_SINK'"' \
+# Mix bus: a virtual sink whose output is exposed as the source "${MIX}_src"
+pw-loopback -n "$MIX" \
+    --capture-props="media.class=Audio/Sink node.name=$MIX node.description=Recording-mix" \
+    --playback-props="media.class=Audio/Source node.name=${MIX}_src node.description=Recording-mix-source" \
     &>/dev/null &
-echo $! > "$LOOP1_PIDFILE"
-
-# Route stereo mic to combined sink
-setsid pw-loopback \
-    --capture-props='node.name="mic_stereo"' \
-    --playback-props='node.target="'$COMBINED_SINK'"' \
-    &>/dev/null &
-echo $! > "$LOOP2_PIDFILE"
-
+PIDS=$!
 sleep 0.3
 
-wf-recorder --audio="${COMBINED_SINK}.monitor" -c libopenh264 -C aac -f "$OUTFILE" &
+# Desktop audio: monitor of the default sink -> mix
+pw-loopback -n "${MIX}_desktop" \
+    --capture-props="stream.capture.sink=true" \
+    --playback-props="target.object=$MIX node.dont-reconnect=true" \
+    &>/dev/null &
+PIDS="$PIDS $!"
+
+# Mic: default source, mono, fanned out to both channels of the mix
+pw-loopback -n "${MIX}_mic" \
+    --playback-props="target.object=$MIX node.dont-reconnect=true" \
+    &>/dev/null &
+PIDS="$PIDS $!"
+echo "$PIDS" > "$LOOPS_PIDFILE"
+sleep 0.3
+
+# The mic is mono, so it only gets linked to FL; link it to FR as well
+MIC_PORT=$(pw-link -l | awk -v p="input.${MIX}_mic:input_FL" '$0==p{getline; print $2; exit}')
+[ -n "$MIC_PORT" ] && pw-link "$MIC_PORT" "input.${MIX}_mic:input_FR" 2>/dev/null
+
+wf-recorder --audio="${MIX}_src" -c libopenh264 -C aac -f "$OUTFILE" &
 echo $! > "$PIDFILE"
