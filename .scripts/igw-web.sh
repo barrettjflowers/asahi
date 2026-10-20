@@ -1,8 +1,8 @@
 #!/usr/bin/env zsh
 # Tunnel to the igw web UI on a local-stack box and print the links.
-# Usage: igw-web [ssh-host]    (default: igw-local-remote; Ctrl-C closes the tunnel)
+# Usage: igw-web [ssh-host]    (default: cajita; Ctrl-C closes the tunnel)
 
-host=${1:-igw-local-remote}
+host=${1:-cajita}
 base=http://localhost:3080
 
 # The app expects port 3080, so don't move it; if it's taken, a tunnel is probably already open
