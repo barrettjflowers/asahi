@@ -59,7 +59,7 @@ Hyprland config. The main file is **Lua** (`hyprland.lua`), migrated from the ol
 - `hyprlock.conf`: draws the lock screen with a blurred redwoods wallpaper, big date/clock, and centered password field
 - `hyprpaper.conf`: sets a solid `#222021` wallpaper (todo integrate into colors.sh)
 - `hyprtoolkit.conf`: themes Hypr tooling GTK-style
-- `scripts/`: runs `battery-saver.sh`, `brightness.sh` (perceptual square curve, steps grow toward the top; past 100% lifts midtones via a screen shader, up to 200%), `camoverlay.sh`, `clipboard.sh` (cliphist + rofi), `screenrecord.sh` (wf-recorder toggle; desktop audio + mic mixed through a private PipeWire sink, never the speakers), `screenshot.sh` (saves to `~/Pictures/Screenshots` + copies), `transcribe.sh` (whisper), `voice-agent.sh`, `volume.sh`
+- `scripts/`: runs `battery-saver.sh`, `brightness.sh` (perceptual square curve, steps grow toward the top; past 100% lifts midtones via a screen shader, up to 200%), `camoverlay.sh`, `clipboard.sh` (cliphist + rofi), `screenrecord.sh` (wf-recorder toggle; desktop audio + mic mixed through a private PipeWire sink, never the speakers), `screenshot.sh` (saves to `~/Pictures/Screenshots` + copies), `transcribe.sh` (whisper), `voice-agent.sh` (edge-tts → mpv, synthesized in sentence chunks a few ahead so speech starts in under a second, played as the transient user unit `voice-agent` so it outlives its caller; no args toggles speaking the clipboard, `-` speaks stdin and replaces current playback — used by the local Claude Code `speak` plugin, toggled with `/speak`), `volume.sh`
 - `shaders/crt.glsl`: adds an optional CRT screen shader (currently commented out)
 
 ## kitty
