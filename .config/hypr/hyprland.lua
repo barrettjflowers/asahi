@@ -77,6 +77,7 @@ hl.bind(control .. " + W",      hl.dsp.window.close())
 hl.bind("SUPER + space",        hl.dsp.exec_cmd(menu))
 hl.bind("SUPER + V",            hl.dsp.exec_cmd("~/.config/hypr/scripts/clipboard.sh"))
 hl.bind(control .. " + D",      hl.dsp.exec_cmd("~/.scripts/rofi-dict.sh"))
+hl.bind("SUPER + S",            hl.dsp.exec_cmd("~/.scripts/rofi-unicode.sh"))
 
 -- script binds
 hl.bind("SUPER + SHIFT + S",    hl.dsp.exec_cmd("~/.config/hypr/scripts/screenshot.sh"))
@@ -136,7 +137,7 @@ hl.window_rule({
     name  = "camera-overlay",
     match = { title = "^camera-overlay$" },
     float       = true,
-    border_size = 3,
+    border_size = 2,
     pin         = true,
     move        = {1200, 100},
     opacity     = "1.0 1.0 override override",
@@ -147,6 +148,9 @@ hl.window_rule({ name = "ws-vivaldi-snapshot", match = { class = "^vivaldi-snaps
 hl.window_rule({ name = "ws-vivaldi-ompi",     match = { class = "^vivaldi-ompi.*" },     workspace = "2" })
 hl.window_rule({ name = "ws-kitty",            match = { class = "kitty" },               workspace = "3" })
 hl.window_rule({ name = "ws-obsidian",         match = { class = "obsidian" },            workspace = "4" })
+
+-- scratchpad windows see-through
+hl.window_rule({ name = "special-transparent", match = { workspace = "name:special:scratchpad" }, opacity = "0.85 0.85" })
 
 -- layer rules (blur off)
 hl.layer_rule({ name = "rofi-blur",    match = { namespace = "rofi" },    blur = false, ignore_alpha = 0 })
@@ -163,7 +167,7 @@ hl.config({
         resize_on_border = true,
         gaps_in          = 2,
         gaps_out         = 10,
-        border_size      = 2,
+        border_size      = 3,
         col = {
             active_border   = accent,
             inactive_border = inactive,
@@ -197,6 +201,7 @@ hl.config({
         active_opacity   = 1.0,
         inactive_opacity = 1.0,
         rounding         = 10,
+        dim_special      = 0.0,
 
         blur = {
             enabled           = false,

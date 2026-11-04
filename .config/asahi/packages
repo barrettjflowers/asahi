@@ -727,6 +727,11 @@ iwlwifi-dvm-firmware-20260810-1.fc44.noarch
 jansson-2.14-4.fc44.aarch64
 jansson-devel-2.14-4.fc44.aarch64
 jasper-libs-4.2.8-2.fc44.aarch64
+java-25-openjdk-25.0.4.1.1-1.1.fc44.aarch64
+java-25-openjdk-crypto-adapter-25.0.4.1.1-1.1.fc44.aarch64
+java-25-openjdk-devel-25.0.4.1.1-1.1.fc44.aarch64
+java-25-openjdk-headless-25.0.4.1.1-1.1.fc44.aarch64
+javapackages-filesystem-6.4.1-10.fc44.noarch
 javascriptcoregtk4.1-2.52.5-1.fc44.aarch64
 jbig2dec-libs-0.20-8.fc44.aarch64
 jbigkit-libs-2.1-33.fc44.aarch64
@@ -1298,6 +1303,7 @@ linux-atm-libs-2.5.1-46.fc44.aarch64
 linux-firmware-20260810-1.fc44.noarch
 linux-firmware-vendor-20250713-7.fc44.noarch
 linux-firmware-whence-20260810-1.fc44.noarch
+lksctp-tools-1.0.21-3.fc44.aarch64
 llhttp-9.3.1-1.fc44.aarch64
 llvm-filesystem-22.1.8-4.fc44.aarch64
 llvm-libs-22.1.8-4.fc44.aarch64
@@ -2053,11 +2059,13 @@ traceroute-2.1.6-4.fc44.aarch64
 tree-2.2.1-4.fc44.aarch64
 tree-sitter-cli-0.26.11-1.fc44.aarch64
 tslib-1.24-2.fc44.aarch64
+ttmkfdir-3.0.9-74.fc44.aarch64
 tuned-2.27.0-1.fc44.noarch
 tuned-ppd-2.27.0-1.fc44.noarch
 turbojpeg-3.1.3-1.fc44.aarch64
 twolame-libs-0.4.0-9.fc44.aarch64
 tzdata-2026c-1.fc44.noarch
+tzdata-java-2026e-1.fc44.noarch
 uboot-images-armv8-2026.04-102.fc44.noarch
 uchardet-0.0.8-10.fc44.aarch64
 udftools-2.3-13.fc44.aarch64
@@ -2186,6 +2194,7 @@ xmlrpc-c-client-1.60.04-5.fc44.aarch64
 xmlsec1-1.2.41-4.fc44.aarch64
 xmlsec1-openssl-1.2.41-4.fc44.aarch64
 xmodmap-1.0.11-10.fc44.aarch64
+xorg-x11-fonts-Type1-7.5-42.fc44.noarch
 xorg-x11-proto-devel-2025.1-2.fc44.noarch
 xorg-x11-server-Xwayland-24.1.13-1.fc44.aarch64
 xorg-x11-xauth-1.1.5-1.fc44.aarch64

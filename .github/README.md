@@ -1,107 +1,27 @@
 # Asahi Config
 
-Dotfiles for my **M2 MacBook Air** running **Fedora Linux Asahi Remix**
-
-Wayland compositing with [Hyprland](https://hyprland.org/), with a unified color source (`~/.config/colors`).
+Dotfiles for my **M2 MacBook Air** running **Fedora Asahi Remix** + [Hyprland](https://hyprland.org/).
 
 <p>
   <img src="screenshots/fastfetch.png" width="49%" />
   <img src="https://github.com/user-attachments/assets/9a5491b6-b450-4505-9af1-c6faa867aa0a" width="49%" />
 </p>
 
-## config
+## Layout
 
-- [asahi](#asahi): backs up system-level config (crontab + GRUB)
-- [colors](#colors): defines the palette in one place
-- [css](#css): injects CSS into the browser, Discord, and Vivaldi
-- [hypr](#hypr): configures the Hyprland compositor
-- [kitty](#kitty): configures the terminal emulator
-- [nvim](#nvim): configures Neovim
-- [rofi](#rofi): launches apps and dmenu prompts
-- [sunshine](#sunshine): streams the desktop to Moonlight for remote monitors
-- [swaync](#swaync): shows notifications
-- [waybar](#waybar): draws the status bar
+| Dir | What |
+| --- | --- |
+| `asahi` | Snapshots of crontab, GRUB, fstab, packages |
+| `colors` | Palette source; `colors.sh` generates every theme file |
+| `css` | Injected CSS for the browser and Vivaldi |
+| `hypr` | Hyprland (`hyprland.lua`), lock screen, wallpaper, scripts |
+| `kitty` | Terminal, Base2Tone Cave Dark |
+| `nvim` | Neovim with `vim.pack`, no plugin manager |
+| `rofi` | Launcher |
+| `sunshine` | Moonlight streaming host |
+| `swaync` | Notifications (generated) |
+| `waybar` | Status bar, split around the notch |
 
-## asahi
+## Changing colors
 
-Backups of system-level config that gets regenerated on the machine.
-
-| File      | Purpose                                                                                          |
-| --------- | ------------------------------------------------------------------------------------------------- |
-| `crontab` | Backs up `crontab -l` and `/etc/default/grub` every 15 min, plus Obsidian vault sync jobs    |
-| `grub`    | Mirrors `/etc/default/grub`: Fedora Asahi Remix, Apple Silicon kernel args (`appledrm.show_notch=1`, `hid-apple.swap_fn_leftctrl=1`), 1s timeout |
-
-## colors
-
-`colors.sh` is the **single source of truth**. Edit the 5 hex values at the top, run the script, and it regenerates:
-
-- `colors.css`: defines the GTK/Sway `@define-color` theme (consumed by waybar, swaync)
-- `colors.rasi`: sets rofi theme variables
-- `hyprland-colors.conf`: sets Hyprland `$background` / `$text` / `$accent` / `$inactive` / `$urgent`
-- `~/.config/swayosd/style.css`: styles the on-screen display (to be deprecated)
-- `~/.config/swaync/style.css` + `config.json`: styles notifications
-
-## css
-
-User-injected CSS fragments used by apps via custom style injection.
-
-| File             | Purpose                                                            |
-| ---------------- | ------------------------------------------------------------------ |
-| `browser.css`    | Forces **Iosevka Nerd Font Mono** weight 600 + hides scrollbars     |
-| `teams.css`      | Sets a monospace font, squashes the header, fixes the avatar trigger (Discord avatar) |
-| `vivaldi/vivaldi.css` | Restyles the full Vivaldi DOM: mono font, no scrollbars, no window radius/gap, hides bookmark/RSS/reader buttons |
-
-## hypr
-
-Hyprland config. The main file is **Lua** (`hyprland.lua`), migrated from the old hyprlang format (kept at `hyprland.conf.bak`).
-
-- `hyprland.lua`: sets monitors (eDP-1 2560x1664 @ 1.6 scale), autostart apps, env vars, keybinds, window/layer rules, dwindle layout, gestures (3-finger workspace/scratchpad)
-- `hyprlock.conf`: draws the lock screen with a blurred redwoods wallpaper, big date/clock, and centered password field
-- `hyprpaper.conf`: sets a solid `#222021` wallpaper (todo integrate into colors.sh)
-- `hyprtoolkit.conf`: themes Hypr tooling GTK-style
-- `scripts/`: runs `battery-saver.sh`, `brightness.sh` (perceptual square curve, steps grow toward the top; past 100% lifts midtones via a screen shader, up to 200%), `camoverlay.sh`, `clipboard.sh` (cliphist + rofi), `screenrecord.sh` (wf-recorder toggle; desktop audio + mic mixed through a private PipeWire sink, never the speakers), `screenshot.sh` (saves to `~/Pictures/Screenshots` + copies), `transcribe.sh` (whisper), `voice-agent.sh` (edge-tts → mpv, synthesized in sentence chunks a few ahead so speech starts in under a second, played as the transient user unit `voice-agent` so it outlives its caller; no args toggles speaking the clipboard, `-` speaks stdin and replaces current playback — used by the local Claude Code `speak` plugin, toggled with `/speak`), `volume.sh`
-- `shaders/crt.glsl`: adds an optional CRT screen shader (currently commented out)
-
-## kitty
-
-Terminal emulator config.
-
-- `kitty.conf`: sets zsh shell, Iosevka Nerd Font Mono SemiBold 13, 12px padding, block cursor, ctrl+v/c copy-paste, opencat font-size shortcuts
-- `current-theme.conf`: sets the **Base2Tone Cave Dark** colorscheme (in the kitty palette)
-
-## nvim
-
-Minimal, plugin-managed Neovim config (`init.lua`) using Neovim's built-in `vim.pack` (no plugin manager).
-
-- Plugins: `mini.pick`, `oil.nvim`, `nvim-treesitter`, `nvim-lspconfig`, `mason.nvim`, `nvim-cmp` (+ lsp/buffer/path sources), `supermaven-nvim`, `conform.nvim`
-- LSP servers: `lua_ls`, `rust_analyzer`, `ts_ls`, `html`, `svelte`, plus a self-compiled `clangd` (mason has no Asahi package)
-- Leader is `Space`: `<leader>o` save+source, `<leader>f`/`h`/`g` picker, `<leader>e` oil, `<leader>lf` format
-
-## rofi
-
-Application launcher (`rofi -show drun`) imported from `colors.rasi`. Transparent floating box with 8px rounded border, Iosevka Nerd Font Mono SemiBold 12, accent-tinted selection.
-
-## sunshine
-
-[Moonlight](https://github.com/LizardByte/Sunshine) streaming host, tuned for Apple Silicon, which has no GPU encoder, so:
-
-- `encoder = software` (x264, all 8 CPU cores)
-- `sw_preset = ultrafast`, `sw_tune = zerolatency`: minimizes encode latency
-- `qp = 51`: keeps text crisp
-- `minimum_fps_target = 60`
-
-`apps.json` registers **Desktop** and **Steam Big Picture** streams.
-
-## swaync
-
-Notification daemon. Config + style are **generated by `colors.sh`** (top-right, overlay layer, 360px width, grouping, 10s timeout). The checked-in `style.css`/`config.json` are the rendered output of the current palette.
-
-## waybar
-
-Status bar, top edge, transparent with accent-colored hover states.
-
-- `config`: defines modules: power button (`systemctl poweroff`), keyboard backlight toggle (off / 100%, hover shows state and level), workspaces, focused window, disk (hover lists / plus each mounted `/mnt/*`), recording indicator, cpu, memory, weather (open-meteo, Indianapolis), battery, network, clock (click → copy ISO date + notification)
-- `style.css`: imports `../colors/colors.css`; `config` defines two half-width bars (`left`, `right`) that meet at the screen centre, each padded 124px from it to clear the hardware notch
-- `scripts/`: provides `colorpicker.sh`, `kbd-backlight.sh` (backlight status JSON, `toggle` arg), `local-ip.sh`, `record-indicator.sh`, `select.sh` (swaps waybar themes via wofi), `uptime.sh`, `weather.sh`
-- `themes/`: holds `default`, `experimental`, `line`, `zen` style/config variants à la wallpaper-selector
-- `assets/`: previews themes in the wofi picker
+Edit the 5 hex values in `~/.config/colors/colors.sh`, then run it.
