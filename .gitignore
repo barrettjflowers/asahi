@@ -205,8 +205,6 @@
 
 # .scripts
 !/.scripts/
-!/.scripts/couch-tunnel.sh
-!/.scripts/igw-web.sh
 !/.scripts/ntfy.sh
 !/.scripts/rofi-dict.sh
 !/.scripts/rofi-unicode.sh

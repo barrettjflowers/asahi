@@ -56,7 +56,6 @@ alias hypr='nvim ~/.config/hypr/hyprland.lua'
 alias wlc='wl-copy'
 alias open='xdg-open'
 alias ascii='/home/barrettjflowers/Dev/ascii-view/ascii-view'
-alias ih='cd ~/Dev/AgentRoot/Indyhost/ && git pull --ff-only && claude'
 
 # notes
 alias ob='cd /home/barrettjflowers/Documents/Vault/barrettjflowers'
@@ -65,8 +64,6 @@ alias daily='/home/barrettjflowers/Documents/Vault/barrettjflowers/daily-note.sh
 # dotfile scripts
 alias ntfy="~/.scripts/ntfy.sh"
 alias dict='~/.scripts/rofi-dict.sh'
-alias couch='~/.scripts/couch-tunnel.sh'
-alias igw-web='~/.scripts/igw-web.sh
 
 # fzf
 alias fman='bash -c '\''compgen -c | fzf --height 20 --no-preview | xargs man'\'
@@ -118,3 +115,6 @@ alias swifter=/Users/barrettjflowers/Dev/swifter/.build/debug/Swifter
 export PATH="$HOME/.opencode/bin:$PATH"
 export QT_QPA_PLATFORMTHEME=qt6ct
 export PATH="$HOME/.local/bin:$PATH"
+
+# machine-local aliases (untracked)
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

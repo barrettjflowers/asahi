@@ -9,6 +9,6 @@ else
 fi
 
 curl -s -X POST -H "Content-Type:multipart/form-data" \
-  -F chat_id=6739543348 \
+  -F chat_id="$TG_CHAT_ID" \
   -F text="$TEXT" \
   "https://api.telegram.org/bot$TG_TOKEN/sendMessage"
