@@ -72,7 +72,7 @@ alias igw-web='~/.scripts/igw-web.sh
 alias fman='bash -c '\''compgen -c | fzf --height 20 --no-preview | xargs man'\'
 alias fd='cd "$(find . -maxdepth 3 -type d -not -name ".Trash" 2>/dev/null | fzf --height 20 --no-preview)"'
 alias falias='alias | awk -F= '\''{print $1}'\'' | fzf --height 20 --no-preview | xargs -I{} zsh -ic {}'
-fh() { local c; c=$(fc -ln -100 | fzf --tac --height 20 --no-preview --color=bw --bind tab:accept) && print -z -- "$c" }
+fh() { local c; c=$(fc -lnr 1 | awk '!seen[$0]++' | fzf --height 20 --no-preview --color=bw --bind tab:accept) && print -z -- "$c" }
 
 # pomodoro! thanks bashbunni
 alias work="timer 10s && terminal-notifier -message 'Pomodoro'\

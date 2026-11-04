@@ -106,7 +106,7 @@ window#waybar.empty #window {
 
 }
 #network{
-    padding: 0px 7px;
+    padding: 0px 15px 0px 7px; /* +1 char (8px) right: the space after the max-length "…" */
     transition: all .3s ease;
     color:@text;
 }

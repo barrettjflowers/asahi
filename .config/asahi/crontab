@@ -24,3 +24,4 @@
 # ====== padlet Life and Ministry -> Telegram ======
 # hourly retry; script itself sends at most once per month
 17 * * * * /usr/bin/zsh -c "$HOME/Documents/Vault/barrettjflowers/padlet-check.py --monthly" >> $HOME/.local/state/padlet-check.log 2>&1
+

@@ -115,6 +115,7 @@
         },
         "network": {
             "format-wifi": "󰖩 {essid}",
+            "max-length": 18, // icon + space + 15 SSID chars + "…", matching the window cap
             "format-ethernet":"",
             "format-disconnected": "",
             "tooltip-format-disconnected": "Error",
