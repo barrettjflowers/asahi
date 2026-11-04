@@ -12,6 +12,7 @@
 - Preserve the existing visual language and the Apple Silicon/Asahi-specific settings.
 - Prefer focused edits to hand-authored configuration. Do not normalize or clean unrelated application-generated files.
 - Do not stage the entire repository blindly. Inspect `git status` and stage only intended paths. Most credential and volatile application-state paths under `.config` are intentionally ignored; add a file's line to the root `.gitignore` only when the user explicitly asks to track that file, and only after checking its contents. Never use `git add -f` or wildcard rules to get around it.
+- The repo is public. Work-specific aliases go in the untracked `~/.zshrc.local` (sourced by `.zshrc`) and work scripts in `~/.local/bin/work/`; never commit them. Secrets and IDs (`TG_TOKEN`, `TG_CHAT_ID`) come from `~/.zshenv`, which is untracked.
 - Many files contain absolute paths under `/home/barrettjflowers`, monitor name `eDP-1`, mount UUIDs, audio device IDs, or remote-host details. Treat these as machine-specific.
 
 ## Generated configuration

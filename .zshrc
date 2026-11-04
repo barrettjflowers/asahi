@@ -115,3 +115,6 @@ alias swifter=/Users/barrettjflowers/Dev/swifter/.build/debug/Swifter
 export PATH="$HOME/.opencode/bin:$PATH"
 export QT_QPA_PLATFORMTHEME=qt6ct
 export PATH="$HOME/.local/bin:$PATH"
+
+# machine-local aliases (untracked)
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
