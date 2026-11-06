@@ -100,7 +100,13 @@
         "margin-bottom": -4,
         "margin-left": 800,
         "margin-right": 3,
-        "modules-left": ["cpu", "custom/memory", "custom/weather", "battery", "network", "clock"],
+        "modules-left": ["group/metrics", "battery", "network", "clock"],
+
+        // one shared background; a group's children have no bar spacing between them
+        "group/metrics": {
+            "orientation": "horizontal",
+            "modules": ["cpu", "custom/memory", "custom/weather"]
+        },
 
         "clock": {
             "format": "󱑃 {:%a %d %b %I:%M}",

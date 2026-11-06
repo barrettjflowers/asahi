@@ -7,7 +7,7 @@ if [ "$1" = toggle ]; then
     if [ "$(brightnessctl -d $dev g)" -gt 0 ]; then
         brightnessctl -q -d $dev s 0
     else
-        brightnessctl -q -d $dev s 100%
+        brightnessctl -q -d $dev s 20%
     fi
     pkill -SIGRTMIN+9 waybar
     exit
