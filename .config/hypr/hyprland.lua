@@ -30,7 +30,6 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd("ydotoold")
     hl.exec_cmd("wl-paste --type text --watch cliphist store")
     hl.exec_cmd("hyprpaper")
-    hl.exec_cmd("swayosd-server --top-margin 1.5")
     hl.exec_cmd("waybar")
     hl.exec_cmd("hyprsunset --temperature 4100") -- warm up display
 
@@ -155,7 +154,6 @@ hl.window_rule({ name = "special-transparent", match = { workspace = "name:speci
 -- layer rules (blur off)
 hl.layer_rule({ name = "rofi-blur",    match = { namespace = "rofi" },    blur = false, ignore_alpha = 0 })
 hl.layer_rule({ name = "waybar-blur",  match = { namespace = "waybar" },  blur = false, ignore_alpha = 0 })
-hl.layer_rule({ name = "swayosd-rules",match = { namespace = "swayosd" }, blur = false, ignore_alpha = 0 })
 
 -----------------------
 ---- LOOK AND FEEL ----

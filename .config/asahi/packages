@@ -78,6 +78,8 @@ apr-util-lmdb-1.6.5-1.fc44.aarch64
 apr-util-openssl-1.6.5-1.fc44.aarch64
 aquamarine-0.14.0-1.fc44.aarch64
 aribb24-1.0.3^20160216git5e9be27-5.fc44.aarch64
+arm-none-eabi-binutils-cs-2.45-5.fc44.aarch64
+arm-none-eabi-gcc-cs-15.2.0-4.fc44.aarch64
 asahi-audio-3.4-5.fc44.noarch
 asahi-battery-20250713-7.fc44.noarch
 asahi-fwupdate-20250713-7.fc44.noarch
@@ -1403,7 +1405,6 @@ ncurses-6.6-1.fc44.aarch64
 ncurses-base-6.6-1.fc44.noarch
 ncurses-libs-6.6-1.fc44.aarch64
 ndi-sdk-6.3.2.1-1.fc44.aarch64
-neatvnc-0.9.0-6.fc44.aarch64
 neon-0.37.1-1.fc44.aarch64
 neovim-0.12.4-3.fc44.aarch64
 net-snmp-libs-5.9.5.2-4.fc44.aarch64
@@ -2134,7 +2135,6 @@ wavpack-5.9.0-2.fc44.aarch64
 waybar-0.15.0-2.fc44.aarch64
 wayland-devel-1.25.0-1.fc44.aarch64
 wayland-protocols-devel-1.49-1.fc44.noarch
-wayvnc-0.9.1-4.fc44.aarch64
 wcurl-2026.01.05-2.fc44.noarch
 webkit2gtk4.1-2.52.5-1.fc44.aarch64
 webrtc-audio-processing-2.1-5.fc44.aarch64
