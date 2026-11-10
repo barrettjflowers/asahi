@@ -116,10 +116,6 @@
 !/.config/hypr/shaders/
 !/.config/hypr/shaders/crt.glsl
 
-# .config/kanata
-!/.config/kanata/
-!/.config/kanata/config.kbd.old
-
 # .config/kitty
 !/.config/kitty/
 !/.config/kitty/current-theme.conf

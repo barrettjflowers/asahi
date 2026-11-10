@@ -43,8 +43,4 @@
 
 - Never print, summarize, or casually modify credential material under `~/.config/rclone`, `~/.config/sunshine/credentials`, `~/.config/pulse/cookie`, Go telemetry tokens, OBS service settings, or OBS WebSocket settings.
 - Treat browser profiles, crash reports, recent-file histories, Aseprite sessions/logs, Audacity registries, `~/.config/dconf/user`, Go telemetry state, OBS logs/profiler data, and Neovim's pack lock as application-owned unless the task explicitly targets them.
-- `~/.config/vivaldi-snapshot` and local dependency files under `~/.config/opencode` are ignored local state and should remain untracked.
-
-## Scoped instructions
-
-- `~/.config/opencode/AGENTS.md` contains notification instructions for work in that subtree.
+- `~/.config/vivaldi-snapshot` is ignored local state and should remain untracked.
