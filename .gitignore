@@ -12,6 +12,7 @@
 # .claude
 !/.claude/
 !/.claude/CLAUDE.md
+!/.claude/keybindings.json
 
 # .config
 !/.config/
