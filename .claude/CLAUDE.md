@@ -47,6 +47,12 @@ When asked to make a todo, add it as `- [ ] ...` to
 After creating a calendar entry, commit only the changed note(s) in the vault and
 `git push origin main` so other devices sync. No confirmation needed for this push.
 
+# IndyHost QA procedure
+
+Do not load by default. Before running any IndyHost card, QA, deploy or release
+skill (`card-*`, `env-deploy-*`, `release-merge-rc`) or answering about that workflow,
+read `~/Documents/Vault/barrettjflowers/bin/Devops Release Procedure.md` and follow its order.
+
 # Dotfiles / this machine
 
 The home directory is the dotfiles repo (`~/.git`, remote `barrettjflowers/asahi`).
