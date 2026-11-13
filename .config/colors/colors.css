@@ -1,6 +1,6 @@
-@define-color background rgba(34, 32, 33, 1.0);
-@define-color text #9f999b;
-@define-color accent #9f999b;
-@define-color inactive #2f2d2e;
-@define-color urgent #ad1f51;
-@define-color surface #383637;
+@define-color background rgba(212, 204, 185, 1.0);
+@define-color text #45363b;
+@define-color accent #45363b;
+@define-color inactive #958b83;
+@define-color urgent #bd100d;
+@define-color surface #bfb8a7;

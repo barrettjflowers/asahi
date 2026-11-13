@@ -1,6 +1,6 @@
 #!/bin/bash
 # Keyboard backlight toggle for the waybar "Backlight" module.
-# No args: print JSON status. "toggle": switch between off and 100%.
+# No args: print JSON status. "toggle": switch between off and 20%.
 dev=kbd_backlight
 
 if [ "$1" = toggle ]; then

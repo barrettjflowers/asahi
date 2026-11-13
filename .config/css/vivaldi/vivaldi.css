@@ -2,11 +2,18 @@
 Vivaldi DOM Tweaks
 */
 
+/* pin real Bold face so weight 700 is never faux-bolded */
+@font-face {
+  font-family: "Iosevka VUI";
+  src: local("Iosevka NFM Bold"), local("IosevkaNFM-Bold");
+  font-weight: 700;
+}
+
 
 * {
-  font-family: Iosevka Nerd Font Mono, monospace !important;
-	font-weight: 400 !important;
-	font-size: 15px !important;
+  font-family: "Iosevka VUI", monospace !important;
+	font-weight: 700 !important;
+	font-size: 16px !important;
 }
 
 #browser > div.auto-hide-wrapper.right.show {
@@ -20,9 +27,9 @@ Vivaldi DOM Tweaks
 }
 
 #urlFieldInput {
-    font-family: Iosevka Nerd Font Mono, monospace !important;
-		font-weight: 400 !important;
-    font-size: 15px !important;
+    font-family: "Iosevka VUI", monospace !important;
+		font-weight: 700 !important;
+    font-size: 16px !important;
 }
 
 #addressfield {
@@ -33,8 +40,8 @@ Vivaldi DOM Tweaks
 .OmniDropdown *,
 .OmniLinkItem,
 .omni-clickable {
-  font-family: Iosevka Nerd Font Mono, monospace !important;
-  font-weight: 600 !important;
+  font-family: "Iosevka VUI", monospace !important;
+  font-weight: 700 !important;
 	font-size: 16px !important;
 }
 
