@@ -1,11 +1,11 @@
 #!/bin/bash
 # One source of truth — edit the 5 hex values below, then run ./colors.sh
 
-BACKGROUND="222021"
-TEXT="9f999b"
-ACCENT="9f999b"
-INACTIVE="2f2d2e"
-URGENT="ad1f51"
+BACKGROUND="d4ccb9"
+TEXT="45363b"
+ACCENT="45363b"
+INACTIVE="958b83"
+URGENT="bd100d"
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
 
@@ -23,10 +23,17 @@ INACTIVE_B=$((16#${INACTIVE:4:2}))
 
 BR_INACTIVE="$INACTIVE_R, $INACTIVE_G, $INACTIVE_B"
 
-# SURFACE: BACKGROUND lightened 10% toward white (Waybar module backgrounds)
-SURFACE_R=$(( BG_R + (255 - BG_R) / 10 ))
-SURFACE_G=$(( BG_G + (255 - BG_G) / 10 ))
-SURFACE_B=$(( BG_B + (255 - BG_B) / 10 ))
+# SURFACE: BACKGROUND moved 10% away from itself (Waybar module backgrounds):
+# toward white on a dark BACKGROUND, toward black on a light one
+if (( (BG_R * 299 + BG_G * 587 + BG_B * 114) / 1000 > 127 )); then
+    SURFACE_R=$(( BG_R - BG_R / 10 ))
+    SURFACE_G=$(( BG_G - BG_G / 10 ))
+    SURFACE_B=$(( BG_B - BG_B / 10 ))
+else
+    SURFACE_R=$(( BG_R + (255 - BG_R) / 10 ))
+    SURFACE_G=$(( BG_G + (255 - BG_G) / 10 ))
+    SURFACE_B=$(( BG_B + (255 - BG_B) / 10 ))
+fi
 SURFACE=$(printf '%02x%02x%02x' $SURFACE_R $SURFACE_G $SURFACE_B)
 
 cat > "$DIR/colors.css" << EOF
@@ -82,7 +89,7 @@ cat > ~/.config/swaync/style.css << CSSEOF
 * {
   font-family: "Iosevka Nerd Font Mono", monospace;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .notification-row {

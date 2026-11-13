@@ -15,7 +15,7 @@ Dotfiles for my **M2 MacBook Air** running **Fedora Asahi Remix** + [Hyprland](h
 | `colors` | Palette source; `colors.sh` generates every theme file |
 | `css` | Injected CSS for the browser and Vivaldi |
 | `hypr` | Hyprland (`hyprland.lua`), lock screen, wallpaper, scripts |
-| `kitty` | Terminal, Base2Tone Cave Dark |
+| `kitty` | Terminal, Belafonte Day |
 | `nvim` | Neovim with `vim.pack`, no plugin manager |
 | `rofi` | Launcher |
 | `sunshine` | Moonlight streaming host |

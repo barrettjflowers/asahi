@@ -1,11 +1,11 @@
 * {
-    bg:                          #222021;
-    foreground-color:            #9f999b;
-    foreground-color-alt:        #9f999b;
-    accent-color:                #9f999b;
-    border-color:                #9f999b;
-    on:                          #9f999b;
-    off:                         #2f2d2e;
-    urgent:                      #ad1f51;
-    surface:                     #383637;
+    bg:                          #d4ccb9;
+    foreground-color:            #45363b;
+    foreground-color-alt:        #45363b;
+    accent-color:                #45363b;
+    border-color:                #45363b;
+    on:                          #45363b;
+    off:                         #958b83;
+    urgent:                      #bd100d;
+    surface:                     #bfb8a7;
 }

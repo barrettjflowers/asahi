@@ -1,6 +1,6 @@
 # ~/.zshrc
 # prompt
-prompt=$'%F{250}%~ › %F{250}$(git_branch_name) \n%F{250}➞%f '
+prompt=$'%F{7}%~ › %F{7}$(git_branch_name) \n%F{7}➞%f '
 
 ##### a bunch of random functions i frequent #####
 
@@ -89,7 +89,6 @@ autoload -Uz compinit; compinit
 autoload -Uz bashcompinit; bashcompinit
 
 autoload -Uz bashcompinit && bashcompinit
-source <(/home/barrettjflowers/.opencode/bin/opencode completion)
 
 _complete_ssh_hosts ()
 {
