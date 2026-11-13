@@ -8,8 +8,8 @@
         "position": "top",
         "reload_style_on_change": true,
         "spacing": 0, // gaps come from CSS margins, so the empty window module takes no slot
-        "margin-top": 4,
-        "margin-bottom": -2,
+        "margin-top": 5,
+        "margin-bottom": -3,
         "margin-left": 3,
         "margin-right": 640,
         "modules-right": ["custom/power", "custom/backlight", "pulseaudio", "hyprland/workspaces", "hyprland/window", "custom/disk", "custom/recording"],
@@ -103,8 +103,8 @@
         "position": "top",
         "reload_style_on_change": true,
         "spacing": 7,
-        "margin-top": -24, // 4 minus the left bar's 28px reserved strip
-        "margin-bottom": -2,
+        "margin-top": -23, // 5 minus the left bar's 28px reserved strip
+        "margin-bottom": -3,
         "margin-left": 640,
         "margin-right": 3,
         "modules-left": ["group/metrics", "battery", "network", "clock"],
@@ -128,7 +128,7 @@
         },
         "network": {
             "format-wifi": "󰖩 {essid}",
-            "max-length": 18, // icon + space + 15 SSID chars + "…"
+            "max-length": 13, // icon + space + 10 SSID chars + "…"
             "format-ethernet":"",
             "format-disconnected": "",
             "tooltip-format-disconnected": "Error",

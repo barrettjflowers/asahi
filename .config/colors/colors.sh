@@ -140,7 +140,6 @@ cat > ~/.config/swaync/style.css << CSSEOF
 .notification-default-action:hover,
 .notification-action:hover {
   background: #$INACTIVE;
-  border: 1px solid #$ACCENT;
 }
 
 .notification-action:not(:last-child) {
@@ -240,7 +239,7 @@ cat > ~/.config/swaync/config.json << JSONEOF
   "keyboard-shortcuts": true,
   "notification-grouping": true,
   "image-visibility": "when-available",
-  "transition-time": 200,
+  "transition-time": 0,
   "hide-on-clear": true,
   "hide-on-action": true,
   "text-empty": "No Notifications",

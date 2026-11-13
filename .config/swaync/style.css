@@ -54,7 +54,6 @@
 .notification-default-action:hover,
 .notification-action:hover {
   background: #958b83;
-  border: 1px solid #45363b;
 }
 
 .notification-action:not(:last-child) {

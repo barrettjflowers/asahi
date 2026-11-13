@@ -13,7 +13,7 @@ Vivaldi DOM Tweaks
 * {
   font-family: "Iosevka VUI", monospace !important;
 	font-weight: 700 !important;
-	font-size: 16px !important;
+	font-size: 13px !important;
 }
 
 #browser > div.auto-hide-wrapper.right.show {
@@ -29,7 +29,7 @@ Vivaldi DOM Tweaks
 #urlFieldInput {
     font-family: "Iosevka VUI", monospace !important;
 		font-weight: 700 !important;
-    font-size: 16px !important;
+    font-size: 13px !important;
 }
 
 #addressfield {
@@ -42,7 +42,7 @@ Vivaldi DOM Tweaks
 .omni-clickable {
   font-family: "Iosevka VUI", monospace !important;
   font-weight: 700 !important;
-	font-size: 16px !important;
+	font-size: 13px !important;
 }
 
 /* Remove 6px gap around window when auto-hide is active */

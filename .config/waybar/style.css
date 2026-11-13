@@ -5,6 +5,11 @@
     font-family: "Iosevka Nerd Font Propo";
     font-weight: 700;
 }
+*, *:hover {
+    box-shadow: none;
+    text-shadow: none;
+    background-image: none;
+}
 window#waybar{
     background: transparent;
     min-height: 0px;
@@ -25,8 +30,8 @@ window#waybar.right .modules-left {
 #battery, #pulseaudio, #network, #clock, #custom-recording {
     background: @surface;
     border-radius: 4px;
-    margin-top: 2px;
-    margin-bottom: 1px;
+    margin-top: 3px;
+    margin-bottom: 2px;
 }
 tooltip {
     box-shadow: none;

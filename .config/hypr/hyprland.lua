@@ -154,6 +154,9 @@ hl.window_rule({ name = "special-transparent", match = { workspace = "name:speci
 -- layer rules (blur off)
 hl.layer_rule({ name = "rofi-blur",    match = { namespace = "rofi" },    blur = false, ignore_alpha = 0 })
 hl.layer_rule({ name = "waybar-blur",  match = { namespace = "waybar" },  blur = false, ignore_alpha = 0 })
+hl.layer_rule({ name = "swaync-slide", match = { namespace = "swaync-notification-window" }, animation = "slide right" })
+hl.animation({ leaf = "layersIn",  enabled = true, speed = 3, bezier = "default" })
+hl.animation({ leaf = "layersOut", enabled = true, speed = 3, bezier = "default" })
 
 -----------------------
 ---- LOOK AND FEEL ----
@@ -164,7 +167,7 @@ hl.config({
         layout           = "dwindle",
         resize_on_border = true,
         gaps_in          = 2,
-        gaps_out         = 6,
+        gaps_out         = 8,
         border_size      = 3,
         col = {
             active_border   = accent,
@@ -216,11 +219,11 @@ hl.config({
     },
 
     animations = {
-        enabled = false,
+        enabled = true,
     }
 })
 
-hl.animation({ leaf = "windows",          enabled = true, speed = 1, bezier = "default" })
+hl.animation({ leaf = "windows",          enabled = false, speed = 1, bezier = "default" })
 hl.animation({ leaf = "border",           enabled = false })
 hl.animation({ leaf = "fade",             enabled = false })
 hl.animation({ leaf = "workspaces",       enabled = false, speed = 3, bezier = "default" })
