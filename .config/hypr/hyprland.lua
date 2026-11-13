@@ -10,7 +10,7 @@ hl.monitor({
     output   = "eDP-1",
     mode     = "2560x1664",
     position = "0x0",
-    scale    = 1.6,
+    scale    = 2,
 })
 
 --------------
@@ -49,7 +49,7 @@ end)
 ------------------------------
 
 hl.env("WLR_DRM_NO_MODIFIERS", "1")
-hl.env("XCURSOR_SIZE", "20")
+hl.env("XCURSOR_SIZE", "18")
 hl.env("XCURSOR_THEME", "breeze_cursors")
 hl.env("HYPRCURSOR_THEME", "breeze_cursors")
 hl.env("HYPRCURSOR_SIZE", "20")
@@ -164,7 +164,7 @@ hl.config({
         layout           = "dwindle",
         resize_on_border = true,
         gaps_in          = 2,
-        gaps_out         = 10,
+        gaps_out         = 6,
         border_size      = 3,
         col = {
             active_border   = accent,

@@ -88,7 +88,7 @@ cat > ~/.config/swaync/style.css << CSSEOF
 
 * {
   font-family: "Iosevka Nerd Font Mono", monospace;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 700;
 }
 
@@ -236,7 +236,7 @@ cat > ~/.config/swaync/config.json << JSONEOF
   "timeout-critical": 0,
   "fit-to-screen": true,
   "relative-timestamps": true,
-  "notification-window-width": 360,
+  "notification-window-width": 290,
   "keyboard-shortcuts": true,
   "notification-grouping": true,
   "image-visibility": "when-available",
