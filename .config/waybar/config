@@ -3,15 +3,15 @@
     {
         "name": "left",
         "layer": "top",
-        "height": 31,
+        "height": 26,
         "fixed-center": false, // no reserved middle section, so each side can use the full half
         "position": "top",
         "reload_style_on_change": true,
         "spacing": 0, // gaps come from CSS margins, so the empty window module takes no slot
-        "margin-top": 6,
-        "margin-bottom": -4,
+        "margin-top": 4,
+        "margin-bottom": -2,
         "margin-left": 3,
-        "margin-right": 800,
+        "margin-right": 640,
         "modules-right": ["custom/power", "custom/backlight", "pulseaudio", "hyprland/workspaces", "hyprland/window", "custom/disk", "custom/recording"],
 
         "hyprland/window": {
@@ -98,14 +98,14 @@
         "name": "right",
         "exclusive": false, // the left bar reserves the space; two reservations would stack
         "layer": "top",
-        "height": 31,
+        "height": 26,
         "fixed-center": false, // no reserved middle section, so each side can use the full half
         "position": "top",
         "reload_style_on_change": true,
         "spacing": 7,
-        "margin-top": -27, // 6 minus the left bar's 33px reserved strip
-        "margin-bottom": -4,
-        "margin-left": 800,
+        "margin-top": -24, // 4 minus the left bar's 28px reserved strip
+        "margin-bottom": -2,
+        "margin-left": 640,
         "margin-right": 3,
         "modules-left": ["group/metrics", "battery", "network", "clock"],
 
