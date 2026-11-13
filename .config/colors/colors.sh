@@ -249,4 +249,9 @@ cat > ~/.config/swaync/config.json << JSONEOF
 }
 JSONEOF
 
-echo "Wrote colors.css, colors.rasi, Hyprland colors, swaync/style.css, swaync/config.json"
+# Vivaldi new tab page (about:blank can't be themed): solid BACKGROUND page
+cat > ~/.config/css/newtab.html << HTMLEOF
+<!doctype html><meta charset="utf-8"><title>New Tab</title><style>html,body{margin:0;height:100%;background:#$BACKGROUND}</style>
+HTMLEOF
+
+echo "Wrote colors.css, colors.rasi, Hyprland colors, swaync/style.css, swaync/config.json, css/newtab.html"

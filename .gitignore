@@ -45,6 +45,7 @@
 # .config/css
 !/.config/css/
 !/.config/css/browser.css
+!/.config/css/newtab.html
 !/.config/css/teams.css
 !/.config/css/vivaldi/
 !/.config/css/vivaldi/vivaldi.css
