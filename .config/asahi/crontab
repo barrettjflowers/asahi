@@ -18,10 +18,12 @@
 */15 * * * * cat /etc/fstab > /home/barrettjflowers/.config/asahi/fstab
 # backup installed packages and versions to dotfiles
 */15 * * * * rpm -qa | LC_ALL=C sort > /home/barrettjflowers/.config/asahi/packages
+# backup cajita's user crontab to dotfiles (tmp+mv keeps last copy if ssh fails)
+*/15 * * * * ssh -o BatchMode=yes -o ConnectTimeout=20 cajita crontab -l > /home/barrettjflowers/.config/asahi/cajita_crontab.tmp && mv /home/barrettjflowers/.config/asahi/cajita_crontab.tmp /home/barrettjflowers/.config/asahi/cajita_crontab
 
 # ===== obsidian vault ======
 
 # ====== padlet Life and Ministry -> Telegram ======
 # hourly retry; script itself sends at most once per month
-17 * * * * /usr/bin/zsh -c "$HOME/Documents/Vault/barrettjflowers/padlet-check.py --monthly" >> $HOME/.local/state/padlet-check.log 2>&1
+#17 * * * * /usr/bin/zsh -c "$HOME/Documents/Vault/barrettjflowers/padlet-check.py --monthly" >> $HOME/.local/state/padlet-check.log 2>&1
 

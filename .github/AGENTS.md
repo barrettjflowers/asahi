@@ -28,6 +28,7 @@
 
 - `~/.config/asahi` stores host snapshots refreshed by the user's crontab every 15 minutes.
 - `crontab` mirrors `crontab -l`; `grub` mirrors `/etc/default/grub`; `fstab` mirrors `/etc/fstab`.
+- `cajita_crontab` mirrors `crontab -l` of the `debian` user on the remote host `cajita` (pulled over SSH with `BatchMode`; written via a `.tmp` file so a failed connection keeps the previous copy). Cajita's root crontab is empty and its `/etc/crontab`/`cron.d` are stock Debian, so they are not mirrored.
 - `systemd` lists enabled system unit files. `packages` is a sorted inventory of installed RPM package names, versions, releases, and architectures.
 - Snapshot files describe current state; they are not restoration scripts and should not be edited directly.
 - To change snapshot jobs, edit `~/.config/asahi/crontab` and immediately install it with `crontab ~/.config/asahi/crontab`; otherwise the next snapshot may overwrite the edit.

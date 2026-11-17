@@ -1,0 +1,13 @@
+0 18 * * 0 set -a; . $HOME/.config/weekly-overview.env; set +a; cd $HOME/vault && /usr/bin/python3 weekly-overview.py >> $HOME/.cache/weekly-overview.log 2>&1
+
+# kalshi-mcp learning cycle: snapshot predictions (prod prices), score settled, relearn; every 2h
+23 */2 * * * $HOME/Dev/furo/mcp/kalshi/run.sh cycle 2>&1 | grep -v "HTTP Request:" >> $HOME/.local/state/kalshi-cycle.log
+
+# kalshi-mcp: nightly backup of trades.db (14 dailies in ~/.kalshi/backups; set KALSHI_BACKUP_DEST in ~/.kalshi/env to copy off-box)
+15 3 * * * $HOME/Dev/furo/mcp/kalshi/backup.sh >> $HOME/.local/state/kalshi-backup.log 2>&1
+47 */2 * * * $HOME/Dev/furo/mcp/polymarket/run.sh track >> $HOME/.local/state/polymarket-track.log 2>&1
+# polymarket dry-run quoter (no orders): keep it running; flock makes this a no-op while it is up
+*/10 * * * * flock -n $HOME/.polymarket/sim.lock $HOME/Dev/furo/mcp/polymarket/run.sh simulate run >> $HOME/.local/state/polymarket-sim.log 2>&1
+
+# padlet-check: Life and Ministry assignments -> Telegram + vault daily notes; hourly, acts only on a new PDF
+23 * * * * set -a; . $HOME/.config/weekly-overview.env; set +a; cd $HOME/vault && /usr/bin/python3 padlet-check.py >> $HOME/.cache/padlet-check.log 2>&1
