@@ -10,6 +10,8 @@ fi
 mpv --no-audio \
     --profile=low-latency \
     --no-border \
+    --no-osc \
+    --osd-level=0 \
     --ontop \
     --title="camera-overlay" \
     --geometry=620x349 \

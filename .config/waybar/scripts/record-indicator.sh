@@ -1,6 +1,6 @@
 #!/bin/bash
 if [ -f /tmp/wf-recorder-pid ]; then
-    echo '{"text": " REC", "class": "recording"}'
+    echo '{"text": " Rec", "class": "recording"}'
 else
     echo '{"text": "", "class": "idle"}'
 fi
