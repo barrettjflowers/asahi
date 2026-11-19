@@ -136,10 +136,10 @@ hl.window_rule({
     name  = "camera-overlay",
     match = { title = "^camera-overlay$" },
     float       = true,
-    border_size = 2,
+    border_size = 3,
     pin         = true,
-    move        = {1200, 100},
-    opacity     = "1.0 1.0 override override",
+    move        = {900, 80},
+    opacity     = "1.0 0.8 override override",
 })
 
 -- always open windows on correct workspaces
