@@ -1,5 +1,5 @@
 #!/bin/bash
-OUTDIR=$HOME/Pictures/Screenshots
+OUTDIR=$HOME/Pictures/screenshots
 mkdir -p "$OUTDIR"
 
 GEOM=$(slurp) || exit 0

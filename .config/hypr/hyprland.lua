@@ -34,7 +34,7 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd("hyprsunset --temperature 4100") -- warm up display
 
     -- bootstrap startup apps
-    hl.exec_cmd("vivaldi",                        { workspace = "1 silent" })
+    hl.exec_cmd("vivaldi file:///home/barrettjflowers/.config/css/newtab.html", { workspace = "1 silent" })
     hl.exec_cmd("flatpak run md.obsidian.Obsidian", { workspace = "4 silent" })
     hl.exec_cmd("kitty",                          { workspace = "3" })
 

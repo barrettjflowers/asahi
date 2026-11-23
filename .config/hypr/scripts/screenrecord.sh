@@ -4,7 +4,7 @@
 # node.dont-reconnect, so nothing can fall back to the speakers and feed back.
 PIDFILE=/tmp/wf-recorder-pid
 LOOPS_PIDFILE=/tmp/wf-recorder-loops-pid
-OUTDIR=$HOME/Pictures/Screenshots
+OUTDIR=$HOME/Pictures/screenshots
 MIX=combined_record
 
 if [ -f "$PIDFILE" ]; then

@@ -36,6 +36,20 @@ Vivaldi DOM Tweaks
     box-shadow: none !important;
 }
 
+/* drop focus border/outline on address bar (Ctrl+L) */
+.UrlBar-AddressField,
+.UrlBar-AddressField:focus-within,
+.UrlBar-AddressField.focus,
+#addressfield,
+#addressfield:focus-within,
+#urlFieldInput,
+#urlFieldInput:focus,
+.OmniDropdown {
+    border-color: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
 .OmniDropdown,
 .OmniDropdown *,
 .OmniLinkItem,
@@ -95,3 +109,26 @@ button[title="Reader View"] {
 }
 
 
+
+/* Ctrl+L: centre address bar + dropdown, keep inside small windows */
+.UrlBar-AddressField:focus-within:has(.OmniDropdown) {
+    position: fixed !important;
+    top: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    bottom: 12px !important;
+    margin: 0 !important;
+    transform: translateX(-50%) !important;
+    width: min(700px, calc(100vw - 24px)) !important;
+    max-width: calc(100vw - 24px) !important;
+    z-index: 1000 !important;
+}
+.OmniDropdown {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: calc(100vw - 24px) !important;
+    max-height: calc(100vh - 80px) !important;
+    overflow-y: auto !important;
+    box-sizing: border-box !important;
+}

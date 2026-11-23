@@ -11,3 +11,7 @@
 
 # padlet-check: Life and Ministry assignments -> Telegram + vault daily notes; hourly, acts only on a new PDF
 23 * * * * set -a; . $HOME/.config/weekly-overview.env; set +a; cd $HOME/vault && /usr/bin/python3 padlet-check.py >> $HOME/.cache/padlet-check.log 2>&1
+# carry: hourly funding-rate snapshot (Coinbase US perp-style + Kalshi perps estimate), read-only
+5 * * * * $HOME/Dev/furo/carry/run.sh track >> $HOME/.local/state/carry-track.log 2>&1
+# bounties: scan GitHub for paid open-source bounties every 2h, Telegram on new ones (read-only)
+17 */2 * * * $HOME/Dev/furo/bounties/run.sh scan >> $HOME/.local/state/bounties.log 2>&1

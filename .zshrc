@@ -56,6 +56,7 @@ alias hypr='nvim ~/.config/hypr/hyprland.lua'
 alias wlc='wl-copy'
 alias open='xdg-open'
 alias ascii='/home/barrettjflowers/Dev/ascii-view/ascii-view'
+alias edtr='/home/barrettjflowers/Dev/edtr/edtr'
 
 # notes
 alias ob='cd /home/barrettjflowers/Documents/Vault/barrettjflowers'

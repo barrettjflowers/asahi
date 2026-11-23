@@ -128,7 +128,7 @@
         },
         "network": {
             "format-wifi": "󰖩 {essid}",
-            "max-length": 13, // icon + space + 10 SSID chars + "…"
+            "max-length": 11, // icon + space + 8 SSID chars + "…" (U+2026, waybar default)
             "format-ethernet":"",
             "format-disconnected": "",
             "tooltip-format-disconnected": "Error",
