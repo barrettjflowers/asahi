@@ -148,6 +148,9 @@ hl.window_rule({ name = "ws-vivaldi-ompi",     match = { class = "^vivaldi-ompi.
 hl.window_rule({ name = "ws-kitty",            match = { class = "kitty" },               workspace = "3" })
 hl.window_rule({ name = "ws-obsidian",         match = { class = "obsidian" },            workspace = "4" })
 
+-- scratchpad centred with wide padding (screen is 1280x832 logical)
+hl.workspace_rule({ workspace = "special:scratchpad", gaps_out = { top = 110, right = 200, bottom = 110, left = 200 } })
+
 -- scratchpad windows see-through
 hl.window_rule({ name = "special-transparent", match = { workspace = "name:special:scratchpad" }, opacity = "0.85 0.85" })
 
