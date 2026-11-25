@@ -35,7 +35,7 @@
 
 ## Systemd configuration
 
-- User units and enablement links are under `~/.config/systemd/user`. They are local only and intentionally untracked; do not re-add them.
+- User units and enablement links are under `~/.config/systemd/user`. Five units (`ollama`, `plasma-kscreenlocker`, `plasma-kwin`, `rclone-obsidian`, `xdg-desktop-portal`) and two enablement links (`default.target.wants/ollama.service`, `graphical-session.target.wants/swaync.service`) are tracked intentionally. They predate the allowlist and have no `!/` line in `.gitignore`, but git keeps tracking them anyway. Any other unit or link in that directory stays untracked unless the user asks to track it.
 - Enablement symlinks under `*target.wants` may target local units, `/usr/lib/systemd/user`, or `/dev/null`; preserve symlinks when editing or copying.
 - Sunshine is the only remote desktop service; WayVNC and noVNC were removed. Remote desktop units can expose network services. Do not change bind addresses, startup behavior, or enablement without explicit approval.
 - After user-unit changes, verify with `systemd-analyze --user verify <unit>` where applicable, then run `systemctl --user daemon-reload` only when applying the change is intended.
